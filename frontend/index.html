@@ -1309,7 +1309,7 @@ let hash=0;for(let i=0;i<p.length;i++)hash=(hash*31+p.charCodeAt(i))>>>0;
 return PARTY_COLOR_PALETTE[hash%PARTY_COLOR_PALETTE.length];
 }
 let liveDataStatus="static";
-const API_BASE_URL="https://know-your-government-api.YOUR-SUBDOMAIN.workers.dev";
+const API_BASE_URL="https://know-your-government-api.know-your-government.workers.dev";
 async function tryLiveLokSabhaFetch(){
 try{
 const res=await fetch(`${API_BASE_URL}/api/lok-sabha-members`);
