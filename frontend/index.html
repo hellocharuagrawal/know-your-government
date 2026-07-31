@@ -146,13 +146,13 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 <div style="font-size:9px;color:var(--text-muted)">seats, decides who governs</div>
 <div style="font-size:10px;font-weight:700;color:var(--accent);margin-top:10px">Explore &rarr;</div>
 </div>
-<div class="card tap" style="flex:1;opacity:.6;padding:12px">
+<div class="card tap" id="card-rajyasabha" style="flex:1;cursor:pointer;border:1px solid rgba(59,158,255,.35);background:rgba(59,158,255,.08);padding:12px">
 <div id="reps-icon-rajyasabha" style="width:38px;height:38px;border-radius:12px;background:#3b9eff22;color:#3b9eff;display:flex;align-items:center;justify-content:center;margin-bottom:8px"></div>
 <div style="font-size:13px;font-weight:800;color:var(--transport)">Rajya Sabha</div>
 <div style="font-size:10px;color:var(--text-secondary);margin-top:2px">Elected by state MLAs</div>
 <div style="font-size:17px;font-weight:800;margin-top:8px">245</div>
 <div style="font-size:9px;color:var(--text-muted)">seats, reviews laws</div>
-<div style="font-size:9px;background:var(--surface-2);color:var(--text-muted);padding:3px 8px;border-radius:20px;margin-top:10px;display:inline-block">Coming soon</div>
+<div style="font-size:10px;font-weight:700;color:var(--transport);margin-top:10px">Explore &rarr;</div>
 </div>
 </div>
 
@@ -236,6 +236,24 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 <div id="bloc-party-chips" style="display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;margin-bottom:6px"></div>
 <div id="bloc-members-list"></div>
 <div id="bloc-members-empty" style="display:none;text-align:center;padding:40px 20px;color:var(--text-muted);font-size:13px">No members match that search.</div>
+</div>
+
+<div id="scr-rajyasabha" class="scr" style="display:none;padding:16px">
+<button class="tap" id="rajyasabha-back-btn" style="background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:8px 16px;color:var(--text-primary);font-size:13px;font-weight:700;margin-bottom:16px">&larr; Back</button>
+<div style="font-size:20px;font-weight:800;margin-bottom:4px">Rajya Sabha</div>
+<div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px">The Council of States, members elected by state legislatures, not directly by voters</div>
+<div id="rajyasabha-live-badge" style="font-size:10.5px;margin-bottom:14px"></div>
+<div style="position:relative;margin-bottom:10px">
+<input type="text" id="rajyasabha-search" placeholder="Search by name or party..." style="width:100%;padding:11px 14px 11px 38px;border-radius:14px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-primary);font-size:13px;font-family:inherit">
+<span style="position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text-muted)"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+</div>
+<div style="display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:10px">
+<select id="rajyasabha-state-select"><option value="All">All states</option></select>
+</div>
+<div id="rajyasabha-party-chips" style="display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;margin-bottom:6px"></div>
+<div id="rajyasabha-list"></div>
+<div id="rajyasabha-empty" style="display:none;text-align:center;padding:40px 20px;color:var(--text-muted);font-size:13px">No members match that search.</div>
+<div style="font-size:11px;color:var(--text-muted);margin-top:14px">Party lists sourced live from india.gov.in. Photos aren't available from this specific data source, so members show with initials unless they're also a minister (in which case we cross-check that photo).</div>
 </div>
 
 <div id="scr-loksabha" class="scr" style="display:none">
@@ -862,9 +880,9 @@ other:[
 ];
 
 function showScreen(name){
-["flash","home","dept","reps","manifestos","manifesto-detail","loksabha","mp-profile","ministers","bloc-members"].forEach(s=>{const el=document.getElementById("scr-"+s);if(el)el.style.display=(s===name?"block":"none")});
+["flash","home","dept","reps","manifestos","manifesto-detail","loksabha","mp-profile","ministers","bloc-members","rajyasabha"].forEach(s=>{const el=document.getElementById("scr-"+s);if(el)el.style.display=(s===name?"block":"none")});
 document.getElementById("nav-home").classList.toggle("active",name==="home");
-document.getElementById("nav-reps").classList.toggle("active",name==="reps"||name==="loksabha"||name==="mp-profile"||name==="ministers"||name==="bloc-members");
+document.getElementById("nav-reps").classList.toggle("active",name==="reps"||name==="loksabha"||name==="mp-profile"||name==="ministers"||name==="bloc-members"||name==="rajyasabha");
 document.getElementById("nav-manifestos").classList.toggle("active",name==="manifestos"||name==="manifesto-detail");
 window.scrollTo(0,0);
 }
@@ -1406,6 +1424,104 @@ const RANK_NORMALIZE={
 "Prime Minister":"Prime Minister"
 };
 let ministersLiveStatus="static";
+let RAJYA_SABHA=[];
+let rajyaSabhaSearch="",rajyaSabhaPartyFilter="All",rajyaSabhaStateFilter="All";
+async function tryLiveRajyaSabhaFetch(){
+try{
+const res=await fetch(`${API_BASE_URL}/api/rajya-sabha-members`);
+if(!res.ok)throw new Error("HTTP "+res.status);
+const results=await res.json();
+if(!results||!results.length)throw new Error("Empty response shape");
+RAJYA_SABHA=results.map(r=>({
+name:r.name,
+party:r.party,
+partyColor:colorForParty(r.party),
+state:r.state,
+mpCode:r.mpCode
+}));
+console.log("Live Rajya Sabha data loaded:",RAJYA_SABHA.length,"members");
+const badge=document.getElementById("rajyasabha-live-badge");
+if(badge)badge.innerHTML=`<span style="color:var(--green)">&#9679;</span> Live data, ${RAJYA_SABHA.length} members fetched just now from india.gov.in`;
+renderRajyaSabhaFilters();
+renderRajyaSabhaList();
+}catch(e){
+console.warn("Live Rajya Sabha fetch failed. Error:",e.message);
+const badge=document.getElementById("rajyasabha-live-badge");
+if(badge)badge.innerHTML=`<span style="color:var(--red)">&#9679;</span> Live fetch failed, no data available. See console for details.`;
+}
+}
+tryLiveRajyaSabhaFetch();
+function findPhotoForRajyaSabhaMember(name){
+const minister=MINISTERS.find(m=>m.name===name);
+return minister?minister.photoUrl:null;
+}
+function renderRajyaSabhaFilters(){
+const parties=[...new Set(RAJYA_SABHA.map(m=>m.party))].sort();
+const states=[...new Set(RAJYA_SABHA.map(m=>m.state).filter(Boolean))].sort();
+const chipsEl=document.getElementById("rajyasabha-party-chips");
+if(chipsEl){
+chipsEl.innerHTML=["All",...parties].map(p=>{
+const active=p===rajyaSabhaPartyFilter;
+return `<button class="tap rajyasabha-party-chip" data-p="${p}" style="flex-shrink:0;padding:6px 13px;border-radius:16px;font-size:11.5px;font-weight:700;border:1px solid ${active?'var(--text-primary)':'var(--border)'};background:${active?'var(--text-primary)':'var(--surface-2)'};color:${active?'var(--bg)':'var(--text-secondary)'}">${p}</button>`;
+}).join("");
+chipsEl.querySelectorAll(".rajyasabha-party-chip").forEach(btn=>{
+btn.addEventListener("click",()=>{rajyaSabhaPartyFilter=btn.dataset.p;renderRajyaSabhaFilters();renderRajyaSabhaList();});
+});
+}
+const stateSel=document.getElementById("rajyasabha-state-select");
+if(stateSel){
+stateSel.innerHTML=`<option value="All">All states</option>`+states.map(s=>`<option value="${s}" ${s===rajyaSabhaStateFilter?"selected":""}>${s}</option>`).join("");
+}
+}
+function renderRajyaSabhaList(){
+const q=rajyaSabhaSearch.trim().toLowerCase();
+const members=RAJYA_SABHA.filter(m=>{
+if(rajyaSabhaPartyFilter!=="All"&&m.party!==rajyaSabhaPartyFilter)return false;
+if(rajyaSabhaStateFilter!=="All"&&m.state!==rajyaSabhaStateFilter)return false;
+if(q&&!m.name.toLowerCase().includes(q)&&!m.party.toLowerCase().includes(q))return false;
+return true;
+});
+const listEl=document.getElementById("rajyasabha-list");
+const emptyEl=document.getElementById("rajyasabha-empty");
+if(!listEl)return;
+if(!members.length){
+listEl.innerHTML="";
+if(emptyEl)emptyEl.style.display="block";
+return;
+}
+if(emptyEl)emptyEl.style.display="none";
+listEl.innerHTML=`<div style="display:grid;gap:8px">${members.map(m=>{
+const photo=findPhotoForRajyaSabhaMember(m.name);
+return `<div class="card tap rajyasabha-item" data-name="${m.name}" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:10px">
+${avatarHTML(m.name,photo,m.partyColor,38,12)}
+<div style="min-width:0;flex:1"><div style="font-size:13px;font-weight:700">${m.name}</div><div style="font-size:10.5px;color:var(--text-secondary)">${m.state||""}</div></div>
+<span style="font-size:10px;font-weight:800;color:${m.partyColor};background:${m.partyColor}18;padding:3px 9px;border-radius:20px;flex-shrink:0">${m.party}</span>
+</div>`;
+}).join("")}</div>`;
+listEl.querySelectorAll(".rajyasabha-item").forEach(el=>{
+el.addEventListener("click",()=>{
+const m=RAJYA_SABHA.find(x=>x.name===el.dataset.name);
+if(!m)return;
+openMPProfile({name:m.name,party:m.party,partyColor:m.partyColor,constituency:`Rajya Sabha, ${m.state||"Nominated"}`,role:"",photoUrl:findPhotoForRajyaSabhaMember(m.name)});
+});
+});
+}
+document.getElementById("card-rajyasabha").addEventListener("click",()=>{
+showScreen("rajyasabha");
+rajyaSabhaSearch="";rajyaSabhaPartyFilter="All";rajyaSabhaStateFilter="All";
+document.getElementById("rajyasabha-search").value="";
+renderRajyaSabhaFilters();
+renderRajyaSabhaList();
+});
+document.getElementById("rajyasabha-back-btn").addEventListener("click",()=>showScreen("reps"));
+document.getElementById("rajyasabha-search").addEventListener("input",e=>{
+rajyaSabhaSearch=e.target.value;
+renderRajyaSabhaList();
+});
+document.getElementById("rajyasabha-state-select").addEventListener("change",e=>{
+rajyaSabhaStateFilter=e.target.value;
+renderRajyaSabhaList();
+});
 async function tryLiveMinistersFetch(){
 try{
 const res=await fetch(`${API_BASE_URL}/api/council-of-ministers`);

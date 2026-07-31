@@ -46,6 +46,28 @@ const PARTY_ABBREV = {
   "All India Majlis-E-Ittehadul Muslimeen": "AIMIM",
   "Indian Union Muslim League": "IUML",
   "Indian Union Muslim League ": "IUML",
+  "Pattali Makkal Katchi": "PMK",
+  "Bharat Rashtra Samithi": "BRS",
+  "Jharkhand Mukti Morcha": "JMM",
+  "J&K National Conference": "JKNC",
+  "Kerala Congress (M)": "KC(M)",
+  "Mizo National Front": "MNF",
+  "National Peoples Party": "NPP",
+  "Nationalist Congress Party-SHARADCHANDRA PAWAR": "NCP(SP)",
+  "Republican Party of India (ATHAWALE)": "RPI(A)",
+  "Rashtriya Lok Morcha": "RLM",
+  "Shiv Sena-Uddhav Balasaheb Thackeray": "SS(UBT)",
+  "Desiya Murpokku Dravida Kazhagam": "DMDK",
+  "Makkal Needhi Maiam": "MNM",
+  "UNITED PEOPLES PARTY (LIBERAL)": "UPPL",
+  "Independent & Others": "Independent",
+  "Biju Janata Dal": "BJD",
+  "Bahujan Samaj Party": "BSP",
+  "Asom Gana Parishad": "AGP",
+  "All India Anna Dravida Munnetra Kazhagam": "AIADMK",
+  "Yuvajana Sramika Rythu Congress Party": "YSRCP",
+  "Janasena Party": "JnP",
+  "Nominated": "Nominated",
   "Shiromani Akali Dal": "SAD",
   "Independent": "Independent",
 };
@@ -56,6 +78,31 @@ function abbreviateParty(fullName) {
 
 function cleanName(rawTitle) {
   return rawTitle.replace(/^(Shri|Smt\.|Dr\.|Adv\.|Adv|Ms\.|Prof\.|Km\.|Kumari|Mr|Mrs)\s+/, "").trim();
+}
+
+async function fetchRajyaSabhaMembers() {
+  const res = await fetch(
+    "https://www.india.gov.in/directory/whos-who/rajya-sabha-members/service",
+    {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ termMatches: [], textquery: "", pageNumber: 1, pageSize: 300 }),
+    }
+  );
+  if (!res.ok) throw new Error(`Upstream error: ${res.status}`);
+  const json = await res.json();
+  const results = json?.result?.data?.getAllRajysabha?.results;
+  if (!results || !results.length) throw new Error("Unexpected response shape from india.gov.in");
+
+  // Note: this source doesn't include photos (every record's `photo` field is null).
+  // The frontend cross-checks against minister data for anyone who's also a minister;
+  // everyone else falls back to initials.
+  return results.map((r) => ({
+    name: cleanName(r.title),
+    party: abbreviateParty(r.partyName),
+    state: r.stateName,
+    mpCode: r.mpCode,
+  }));
 }
 
 async function fetchLokSabhaMembers() {
@@ -160,6 +207,19 @@ async function main() {
   } catch (e) {
     runLog.errors.push(`Chiefs fetch failed: ${e.message}`);
     console.error("Chiefs fetch failed:", e.message);
+  }
+
+  try {
+    const rajyaSabha = await fetchRajyaSabhaMembers();
+    await writeFile(
+      join(DATA_DIR, "rajya-sabha-members.json"),
+      JSON.stringify(rajyaSabha, null, 2)
+    );
+    runLog.results.rajyaSabhaMembers = rajyaSabha.length;
+    console.log(`Rajya Sabha members: wrote ${rajyaSabha.length} records`);
+  } catch (e) {
+    runLog.errors.push(`Rajya Sabha fetch failed: ${e.message}`);
+    console.error("Rajya Sabha fetch failed:", e.message);
   }
 
   try {
