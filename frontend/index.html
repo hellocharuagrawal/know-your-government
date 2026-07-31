@@ -270,7 +270,7 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 <div id="tab-people">
 <div style="display:flex;flex-direction:column;align-items:center;margin-bottom:20px">
 <div class="org-card" style="margin-bottom:14px">
-<div class="org-avatar" style="background:#FF993022;border:1.5px solid #FF9933;color:#FF9933">OB</div>
+<div id="om-birla-avatar" class="org-avatar" style="background:#FF993022;border:1.5px solid #FF9933;color:#FF9933">OB</div>
 <div style="font-size:14px;font-weight:800">Om Birla</div>
 <div style="font-size:11px;color:var(--text-secondary)">Speaker of the Lok Sabha</div>
 <div style="font-size:10px;color:var(--text-muted)">BJP, Kota</div>
@@ -1433,6 +1433,13 @@ const BLOC_INFO={
 "Others":{label:"Independent and others",color:"var(--border-strong)",seats:16,leader:null,leaderRole:null}
 };
 function renderBlocSummary(){
+const omBirlaMP=MPS.find(mp=>mp.name==="Om Birla");
+if(omBirlaMP&&omBirlaMP.photoUrl){
+const avatarEl=document.getElementById("om-birla-avatar");
+if(avatarEl&&avatarEl.tagName!=="IMG"){
+avatarEl.outerHTML=`<img id="om-birla-avatar" class="org-avatar" src="${omBirlaMP.photoUrl}" alt="Om Birla" referrerpolicy="no-referrer" style="object-fit:cover;border:1.5px solid #FF9933" onerror="this.outerHTML='<div id=&quot;om-birla-avatar&quot; class=&quot;org-avatar&quot; style=&quot;background:#FF993022;border:1.5px solid #FF9933;color:#FF9933&quot;>OB</div>'">`;
+}
+}
 const summary=document.getElementById("bloc-summary");
 const keys=Object.keys(BLOC_INFO);
 const cards=keys.map((key,i)=>{
