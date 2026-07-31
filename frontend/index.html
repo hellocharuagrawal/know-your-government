@@ -1109,9 +1109,8 @@ panel.innerHTML=`<div class="card"><div style="font-size:16px;font-weight:800;ma
 return;
 }
 panel.innerHTML=`<div style="font-size:16px;font-weight:800;margin-bottom:2px">${stateName}</div>${seatLine}<div style="font-size:11px;color:var(--text-muted);margin-bottom:10px">Showing ${matches.length} of ${seats||"?"} MPs we have verified data for</div><div style="display:grid;gap:10px">${matches.map(mp=>{
-const initials=mp.name.split(" ").map(w=>w[0]).slice(0,2).join("");
 return `<div class="card tap mp-panel-item" data-name="${mp.name}" style="display:flex;align-items:center;gap:12px;cursor:pointer">
-<div style="width:44px;height:44px;border-radius:50%;background:${mp.partyColor}22;border:1.5px solid ${mp.partyColor};color:${mp.partyColor};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0">${initials}</div>
+${avatarHTML(mp.name,mp.photoUrl,mp.partyColor,44,14)}
 <div><div style="font-size:13px;font-weight:700">${mp.name}</div><div style="font-size:11px;color:var(--text-secondary)">${mp.constituency}</div></div>
 <span style="margin-left:auto;font-size:10px;font-weight:800;color:${mp.partyColor};background:${mp.partyColor}18;padding:4px 10px;border-radius:20px;flex-shrink:0">${mp.party}</span>
 </div>`;
@@ -1322,6 +1321,15 @@ function proxiedPhoto(rawUrl){
 if(!rawUrl)return null;
 return `${API_BASE_URL}/api/image?url=${encodeURIComponent(rawUrl)}`;
 }
+function avatarHTML(name,photoUrl,partyColor,size,fontSize){
+const initials=name.split(" ").map(w=>w[0]).slice(0,2).join("");
+const color=partyColor||"#8b8b86";
+const border=Math.max(1.5,size/32);
+if(photoUrl){
+return `<img src="${photoUrl}" alt="${name}" referrerpolicy="no-referrer" style="width:${size}px;height:${size}px;border-radius:50%;object-fit:cover;border:${border}px solid ${color};flex-shrink:0" onerror="this.outerHTML='<div style=&quot;width:${size}px;height:${size}px;border-radius:50%;background:${color}22;border:${border}px solid ${color};color:${color};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:${fontSize}px;flex-shrink:0&quot;>${initials}</div>'">`;
+}
+return `<div style="width:${size}px;height:${size}px;border-radius:50%;background:${color}22;border:${border}px solid ${color};color:${color};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:${fontSize}px;flex-shrink:0">${initials}</div>`;
+}
 async function tryLiveLokSabhaFetch(){
 try{
 const res=await fetch(`${API_BASE_URL}/api/lok-sabha-members`);
@@ -1430,7 +1438,7 @@ const keys=Object.keys(BLOC_INFO);
 const cards=keys.map((key,i)=>{
 const info=BLOC_INFO[key];
 const count=MPS.filter(mp=>BLOC_BY_PARTY[mp.party]===key).length;
-const leaderInitials=info.leader?info.leader.split(" ").map(w=>w[0]).slice(0,2).join(""):null;
+const leaderMP=info.leader?MPS.find(mp=>mp.name===info.leader):null;
 const isLast=i===keys.length-1;
 return `<div style="position:relative;padding-left:20px;margin-bottom:14px">
 <div style="position:absolute;left:0;top:18px;width:14px;height:2px;background:var(--border-strong)"></div>
@@ -1442,7 +1450,7 @@ ${isLast?"":`<div style="position:absolute;left:0;top:18px;bottom:-14px;width:2p
 </div>
 <div style="font-size:10.5px;color:var(--text-muted);margin-top:2px;margin-bottom:${info.leader?'10px':'0'}">${info.seats} seats total, ${count} in our sample</div>
 ${info.leader?`<div style="display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid var(--border)">
-<div style="width:26px;height:26px;border-radius:50%;background:${info.color}22;border:1px solid ${info.color};color:${info.color};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;flex-shrink:0">${leaderInitials}</div>
+${avatarHTML(info.leader,leaderMP?leaderMP.photoUrl:null,info.color,26,10)}
 <div><span style="font-size:12px;font-weight:700">${info.leader}</span><span style="font-size:10px;color:var(--text-muted)"> &middot; ${info.leaderRole}</span></div>
 </div>`:""}
 </div>
@@ -1523,9 +1531,8 @@ return;
 }
 emptyEl.style.display="none";
 listEl.innerHTML=`<div style="display:grid;gap:8px">${members.map(mp=>{
-const initials=mp.name.split(" ").map(w=>w[0]).slice(0,2).join("");
 return `<div class="card tap bloc-mp-item" data-name="${mp.name}" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:10px">
-<div style="width:38px;height:38px;border-radius:50%;background:${mp.partyColor}22;border:1.5px solid ${mp.partyColor};color:${mp.partyColor};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex-shrink:0">${initials}</div>
+${avatarHTML(mp.name,mp.photoUrl,mp.partyColor,38,12)}
 <div style="min-width:0;flex:1"><div style="font-size:13px;font-weight:700">${mp.name}</div><div style="font-size:10.5px;color:var(--text-secondary)">${mp.constituency}</div></div>
 <span style="font-size:10px;font-weight:800;color:${mp.partyColor};background:${mp.partyColor}18;padding:3px 9px;border-radius:20px;flex-shrink:0">${mp.party}</span>
 </div>`;
@@ -1655,7 +1662,7 @@ return `<div style="margin-bottom:20px">
 <div style="display:grid;gap:8px">
 ${members.map(m=>{
 const depts=ministryList(m).join(", ");
-return `<div class="card tap minister-item" data-name="${m.name}" style="padding:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px"><div><div style="font-size:13px;font-weight:700">${m.name}</div><div style="font-size:11.5px;color:var(--text-secondary);margin-top:2px">${depts}</div></div><span style="font-size:16px;color:var(--text-muted);flex-shrink:0">&rsaquo;</span></div>`;
+return `<div class="card tap minister-item" data-name="${m.name}" style="padding:12px;cursor:pointer;display:flex;align-items:center;gap:12px">${avatarHTML(m.name,m.photoUrl,RANK_COLORS[rank],40,13)}<div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:700">${m.name}</div><div style="font-size:11.5px;color:var(--text-secondary);margin-top:2px">${depts}</div></div><span style="font-size:16px;color:var(--text-muted);flex-shrink:0">&rsaquo;</span></div>`;
 }).join("")}
 </div>
 </div>`;
