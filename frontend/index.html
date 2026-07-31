@@ -303,7 +303,7 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 <div id="scr-ministers" class="scr" style="display:none;padding:16px">
 <button class="tap" id="ministers-back-btn" style="background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:8px 16px;color:var(--text-primary);font-size:13px;font-weight:700;margin-bottom:16px">&larr; Back</button>
 <div style="font-size:20px;font-weight:800;margin-bottom:4px">Council of Ministers</div>
-<div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px">All 72 members of the Union Council of Ministers, sworn in 9 June 2024</div>
+<div id="ministers-subtitle" style="font-size:12px;color:var(--text-secondary);margin-bottom:8px">Members of the Union Council of Ministers, sworn in 9 June 2024</div>
 <div id="ministers-live-badge" style="font-size:10.5px;margin-bottom:14px"></div>
 <div style="position:relative;margin-bottom:12px">
 <input type="text" id="minister-search" placeholder="Search by name or ministry..." style="width:100%;padding:11px 14px 11px 38px;border-radius:14px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-primary);font-size:13px;font-family:inherit">
@@ -1376,8 +1376,11 @@ if(pmEntry)MINISTERS.push(pmEntry);
 MINISTERS.push(...live);
 ministersLiveStatus="live";
 console.log("Live Council of Ministers data loaded:",live.length,"members, plus PM");
+const totalCount=live.length+(pmEntry?1:0);
+const subtitle=document.getElementById("ministers-subtitle");
+if(subtitle)subtitle.textContent=`All ${totalCount} members of the Union Council of Ministers, sworn in 9 June 2024`;
 const badge=document.getElementById("ministers-live-badge");
-if(badge)badge.innerHTML=`<span style="color:var(--green)">&#9679;</span> Live data, ${live.length+(pmEntry?1:0)} members fetched just now`;
+if(badge)badge.innerHTML=`<span style="color:var(--green)">&#9679;</span> Live data, ${totalCount} members fetched just now`;
 }catch(e){
 ministersLiveStatus="static";
 console.warn("Live Council of Ministers fetch failed, using static data. Error:",e.message);
