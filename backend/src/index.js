@@ -81,6 +81,41 @@ export default {
       });
     }
 
+    if (url.pathname === "/api/image") {
+      const imageUrl = url.searchParams.get("url");
+      if (!imageUrl) {
+        return new Response("Missing url parameter", { status: 400, headers: CORS_HEADERS });
+      }
+      // Safety allowlist: only proxy images from known government photo hosts,
+      // so this endpoint can't be used to fetch arbitrary URLs.
+      const ALLOWED_IMAGE_HOSTS = ["sansad.in", "static.india.gov.in", "static2.india.gov.in"];
+      let parsedUrl;
+      try {
+        parsedUrl = new URL(imageUrl);
+      } catch {
+        return new Response("Invalid url parameter", { status: 400, headers: CORS_HEADERS });
+      }
+      if (!ALLOWED_IMAGE_HOSTS.includes(parsedUrl.hostname)) {
+        return new Response("Host not allowed", { status: 403, headers: CORS_HEADERS });
+      }
+      try {
+        const imageRes = await fetch(imageUrl);
+        if (!imageRes.ok) {
+          return new Response("Upstream image fetch failed", { status: 502, headers: CORS_HEADERS });
+        }
+        const contentType = imageRes.headers.get("content-type") || "image/jpeg";
+        return new Response(imageRes.body, {
+          headers: {
+            "content-type": contentType,
+            "cache-control": "public, max-age=86400",
+            ...CORS_HEADERS,
+          },
+        });
+      } catch (e) {
+        return new Response(`Image proxy error: ${e.message}`, { status: 500, headers: CORS_HEADERS });
+      }
+    }
+
     if (url.pathname === "/api/status") {
       const meta = await env.GOVT_DATA.get("last-refresh-meta");
       return new Response(meta || JSON.stringify({ status: "never refreshed" }), {
@@ -91,7 +126,7 @@ export default {
     return new Response(
       JSON.stringify({
         message: "Know Your Government API",
-        endpoints: ["/api/lok-sabha-members", "/api/council-of-ministers", "/api/refresh", "/api/status"],
+        endpoints: ["/api/lok-sabha-members", "/api/council-of-ministers", "/api/image?url=...", "/api/refresh", "/api/status"],
       }),
       { headers: { "content-type": "application/json", ...CORS_HEADERS } }
     );
