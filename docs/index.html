@@ -269,7 +269,7 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 
 <div id="tab-people">
 <div style="display:flex;flex-direction:column;align-items:center;margin-bottom:20px">
-<div class="org-card" style="margin-bottom:14px">
+<div class="org-card tap" id="om-birla-card" style="margin-bottom:14px;cursor:pointer">
 <div id="om-birla-avatar" class="org-avatar" style="background:#FF993022;border:1.5px solid #FF9933;color:#FF9933">OB</div>
 <div style="font-size:14px;font-weight:800">Om Birla</div>
 <div style="font-size:11px;color:var(--text-secondary)">Speaker of the Lok Sabha</div>
@@ -1145,7 +1145,8 @@ const ROLES={
 "Shripad Yesso Naik":"Minister of State, New and Renewable Energy and Power",
 "Sukanta Majumdar":"Minister of State, Development of North Eastern Region and Education",
 "Rahul Gandhi":"Leader of the Opposition",
-"Gaurav Gogoi":"Deputy Leader of the Opposition"
+"Gaurav Gogoi":"Deputy Leader of the Opposition",
+"Om Birla":"Speaker of the Lok Sabha"
 };
 const PROFILE_DATA={
 "Narendra Modi":{
@@ -1411,6 +1412,11 @@ if(badge)badge.innerHTML=`<span style="color:var(--red)">&#9679;</span> Live fet
 }
 }
 tryLiveMinistersFetch();
+document.getElementById("om-birla-card").addEventListener("click",()=>{
+const omBirlaMP=MPS.find(mp=>mp.name==="Om Birla");
+const fallback={name:"Om Birla",party:"BJP",partyColor:"#FF9933",constituency:"Kota, Rajasthan",role:"Speaker of the Lok Sabha"};
+openMPProfile(omBirlaMP||fallback);
+});
 document.getElementById("card-loksabha").addEventListener("click",async()=>{
 showScreen("loksabha");
 renderBlocSummary();
