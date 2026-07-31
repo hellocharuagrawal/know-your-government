@@ -1,0 +1,38 @@
+name: Scrape government data
+
+# Runs automatically on a schedule, and can also be triggered manually
+# from the Actions tab in GitHub for testing.
+on:
+  schedule:
+    # Runs daily at 3:00 AM UTC. Cron syntax: minute hour day month weekday.
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run scraper
+        run: node scripts/scrape.js
+
+      - name: Commit updated data if anything changed
+        run: |
+          git config user.name "know-your-government-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No data changes since last run."
+          else
+            git commit -m "Automated data refresh: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

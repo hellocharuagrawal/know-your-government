@@ -1,0 +1,13 @@
+{
+  "name": "know-your-government-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Scheduled scraper that fetches live government data and writes it into /data as versioned JSON.",
+  "scripts": {
+    "scrape": "node scripts/scrape.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
