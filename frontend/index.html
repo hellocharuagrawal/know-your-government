@@ -303,7 +303,8 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 <div id="scr-ministers" class="scr" style="display:none;padding:16px">
 <button class="tap" id="ministers-back-btn" style="background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:8px 16px;color:var(--text-primary);font-size:13px;font-weight:700;margin-bottom:16px">&larr; Back</button>
 <div style="font-size:20px;font-weight:800;margin-bottom:4px">Council of Ministers</div>
-<div style="font-size:12px;color:var(--text-secondary);margin-bottom:18px">All 72 members of the Union Council of Ministers, sworn in 9 June 2024</div>
+<div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px">All 72 members of the Union Council of Ministers, sworn in 9 June 2024</div>
+<div id="ministers-live-badge" style="font-size:10.5px;margin-bottom:14px"></div>
 <div style="position:relative;margin-bottom:12px">
 <input type="text" id="minister-search" placeholder="Search by name or ministry..." style="width:100%;padding:11px 14px 11px 38px;border-radius:14px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-primary);font-size:13px;font-family:inherit">
 <span style="position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text-muted)"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
@@ -1350,6 +1351,40 @@ if(!STATE_MPS[state])STATE_MPS[state]=[];
 STATE_MPS[state].push(mp);
 });
 }
+const RANK_NORMALIZE={
+"Ministers of State":"Minister of State",
+"Ministers of State (Independent Charge)":"Minister of State (Independent Charge)",
+"Cabinet Minister":"Cabinet Minister",
+"Prime Minister":"Prime Minister"
+};
+let ministersLiveStatus="static";
+async function tryLiveMinistersFetch(){
+try{
+const res=await fetch(`${API_BASE_URL}/api/council-of-ministers`);
+if(!res.ok)throw new Error("HTTP "+res.status);
+const results=await res.json();
+if(!results||!results.length)throw new Error("Empty response shape");
+const live=results.map(r=>({
+name:r.name.replace(/^(Shri|Smt\.|Dr\.|Adv\.|Adv|Ms\.|Prof\.|Km\.|Kumari|Mr|Mrs)\s+/,"").trim(),
+role:RANK_NORMALIZE[r.rank]||r.rank,
+depts:(r.ministries||[]).join("; "),
+photoUrl:r.photoUrl
+}));
+const pmEntry=MINISTERS.find(m=>m.role==="Prime Minister");
+MINISTERS.length=0;
+if(pmEntry)MINISTERS.push(pmEntry);
+MINISTERS.push(...live);
+ministersLiveStatus="live";
+console.log("Live Council of Ministers data loaded:",live.length,"members, plus PM");
+const badge=document.getElementById("ministers-live-badge");
+if(badge)badge.innerHTML=`<span style="color:var(--green)">&#9679;</span> Live data, ${live.length+(pmEntry?1:0)} members fetched just now`;
+}catch(e){
+ministersLiveStatus="static";
+console.warn("Live Council of Ministers fetch failed, using static data. Error:",e.message);
+const badge=document.getElementById("ministers-live-badge");
+if(badge)badge.innerHTML=`<span style="color:var(--red)">&#9679;</span> Live fetch blocked, showing static sample data. See console for details.`;
+}
+}
 document.getElementById("card-loksabha").addEventListener("click",async()=>{
 showScreen("loksabha");
 renderBlocSummary();
@@ -1512,8 +1547,8 @@ if(matched){openMPProfile(matched);return;}
 const depts=minister.depts.split("; ").map(d=>d.replace("Ministry of ","").replace("Department of ","")).join(" and ");
 const rs=RS_MEMBERS[minister.name];
 const fallback=rs
-?{name:minister.name,party:rs.party,partyColor:rs.partyColor,constituency:rs.constituency,role:`${minister.role}, ${depts}`}
-:{name:minister.name,party:"",partyColor:"#a8a6a0",constituency:"Union Council of Ministers",role:`${minister.role}, ${depts}`};
+?{name:minister.name,party:rs.party,partyColor:rs.partyColor,constituency:rs.constituency,role:`${minister.role}, ${depts}`,photoUrl:minister.photoUrl}
+:{name:minister.name,party:"",partyColor:"#a8a6a0",constituency:"Union Council of Ministers",role:`${minister.role}, ${depts}`,photoUrl:minister.photoUrl};
 openMPProfile(fallback);
 }
 const RANKS=["Prime Minister","Cabinet Minister","Minister of State (Independent Charge)","Minister of State"];
@@ -1618,13 +1653,19 @@ document.getElementById("minister-search").addEventListener("input",e=>{
 ministerSearch=e.target.value;
 renderMinistersList();
 });
-document.getElementById("card-ministers").addEventListener("click",()=>{
+document.getElementById("card-ministers").addEventListener("click",async()=>{
 showScreen("ministers");
 ministerSearch="";ministerFilter="All";ministrySubFilter="All";
 document.getElementById("minister-search").value="";
 renderMinistryChips();
 renderSubChips();
 renderMinistersList();
+if(ministersLiveStatus==="static"){
+await tryLiveMinistersFetch();
+renderMinistryChips();
+renderSubChips();
+renderMinistersList();
+}
 });
 document.getElementById("ministers-back-btn").addEventListener("click",()=>showScreen("reps"));
 
