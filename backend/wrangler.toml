@@ -1,0 +1,10 @@
+name = "know-your-government-api"
+main = "src/index.js"
+compatibility_date = "2024-09-01"
+
+[[kv_namespaces]]
+binding = "GOVT_DATA"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+[triggers]
+crons = ["0 3 * * *"]
