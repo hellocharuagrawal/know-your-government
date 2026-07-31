@@ -1,0 +1,770 @@
+[
+  {
+    "name": "Shri Rajnath Singh",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Defence"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/raj_nath_singh_72f5694aa2.jpg",
+    "house": "loksabha",
+    "mpsno": "4268"
+  },
+  {
+    "name": "Shri Amit Shah",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Home Affairs",
+      "Ministry of Cooperation"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/amit_shah_3b34808883.jpg",
+    "house": "loksabha",
+    "mpsno": "5021"
+  },
+  {
+    "name": "Shri Nitin Jairam Gadkari",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Road Transport and Highways"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/nitin_jairam_gadkari_5077850947.jpg",
+    "house": "loksabha",
+    "mpsno": "4923"
+  },
+  {
+    "name": "Shri Jagat Prakash Nadda",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Health and Family Welfare",
+      "Ministry of Chemicals and Fertilizers"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jagat_prakash_nadda_cf65a797e4.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2204"
+  },
+  {
+    "name": "Shri Shivraj Singh Chouhan",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Rural Development",
+      "Ministry of Agriculture and Farmers Welfare"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/shivraj_singh_chouhan_59558d4d04.jpg",
+    "house": "loksabha",
+    "mpsno": "96"
+  },
+  {
+    "name": "Smt. Nirmala Sitharaman",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Finance",
+      "Ministry of Corporate Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/nirmala_sitharaman_3f05c692d3.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2288"
+  },
+  {
+    "name": "Shri S. Jaishankar",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of External Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/subrahmanyam_jaishankar_45fb32ea9a.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2426"
+  },
+  {
+    "name": "Shri Manohar Lal",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Power",
+      "Ministry of Housing and Urban Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/manohar_lal_d4dcbc7e75.jpg",
+    "house": "loksabha",
+    "mpsno": "5792"
+  },
+  {
+    "name": "Shri H D Kumaraswamy",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Steel",
+      "Ministry of Heavy Industries"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/hd_kumaraswamy_9290c2bb6a.jpg",
+    "house": "loksabha",
+    "mpsno": "3711"
+  },
+  {
+    "name": "Shri Piyush Vedprakash Goyal",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Commerce and Industry"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/piyush_goyal_50aa17b3de.jpg",
+    "house": "loksabha",
+    "mpsno": "5551"
+  },
+  {
+    "name": "Shri Jitan Ram Manjhi",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Micro, Small Medium Enterprises"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jitan_ram_manjhi_d1f9962c7e.jpg",
+    "house": "loksabha",
+    "mpsno": "5558"
+  },
+  {
+    "name": "Shri Rajiv Ranjan Singh",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Panchayati Raj",
+      "Ministry of Fisheries, Animal Husbandry and Dairying"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/rajiv_ranjan_singh_1dd66d679f.jpg",
+    "house": "loksabha",
+    "mpsno": "4134"
+  },
+  {
+    "name": "Shri Sarbananda Sonowal",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Ports, Shipping and Waterways"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/sarbananda_sonowal_1592828a5a.jpg",
+    "house": "loksabha",
+    "mpsno": "4163"
+  },
+  {
+    "name": "Dr. Virendra Kumar",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Social Justice and Empowerment"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/virendra_kumar_e92d828207.jpg",
+    "house": "loksabha",
+    "mpsno": "515"
+  },
+  {
+    "name": "Shri Kinjarapu Rammohan Naidu",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Civil Aviation"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/kinjarapu_rammohan_naidu_7c2a99fd60.jpg",
+    "house": "loksabha",
+    "mpsno": "4771"
+  },
+  {
+    "name": "Shri Pralhad Joshi",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of New and Renewable Energy",
+      "Ministry of Education",
+      "Ministry of Consumer Affairs, Food and Public Distribution"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/pralhad_joshi_b8a6445fab_b60cc3b7d5.jpg",
+    "house": "loksabha",
+    "mpsno": "3982"
+  },
+  {
+    "name": "Shri Jual Oram",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Tribal Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jual_oram_7deb11e2c7.jpg",
+    "house": "loksabha",
+    "mpsno": "279"
+  },
+  {
+    "name": "Shri Giriraj Singh",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Textiles"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/giriraj_singh_0970dc86c7.jpg",
+    "house": "loksabha",
+    "mpsno": "4641"
+  },
+  {
+    "name": "Shri Ashwini Vaishnaw",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Railways",
+      "Ministry of Information and Broadcasting",
+      "Ministry of Electronics and Information Technology"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/ashwini_vaishnaw_ad9b829bef.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2425"
+  },
+  {
+    "name": "Shri Jyotiraditya M Scindia",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Development of North Eastern Region",
+      "Ministry of Communications"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jyotiraditya_m_scindia_b1175bccf8_a4d0ee4b74.jpg",
+    "house": "loksabha",
+    "mpsno": "3958"
+  },
+  {
+    "name": "Shri Bhupender Yadav",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Environment, Forest and Climate Change"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/bhupender_yadav_e7b31ce13c.jpg",
+    "house": "loksabha",
+    "mpsno": "5541"
+  },
+  {
+    "name": "Shri Gajendra Singh Shekhawat",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Tourism",
+      "Ministry of Culture"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/gajendra_singh_shekhawat_3325a83684.jpg",
+    "house": "loksabha",
+    "mpsno": "4670"
+  },
+  {
+    "name": "Smt. Annpurna Devi",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Women and Child Development"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/annpurna_devi_5186853cf9.jpg",
+    "house": "loksabha",
+    "mpsno": "5116"
+  },
+  {
+    "name": "Shri Kiren Rijiju",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Parliamentary Affairs",
+      "Ministry of Minority Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/kiren_rijiju_a0fd56e235.jpg",
+    "house": "loksabha",
+    "mpsno": "3972"
+  },
+  {
+    "name": "Shri Hardeep Singh Puri",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Petroleum and Natural Gas"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/hardeep_singh_puri_a8c32d4a81.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2371"
+  },
+  {
+    "name": "Dr. Mansukh Mandaviya",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Youth Affairs and Sports",
+      "Ministry of Labour and Employment"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/mansukh_l_mandaviya_4639732b47.jpg",
+    "house": "loksabha",
+    "mpsno": "5555"
+  },
+  {
+    "name": "Shri G Kishan Reddy",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Mines",
+      "Ministry of Coal"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/g_kishan_reddy_f1a3a5c645.jpg",
+    "house": "loksabha",
+    "mpsno": "5084"
+  },
+  {
+    "name": "Shri Chirag Paswan",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Food Processing Industries"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/chirag_paswan_9467815ad5.jpg",
+    "house": "loksabha",
+    "mpsno": "4777"
+  },
+  {
+    "name": "Shri Chandrakant Raghunath Patil",
+    "rank": "Cabinet Minister",
+    "ministries": [
+      "Ministry of Jal Shakti"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/c_r_patil_9f69d8c2a5.jpg",
+    "house": "loksabha",
+    "mpsno": "4452"
+  },
+  {
+    "name": "Shri Rao Inderjit Singh",
+    "rank": "Ministers of State (Independent Charge)",
+    "ministries": [
+      "Ministry of Statistics and Programme Implementation",
+      "Ministry of Planning"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/rao_inderjit_singh_52698ce5c6.jpg",
+    "house": "loksabha",
+    "mpsno": "3904"
+  },
+  {
+    "name": "Dr. Jitendra Singh",
+    "rank": "Ministers of State (Independent Charge)",
+    "ministries": [
+      "Ministry of Science and Technology",
+      "Ministry of Earth Sciences"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jitendra_singh_c9a430d263.jpg",
+    "house": "loksabha",
+    "mpsno": "4718"
+  },
+  {
+    "name": "Shri Arjun Ram Meghwal",
+    "rank": "Ministers of State (Independent Charge)",
+    "ministries": [
+      "Ministry of Law and Justice"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/arjun_ram_meghwal_ded4c045c2.jpg",
+    "house": "loksabha",
+    "mpsno": "4399"
+  },
+  {
+    "name": "Shri Prataprao Ganpatrao Jadhav",
+    "rank": "Ministers of State (Independent Charge)",
+    "ministries": [
+      "Ministry of AYUSH"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jadhav_prataprao_ganpatrao_e82b242081.jpg",
+    "house": "loksabha",
+    "mpsno": "4373"
+  },
+  {
+    "name": "Shri Jayant Chaudhary",
+    "rank": "Ministers of State (Independent Charge)",
+    "ministries": [
+      "Ministry of Skill Development and Entrepreneurship"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jayant_chaudhary_1a9471c22d.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2551"
+  },
+  {
+    "name": "Shri Rao Inderjit Singh",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Culture"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/rao_inderjit_singh_52698ce5c6.jpg",
+    "house": "loksabha",
+    "mpsno": "3904"
+  },
+  {
+    "name": "Dr. Jitendra Singh",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Prime Minister's Office",
+      "Ministry of Personnel, Public Grievances and Pensions",
+      "Department of Space",
+      "Department of Atomic Energy"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jitendra_singh_c9a430d263.jpg",
+    "house": "loksabha",
+    "mpsno": "4718"
+  },
+  {
+    "name": "Shri Arjun Ram Meghwal",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Parliamentary Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/arjun_ram_meghwal_ded4c045c2.jpg",
+    "house": "loksabha",
+    "mpsno": "4399"
+  },
+  {
+    "name": "Shri Prataprao Ganpatrao Jadhav",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Health and Family Welfare"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jadhav_prataprao_ganpatrao_e82b242081.jpg",
+    "house": "loksabha",
+    "mpsno": "4373"
+  },
+  {
+    "name": "Shri Jayant Chaudhary",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Education"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jayant_chaudhary_1a9471c22d.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2551"
+  },
+  {
+    "name": "Shri Jitin Prasada",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Electronics and Information Technology",
+      "Ministry of Commerce and Industry"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/jitin_prasada_5ac1e85494.jpg",
+    "house": "loksabha",
+    "mpsno": "4065"
+  },
+  {
+    "name": "Shri Shripad Yesso Naik",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Power",
+      "Ministry of New and Renewable Energy"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/shripad_yesso_naik_0618ec1418.jpg",
+    "house": "loksabha",
+    "mpsno": "273"
+  },
+  {
+    "name": "Shri Pankaj Choudhary",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Finance"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/pankaj_chaudhary_8aaf91b405.jpg",
+    "house": "loksabha",
+    "mpsno": "3479"
+  },
+  {
+    "name": "Shri Krishan Pal Gurjar",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Cooperation"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/krishan_pal_b972c063a9.jpg",
+    "house": "loksabha",
+    "mpsno": "4629"
+  },
+  {
+    "name": "Shri Ramdas Athawale",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Social Justice and Empowerment"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/ramdas_athawale_aa57ccddb2.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2248"
+  },
+  {
+    "name": "Shri Ram Nath Thakur",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Agriculture and Farmers Welfare"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/ram_nath_thakur_d058fd3ac7.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2268"
+  },
+  {
+    "name": "Shri Nityanand Rai",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Home Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/nityanand_rai_64a6ef8390.jpg",
+    "house": "loksabha",
+    "mpsno": "4625"
+  },
+  {
+    "name": "Smt. Anupriya Patel",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Health and Family Welfare",
+      "Ministry of Chemicals and Fertilizers"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/anupriya_singh_patel_08aa75b2be.jpg",
+    "house": "loksabha",
+    "mpsno": "4662"
+  },
+  {
+    "name": "Shri V Somanna",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Railways",
+      "Ministry of Jal Shakti"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/v_somanna_35ac2231b0.jpg",
+    "house": "loksabha",
+    "mpsno": "5625"
+  },
+  {
+    "name": "Dr. Chandra Sekhar Pemmasani",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Rural Development",
+      "Ministry of Communications"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/chandra_sekhar_pemmasani_94dbe3e9b4.jpg",
+    "house": "loksabha",
+    "mpsno": "5636"
+  },
+  {
+    "name": "Prof. S P Singh Baghel",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Panchayati Raj",
+      "Ministry of Fisheries, Animal Husbandry and Dairying"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/s_p_singh_baghel_99d410cf0b.jpg",
+    "house": "loksabha",
+    "mpsno": "31"
+  },
+  {
+    "name": "Km. Shobha Karandlaje",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Micro, Small Medium Enterprises",
+      "Ministry of Labour and Employment"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/sushri_shobha_karandlaje_4c26156fbd.jpg",
+    "house": "loksabha",
+    "mpsno": "4616"
+  },
+  {
+    "name": "Shri Kirti Vardhan Singh",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of External Affairs",
+      "Ministry of Environment, Forest and Climate Change"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/kirtivardhan_singh_f4e8a10268.jpg",
+    "house": "loksabha",
+    "mpsno": "3926"
+  },
+  {
+    "name": "Shri B.L. Verma",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Social Justice and Empowerment",
+      "Ministry of Consumer Affairs, Food and Public Distribution"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/b_l_verma_7a6fc84bb8.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2491"
+  },
+  {
+    "name": "Shri Shantanu Thakur",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Ports, Shipping and Waterways"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/shantanu_thakur_9e89e888f5.jpg",
+    "house": "loksabha",
+    "mpsno": "5036"
+  },
+  {
+    "name": "Shri Suresh Gopi",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Tourism",
+      "Ministry of Petroleum and Natural Gas"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/suresh_gopi_61d50ed6ed.jpg",
+    "house": "loksabha",
+    "mpsno": "5552"
+  },
+  {
+    "name": "Dr. L. Murugan",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Parliamentary Affairs",
+      "Ministry of Information and Broadcasting"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/l_murugan_0a01ce413a.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2504"
+  },
+  {
+    "name": "Shri Ajay Tamta",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Road Transport and Highways"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/ajay_tamta_dc3cca74bf.jpg",
+    "house": "loksabha",
+    "mpsno": "4651"
+  },
+  {
+    "name": "Shri Bandi Sanjay Kumar",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Home Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/bandi_sanjay_kumar_8fbb8f4f93.jpg",
+    "house": "loksabha",
+    "mpsno": "5076"
+  },
+  {
+    "name": "Shri Kamlesh Paswan",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Rural Development"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/kamlesh_paswan_9cf4448607.jpg",
+    "house": "loksabha",
+    "mpsno": "4303"
+  },
+  {
+    "name": "Shri Bhagirath Choudhary",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Agriculture and Farmers Welfare"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/bhagirath_choudhary_53538c9f9d.jpg",
+    "house": "loksabha",
+    "mpsno": "5203"
+  },
+  {
+    "name": "Shri Satish Chandra Dubey",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Mines",
+      "Ministry of Coal"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/satish_chandra_dubey_dcda72a43b.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2435"
+  },
+  {
+    "name": "Shri Sanjay Seth",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Defence"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/sanjay_seth_e38c2d166b.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2351"
+  },
+  {
+    "name": "Shri Durgadas D D Uikey",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Tribal Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/durgadas_uikey_4f8aa8f395.jpg",
+    "house": "loksabha",
+    "mpsno": "5057"
+  },
+  {
+    "name": "Smt. Raksha Nikhil Khadse",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Youth Affairs and Sports"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/raksha_nikhil_khadse_36f133efa9.jpg",
+    "house": "loksabha",
+    "mpsno": "4722"
+  },
+  {
+    "name": "Dr. Sukanta Majumdar",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Education",
+      "Ministry of Development of North Eastern Region"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/sukanta_majumdar_81f2bd6b05.jpg",
+    "house": "loksabha",
+    "mpsno": "5035"
+  },
+  {
+    "name": "Smt. Savitri Thakur",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Women and Child Development"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/savitri_thakur_018a4fadb6.jpg",
+    "house": "loksabha",
+    "mpsno": "4596"
+  },
+  {
+    "name": "Shri Tokhan Sahu",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Housing and Urban Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/tokhan_sahu_c8d35725f8.jpg",
+    "house": "loksabha",
+    "mpsno": "5700"
+  },
+  {
+    "name": "Dr. Raj Bhushan Choudhary",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Jal Shakti"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/raj_bhushan_choudhary_3ff78c524c.jpg",
+    "house": "loksabha",
+    "mpsno": "5568"
+  },
+  {
+    "name": "Shri Srinivasa Varma B J P Varma Bhupathiraju",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Steel",
+      "Ministry of Heavy Industries"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/bhupathi_raju_srinivasa_varma_09a1c98304.jpg",
+    "house": "loksabha",
+    "mpsno": "5745"
+  },
+  {
+    "name": "Shri Harsh Malhotra",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Road Transport and Highways",
+      "Ministry of Corporate Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/harsh_malhotra_8358f0dcc8.jpg",
+    "house": "loksabha",
+    "mpsno": "5563"
+  },
+  {
+    "name": "Smt. Nimuben Jayantibhai Bambhaniya",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Consumer Affairs, Food and Public Distribution"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/nimuben_jayantibhai_bambhaniya_b88b94ddfa.jpg",
+    "house": "loksabha",
+    "mpsno": "5614"
+  },
+  {
+    "name": "Shri Murlidhar Mohol",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Cooperation",
+      "Ministry of Civil Aviation"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/murlidhar_mohol_45a379685c.jpg",
+    "house": "loksabha",
+    "mpsno": "5705"
+  },
+  {
+    "name": "Shri Pabitra Margherita",
+    "rank": "Ministers of State",
+    "ministries": [
+      "Ministry of Textiles",
+      "Ministry of External Affairs"
+    ],
+    "photoUrl": "https://static.india.gov.in/npiprod/uploads/pabitra_margherita_0de0dccb02.jpg",
+    "house": "rajyasabha",
+    "mpsno": "2510"
+  }
+]
