@@ -82,6 +82,38 @@ async function fetchLokSabhaMembers() {
   }));
 }
 
+async function fetchChiefs() {
+  const res = await fetch("https://www.india.gov.in/directory/whos-who/api", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      dataval: {
+        querytype: "getAllWhosWho",
+        variables: {
+          termMatches: [],
+          types: [
+            { fieldName: "designation", fieldValue: "President" },
+            { fieldName: "designation", fieldValue: "Vice-President" },
+          ],
+          pageNumber: 1,
+          pageSize: 10,
+        },
+      },
+    }),
+  });
+  if (!res.ok) throw new Error(`Upstream error: ${res.status}`);
+  const json = await res.json();
+  const results = json?.resultdata?.data?.getAllWhosWho?.results;
+  if (!results || !results.length) throw new Error("Unexpected response shape from india.gov.in");
+
+  return results.map((r) => ({
+    name: cleanName(r.title),
+    designation: r.designation,
+    photoUrl: r.imageUrl,
+    npiAlias: r.npiAlias,
+  }));
+}
+
 async function fetchCouncilOfMinisters() {
   const res = await fetch("https://www.india.gov.in/directory/whos-who/api", {
     method: "POST",
@@ -116,6 +148,19 @@ async function fetchCouncilOfMinisters() {
 async function main() {
   await mkdir(DATA_DIR, { recursive: true });
   const runLog = { ranAt: new Date().toISOString(), results: {}, errors: [] };
+
+  try {
+    const chiefs = await fetchChiefs();
+    await writeFile(
+      join(DATA_DIR, "chiefs.json"),
+      JSON.stringify(chiefs, null, 2)
+    );
+    runLog.results.chiefs = chiefs.length;
+    console.log(`Chiefs: wrote ${chiefs.length} records`);
+  } catch (e) {
+    runLog.errors.push(`Chiefs fetch failed: ${e.message}`);
+    console.error("Chiefs fetch failed:", e.message);
+  }
 
   try {
     const members = await fetchLokSabhaMembers();

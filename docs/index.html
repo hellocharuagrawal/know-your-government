@@ -1151,7 +1151,7 @@ const ROLES={
 const PROFILE_DATA={
 "Droupadi Murmu":{
 "Known for":"The 15th President of India, and the first person from a Scheduled Tribe (Santhal) community to hold the office. Previously served as Governor of Jharkhand (2015 to 2021) and as a minister in the Odisha state government. Source: Wikipedia.",
-"Political career":"<div style='margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:10.5px;color:var(--text-muted)'>Note: unlike MPs and ministers, this profile isn't yet fed by our live data pipeline, since the President is a separate government category we haven't built a scraper for. This means no live photo either, the app correctly falls back to initials. If this matters to you, it's a small, well-scoped addition, the same india.gov.in API already has a \"Chiefs\" category covering President, Vice-President, and PM together.</div>"
+"Political career":"<div style='margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:10.5px;color:var(--text-muted)'>Note: her photo and basic details are now fetched live from india.gov.in, same pipeline as MPs and ministers. Deeper biographical content here is still limited compared to other profiles, since she isn't a Lok Sabha member or minister and most of our other profile-building work has focused on that space.</div>"
 },
 "Narendra Modi":{
 "Education":"<div><b style='color:var(--text-primary)'>Schooling:</b> Completed higher secondary education in Vadnagar, Gujarat (1967).</div><div style='margin-top:8px'><b style='color:var(--text-primary)'>Bachelor's:</b> BA in political science, School of Open Learning, Delhi University (1978).</div><div style='margin-top:8px'><b style='color:var(--text-primary)'>Master's:</b> MA in political science, Gujarat University (1983), external distance-learning student, first class.</div><div style='margin-top:12px;padding-top:10px;border-top:1px dashed var(--border-strong);font-size:11px;color:var(--text-muted)'><b>Note:</b> The authenticity of both degrees has been publicly disputed and litigated over the years.</div><div style='margin-top:10px;padding-top:8px;border-top:1px solid var(--border);font-size:10.5px;color:var(--text-muted)'>Source: Wikipedia.</div>",
@@ -1328,6 +1328,27 @@ function proxiedPhoto(rawUrl){
 if(!rawUrl)return null;
 return `${API_BASE_URL}/api/image?url=${encodeURIComponent(rawUrl)}`;
 }
+let CHIEFS_DATA=null;
+async function tryLiveChiefsFetch(){
+try{
+const res=await fetch(`${API_BASE_URL}/api/chiefs`);
+if(!res.ok)throw new Error("HTTP "+res.status);
+const results=await res.json();
+if(!results||!results.length)throw new Error("Empty response shape");
+CHIEFS_DATA=results.map(r=>({name:r.name,designation:r.designation,photoUrl:proxiedPhoto(r.photoUrl)}));
+const president=CHIEFS_DATA.find(c=>c.designation==="President");
+if(president&&president.photoUrl){
+const avatarEl=document.getElementById("president-avatar");
+if(avatarEl&&avatarEl.tagName!=="IMG"){
+avatarEl.outerHTML=`<img id="president-avatar" src="${president.photoUrl}" alt="Droupadi Murmu" referrerpolicy="no-referrer" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:1.5px solid var(--text-secondary);flex-shrink:0" onerror="this.outerHTML='<div id=&quot;president-avatar&quot; style=&quot;width:44px;height:44px;border-radius:50%;background:#8888883a;border:1.5px solid var(--text-secondary);color:var(--text-primary);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex-shrink:0&quot;>DM</div>'">`;
+}
+}
+console.log("Live Chiefs data loaded:",CHIEFS_DATA.length,"records");
+}catch(e){
+console.warn("Live Chiefs fetch failed, President/VP photos unavailable. Error:",e.message);
+}
+}
+tryLiveChiefsFetch();
 function avatarHTML(name,photoUrl,partyColor,size,fontSize){
 const initials=name.split(" ").map(w=>w[0]).slice(0,2).join("");
 const color=partyColor||"#8b8b86";
@@ -1419,7 +1440,8 @@ if(badge)badge.innerHTML=`<span style="color:var(--red)">&#9679;</span> Live fet
 }
 tryLiveMinistersFetch();
 document.getElementById("president-card").addEventListener("click",()=>{
-openMPProfile({name:"Droupadi Murmu",party:"",partyColor:"#a8a6a0",constituency:"Head of State",role:"President of India"});
+const president=CHIEFS_DATA?CHIEFS_DATA.find(c=>c.designation==="President"):null;
+openMPProfile({name:"Droupadi Murmu",party:"",partyColor:"#a8a6a0",constituency:"Head of State",role:"President of India",photoUrl:president?president.photoUrl:null});
 });
 document.getElementById("om-birla-card").addEventListener("click",()=>{
 const omBirlaMP=MPS.find(mp=>mp.name==="Om Birla");

@@ -26,6 +26,14 @@ async function refreshCache(env) {
   const results = { refreshedAt: new Date().toISOString(), errors: [] };
 
   try {
+    const chiefs = await fetchFromGitHub("chiefs.json");
+    await env.GOVT_DATA.put("chiefs", JSON.stringify(chiefs));
+    results.chiefsCount = chiefs.length;
+  } catch (e) {
+    results.errors.push(`Chiefs fetch failed: ${e.message}`);
+  }
+
+  try {
     const members = await fetchFromGitHub("lok-sabha-members.json");
     await env.GOVT_DATA.put("lok-sabha-members", JSON.stringify(members));
     results.lokSabhaCount = members.length;
@@ -68,6 +76,10 @@ export default {
 
     if (url.pathname === "/api/lok-sabha-members") {
       return respondWithCached(env, "lok-sabha-members");
+    }
+
+    if (url.pathname === "/api/chiefs") {
+      return respondWithCached(env, "chiefs");
     }
 
     if (url.pathname === "/api/council-of-ministers") {
@@ -126,7 +138,7 @@ export default {
     return new Response(
       JSON.stringify({
         message: "Know Your Government API",
-        endpoints: ["/api/lok-sabha-members", "/api/council-of-ministers", "/api/image?url=...", "/api/refresh", "/api/status"],
+        endpoints: ["/api/chiefs", "/api/lok-sabha-members", "/api/council-of-ministers", "/api/image?url=...", "/api/refresh", "/api/status"],
       }),
       { headers: { "content-type": "application/json", ...CORS_HEADERS } }
     );
