@@ -1309,24 +1309,20 @@ let hash=0;for(let i=0;i<p.length;i++)hash=(hash*31+p.charCodeAt(i))>>>0;
 return PARTY_COLOR_PALETTE[hash%PARTY_COLOR_PALETTE.length];
 }
 let liveDataStatus="static";
+const API_BASE_URL="https://know-your-government-api.YOUR-SUBDOMAIN.workers.dev";
 async function tryLiveLokSabhaFetch(){
 try{
-const res=await fetch("https://www.india.gov.in/directory/whos-who/lok-sabha-members/service",{
-method:"POST",
-headers:{"content-type":"application/json"},
-body:JSON.stringify({termMatches:[],textquery:"",pageNumber:1,pageSize:600})
-});
+const res=await fetch(`${API_BASE_URL}/api/lok-sabha-members`);
 if(!res.ok)throw new Error("HTTP "+res.status);
-const json=await res.json();
-const results=json?.result?.data?.getAllLoksabha?.results;
+const results=await res.json();
 if(!results||!results.length)throw new Error("Empty response shape");
 const live=results.map(r=>{
-const abbrev=PARTY_ABBREV[r.partyFname]||r.partyFname;
+const color=colorForParty(r.party);
 return{
-name:r.title.replace(/^(Shri|Smt\.|Dr\.|Adv\.|Adv|Ms\.|Prof\.|Km\.|Kumari|Mr|Mrs)\s+/,"").trim(),
-party:abbrev,
-partyColor:colorForParty(abbrev),
-constituency:`${r.constituency}, ${r.stateName}`,
+name:r.name,
+party:r.party,
+partyColor:color,
+constituency:`${r.constituency}, ${r.state}`,
 photoUrl:r.photoUrl,
 mpsno:r.mpsno,
 role:""

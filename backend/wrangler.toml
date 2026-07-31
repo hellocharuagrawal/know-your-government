@@ -7,4 +7,6 @@ binding = "GOVT_DATA"
 id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
 
 [triggers]
-crons = ["0 3 * * *"]
+# Runs at 4am UTC, one hour after the GitHub Actions scraper (3am UTC),
+# giving it time to finish and commit fresh data first.
+crons = ["0 4 * * *"]
