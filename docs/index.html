@@ -116,8 +116,8 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 
 <div id="reps-central">
 
-<div class="card" style="display:flex;align-items:center;gap:12px;margin-bottom:2px">
-<div style="width:44px;height:44px;border-radius:50%;background:#8888883a;border:1.5px solid var(--text-secondary);color:var(--text-primary);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex-shrink:0">DM</div>
+<div class="card tap" id="president-card" style="display:flex;align-items:center;gap:12px;margin-bottom:2px;cursor:pointer">
+<div id="president-avatar" style="width:44px;height:44px;border-radius:50%;background:#8888883a;border:1.5px solid var(--text-secondary);color:var(--text-primary);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex-shrink:0">DM</div>
 <div style="min-width:0">
 <div style="font-size:14px;font-weight:800">Droupadi Murmu</div>
 <div style="font-size:11px;color:var(--text-secondary)">President &middot; Head of State</div>
@@ -1149,6 +1149,10 @@ const ROLES={
 "Om Birla":"Speaker of the Lok Sabha"
 };
 const PROFILE_DATA={
+"Droupadi Murmu":{
+"Known for":"The 15th President of India, and the first person from a Scheduled Tribe (Santhal) community to hold the office. Previously served as Governor of Jharkhand (2015 to 2021) and as a minister in the Odisha state government. Source: Wikipedia.",
+"Political career":"<div style='margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:10.5px;color:var(--text-muted)'>Note: unlike MPs and ministers, this profile isn't yet fed by our live data pipeline, since the President is a separate government category we haven't built a scraper for. This means no live photo either, the app correctly falls back to initials. If this matters to you, it's a small, well-scoped addition, the same india.gov.in API already has a \"Chiefs\" category covering President, Vice-President, and PM together.</div>"
+},
 "Narendra Modi":{
 "Education":"<div><b style='color:var(--text-primary)'>Schooling:</b> Completed higher secondary education in Vadnagar, Gujarat (1967).</div><div style='margin-top:8px'><b style='color:var(--text-primary)'>Bachelor's:</b> BA in political science, School of Open Learning, Delhi University (1978).</div><div style='margin-top:8px'><b style='color:var(--text-primary)'>Master's:</b> MA in political science, Gujarat University (1983), external distance-learning student, first class.</div><div style='margin-top:12px;padding-top:10px;border-top:1px dashed var(--border-strong);font-size:11px;color:var(--text-muted)'><b>Note:</b> The authenticity of both degrees has been publicly disputed and litigated over the years.</div><div style='margin-top:10px;padding-top:8px;border-top:1px solid var(--border);font-size:10.5px;color:var(--text-muted)'>Source: Wikipedia.</div>",
 "Life before power":"Grew up in Vadnagar, Gujarat; reportedly worked in his father's tea stall at Vadnagar railway station as a young man, though some biographical details of this period are contested. Became an RSS full-time worker in 1971. During the 1975-77 Emergency, when the RSS was banned, he worked underground in Gujarat coordinating opposition to the government, printing pamphlets, organising demonstrations, and helping build a network of safe houses for wanted activists. Source: Wikipedia.",
@@ -1193,12 +1197,14 @@ const SECTION_COLORS={
 };
 const TERM_OVERRIDES={
 "Narendra Modi":"MP since 2014, 3rd term &middot; PM since 2014",
-"Nirmala Sitharaman":"Rajya Sabha since 2014 &middot; Finance Minister since 2019"
+"Nirmala Sitharaman":"Rajya Sabha since 2014 &middot; Finance Minister since 2019",
+"Droupadi Murmu":"President since 25 July 2022"
 };
 const BIO={
 "Narendra Modi":"Born 17 September 1950 (age 75) &middot; Vadnagar, Gujarat",
 "Imran Masood":"Born 21 April 1971 (age 55) &middot; Gangoh, Uttar Pradesh",
-"Nirmala Sitharaman":"Born 18 August 1959 (age 66) &middot; Madurai, Tamil Nadu"
+"Nirmala Sitharaman":"Born 18 August 1959 (age 66) &middot; Madurai, Tamil Nadu",
+"Droupadi Murmu":"Born 20 June 1958 (age 67) &middot; Mayurbhanj, Odisha"
 };
 let activeMP=null,activeProfileTab="background";
 const PROFILE_SCREENS=["flash","home","dept","reps","manifestos","manifesto-detail","loksabha","ministers","bloc-members"];
@@ -1412,6 +1418,9 @@ if(badge)badge.innerHTML=`<span style="color:var(--red)">&#9679;</span> Live fet
 }
 }
 tryLiveMinistersFetch();
+document.getElementById("president-card").addEventListener("click",()=>{
+openMPProfile({name:"Droupadi Murmu",party:"",partyColor:"#a8a6a0",constituency:"Head of State",role:"President of India"});
+});
 document.getElementById("om-birla-card").addEventListener("click",()=>{
 const omBirlaMP=MPS.find(mp=>mp.name==="Om Birla");
 const fallback={name:"Om Birla",party:"BJP",partyColor:"#FF9933",constituency:"Kota, Rajasthan",role:"Speaker of the Lok Sabha"};
