@@ -4,7 +4,7 @@ compatibility_date = "2024-09-01"
 
 [[kv_namespaces]]
 binding = "GOVT_DATA"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+id = "c2e9b2589c434b878fb8701033871de9"
 
 [triggers]
 # Runs at 4am UTC, one hour after the GitHub Actions scraper (3am UTC),
