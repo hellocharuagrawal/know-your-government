@@ -26,6 +26,14 @@ async function refreshCache(env) {
   const results = { refreshedAt: new Date().toISOString(), errors: [] };
 
   try {
+    const ministerProfiles = await fetchFromGitHub("minister-profiles.json");
+    await env.GOVT_DATA.put("minister-profiles", JSON.stringify(ministerProfiles));
+    results.ministerProfilesCount = ministerProfiles.length;
+  } catch (e) {
+    results.errors.push(`Minister profiles fetch failed: ${e.message}`);
+  }
+
+  try {
     const partyRep = await fetchFromGitHub("party-representation.json");
     await env.GOVT_DATA.put("party-representation", JSON.stringify(partyRep));
     results.partyRepresentationCount = partyRep.length;
@@ -114,6 +122,10 @@ export default {
       return respondWithCached(env, "alliances");
     }
 
+    if (url.pathname === "/api/minister-profiles") {
+      return respondWithCached(env, "minister-profiles");
+    }
+
     if (url.pathname === "/api/party-representation") {
       return respondWithCached(env, "party-representation");
     }
@@ -178,7 +190,7 @@ export default {
     return new Response(
       JSON.stringify({
         message: "Know Your Government API",
-        endpoints: ["/api/alliances", "/api/party-representation", "/api/chiefs", "/api/lok-sabha-members", "/api/rajya-sabha-members", "/api/council-of-ministers", "/api/image?url=...", "/api/refresh", "/api/status"],
+        endpoints: ["/api/minister-profiles", "/api/alliances", "/api/party-representation", "/api/chiefs", "/api/lok-sabha-members", "/api/rajya-sabha-members", "/api/council-of-ministers", "/api/image?url=...", "/api/refresh", "/api/status"],
       }),
       { headers: { "content-type": "application/json", ...CORS_HEADERS } }
     );

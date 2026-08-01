@@ -1249,14 +1249,18 @@ const initials=mp.name.split(" ").map(w=>w[0]).slice(0,2).join("");
 const role=ROLES[mp.name]||mp.role;
 const term=TERM_OVERRIDES[mp.name]||"18th Lok Sabha, 2024 to present";
 const bio=BIO[mp.name];
+const ministerProfile=findMinisterProfile(mp.mpsno);
+const age=ministerProfile?computeAge(ministerProfile.dateBirth):null;
+const attendanceText=ministerProfile?formatAttendanceByTerm(ministerProfile.attendanceByTerm):null;
 document.getElementById("mp-profile-header").innerHTML=`<div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
 ${mp.photoUrl?`<img src="${mp.photoUrl}" alt="${mp.name}" referrerpolicy="no-referrer" style="width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid ${mp.partyColor};flex-shrink:0" onerror="this.outerHTML='<div style=&quot;width:64px;height:64px;border-radius:50%;background:${mp.partyColor}22;border:2px solid ${mp.partyColor};color:${mp.partyColor};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;flex-shrink:0&quot;>${initials}</div>'">`:`<div style="width:64px;height:64px;border-radius:50%;background:${mp.partyColor}22;border:2px solid ${mp.partyColor};color:${mp.partyColor};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;flex-shrink:0">${initials}</div>`}
-<div><div style="font-size:19px;font-weight:800">${mp.name}</div>${bio?`<div style="font-size:11px;color:var(--text-secondary);margin-top:3px">${bio}</div>`:""}${mp.party?`<span style="display:inline-block;margin-top:6px;font-size:11px;font-weight:800;color:${mp.partyColor};background:${mp.partyColor}18;padding:3px 10px;border-radius:20px">${mp.party}</span>`:""}</div>
+<div><div style="font-size:19px;font-weight:800">${mp.name}</div>${bio?`<div style="font-size:11px;color:var(--text-secondary);margin-top:3px">${bio}</div>`:ministerProfile&&ministerProfile.placeBirth?`<div style="font-size:11px;color:var(--text-secondary);margin-top:3px">${ministerProfile.dateBirth?`Born ${ministerProfile.dateBirth}`:""}${age?` (age ${age})`:""}${ministerProfile.placeBirth?` &middot; ${ministerProfile.placeBirth}`:""}</div>`:""}${mp.party?`<span style="display:inline-block;margin-top:6px;font-size:11px;font-weight:800;color:${mp.partyColor};background:${mp.partyColor}18;padding:3px 10px;border-radius:20px">${mp.party}</span>`:""}</div>
 </div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
 <div class="card" style="padding:10px"><div style="display:flex;align-items:center;gap:6px;color:#3b9eff">${ICONS.mappin}<span style="font-size:10px;font-weight:800;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.3px">Constituency</span></div><div style="font-size:13px;font-weight:700;margin-top:4px">${mp.constituency}</div></div>
 <div class="card" style="padding:10px"><div style="display:flex;align-items:center;gap:6px;color:#f5a623">${ICONS.calendar}<span style="font-size:10px;font-weight:800;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.3px">Term</span></div><div style="font-size:12px;font-weight:700;margin-top:4px">${term}</div></div>
 <div class="card" style="padding:10px;grid-column:1/-1"><div style="display:flex;align-items:center;gap:6px;color:#7c5cff">${ICONS.briefcase}<span style="font-size:10px;font-weight:800;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.3px">Ministries</span></div><div style="font-size:12.5px;font-weight:700;margin-top:4px">${role||"Not currently a minister"}</div></div>
+${attendanceText?`<div class="card" style="padding:10px;grid-column:1/-1"><div style="display:flex;align-items:center;gap:6px;color:#2ecc71">${ICONS.calendar}<span style="font-size:10px;font-weight:800;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.3px">Attendance</span></div><div style="font-size:12.5px;font-weight:700;margin-top:4px">${attendanceText}</div></div>`:""}
 </div>`;
 const tabsEl=document.getElementById("mp-profile-tabs");
 tabsEl.innerHTML="";
@@ -1297,6 +1301,20 @@ if(real){
 const{body,source}=splitSource(real);
 const sc=SECTION_COLORS[s]||activeMP.partyColor;
 return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div><div style="font-size:12.5px;color:var(--text-primary);line-height:1.55">${body}</div>${source?`<div style="font-size:10.5px;color:var(--text-muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">Source: ${source}</div>`:""}</div>`;
+}
+const ministerProfile=findMinisterProfile(activeMP.mpsno);
+if(s==="Education"&&ministerProfile&&(ministerProfile.education||ministerProfile.profession)){
+const sc=SECTION_COLORS[s]||activeMP.partyColor;
+const parts=[];
+if(ministerProfile.education)parts.push(ministerProfile.education);
+if(ministerProfile.profession)parts.push(`Profession: ${ministerProfile.profession}`);
+const usedFallback=ministerProfile.educationSource==="wikidata"||ministerProfile.professionSource==="wikidata";
+return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div><div style="font-size:12.5px;color:var(--text-primary);line-height:1.55">${parts.join(". ")}</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">Source: ${usedFallback?"Sansad, Wikidata":"Sansad (Parliament of India)"}</div></div>`;
+}
+if(s==="Political career"&&ministerProfile&&ministerProfile.careerTimeline&&ministerProfile.careerTimeline.length){
+const sc=SECTION_COLORS[s]||activeMP.partyColor;
+const rows=ministerProfile.careerTimeline.map(item=>`<div style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border)"><div style="font-size:11px;font-weight:700;color:var(--text-muted);flex-shrink:0;width:110px">${item.period||""}</div><div style="font-size:12.5px;color:var(--text-primary)">${item.position||""}</div></div>`).join("");
+return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div>${rows}<div style="font-size:10.5px;color:var(--text-muted);margin-top:10px">Source: Sansad (Parliament of India)</div></div>`;
 }
 return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px;color:var(--text-muted)">${icon}<span style="font-size:13px;font-weight:800;color:var(--text-primary)">${s}</span></div><div style="font-size:12px;color:var(--text-muted)">Needs sourcing from verified public records for this individual. Not something we'd want to fill in from general knowledge.</div></div>`;
 }).join("");
@@ -1457,6 +1475,40 @@ console.warn("Live alliance fetch failed, using static fallback. Error:",e.messa
 }
 tryLiveAlliancesFetch();
 let PARTY_REPRESENTATION=[];
+let MINISTER_PROFILES=[];
+async function tryLiveMinisterProfilesFetch(){
+try{
+const res=await fetch(`${API_BASE_URL}/api/minister-profiles`);
+if(!res.ok)throw new Error("HTTP "+res.status);
+const profiles=await res.json();
+if(!profiles||!profiles.length)throw new Error("Empty response shape");
+MINISTER_PROFILES=profiles;
+console.log("Live minister profiles loaded:",MINISTER_PROFILES.length);
+}catch(e){
+console.warn("Live minister profiles fetch failed. Error:",e.message);
+}
+}
+tryLiveMinisterProfilesFetch();
+function findMinisterProfile(mpsno){
+if(!mpsno)return null;
+return MINISTER_PROFILES.find(p=>String(p.mpsno)===String(mpsno))||null;
+}
+function computeAge(dobString){
+if(!dobString)return null;
+const parts=dobString.match(/(\d{1,2})[\-\/](\w+|\d{1,2})[\-\/](\d{4})/);
+const parsed=new Date(dobString);
+const dob=isNaN(parsed)&&parts?new Date(`${parts[2]} ${parts[1]}, ${parts[3]}`):parsed;
+if(isNaN(dob))return null;
+const diff=Date.now()-dob.getTime();
+const age=Math.floor(diff/(365.25*24*60*60*1000));
+return age>0&&age<120?age:null;
+}
+function formatAttendanceByTerm(attendanceByTerm){
+if(!attendanceByTerm)return null;
+const entries=Object.entries(attendanceByTerm).filter(([,v])=>v!=null);
+if(!entries.length)return null;
+return entries.map(([term,pct])=>`${pct}% (${term}${term==="18"?"th":term==="17"?"th":""} Lok Sabha)`).join(", ");
+}
 async function tryLivePartyRepFetch(){
 try{
 const res=await fetch(`${API_BASE_URL}/api/party-representation`);
@@ -1662,7 +1714,8 @@ const live=results.map(r=>({
 name:r.name.replace(/^(Shri|Smt\.|Dr\.|Adv\.|Adv|Ms\.|Prof\.|Km\.|Kumari|Mr|Mrs)\s+/,"").trim(),
 role:RANK_NORMALIZE[r.rank]||r.rank,
 depts:(r.ministries||[]).join("; "),
-photoUrl:proxiedPhoto(r.photoUrl)
+photoUrl:proxiedPhoto(r.photoUrl),
+mpsno:r.mpsno
 }));
 const pmEntry=MINISTERS.find(m=>m.role==="Prime Minister");
 MINISTERS.length=0;
@@ -1912,8 +1965,8 @@ if(matched){openMPProfile(matched);return;}
 const depts=minister.depts.split("; ").map(d=>d.replace("Ministry of ","").replace("Department of ","")).join(" and ");
 const rs=RS_MEMBERS[minister.name];
 const fallback=rs
-?{name:minister.name,party:rs.party,partyColor:rs.partyColor,constituency:rs.constituency,role:`${minister.role}, ${depts}`,photoUrl:minister.photoUrl}
-:{name:minister.name,party:"",partyColor:"#a8a6a0",constituency:"Union Council of Ministers",role:`${minister.role}, ${depts}`,photoUrl:minister.photoUrl};
+?{name:minister.name,party:rs.party,partyColor:rs.partyColor,constituency:rs.constituency,role:`${minister.role}, ${depts}`,photoUrl:minister.photoUrl,mpsno:minister.mpsno}
+:{name:minister.name,party:"",partyColor:"#a8a6a0",constituency:"Union Council of Ministers",role:`${minister.role}, ${depts}`,photoUrl:minister.photoUrl,mpsno:minister.mpsno};
 openMPProfile(fallback);
 }
 const RANKS=["Prime Minister","Cabinet Minister","Minister of State (Independent Charge)","Minister of State"];

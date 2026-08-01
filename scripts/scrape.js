@@ -212,6 +212,185 @@ async function fetchChiefs() {
   }));
 }
 
+async function fetchOneMinisterProfile(mpsno, name) {
+  const profile = {
+    mpsno,
+    placeBirth: null,
+    dateBirth: null,
+    education: null,
+    profession: null,
+    careerTimeline: [],
+    attendanceByTerm: {},
+    errors: [],
+  };
+
+  // 1. Personal/biographical details
+  try {
+    const res = await fetch(`https://sansad.in/api_ls/member/${mpsno}?locale=en`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const d = await res.json();
+    profile.placeBirth = d.birthPlace || null;
+    profile.dateBirth = d.dateOfBirth || null;
+    profile.education = d.education || d.qualificationName || null;
+    profile.profession = d.mainProfessionName || d.otherProfessionName || null;
+  } catch (e) {
+    profile.errors.push(`member details: ${e.message}`);
+  }
+
+  // Fall back to Wikidata only for the specific fields the government source lacks.
+  if ((!profile.education || !profile.profession) && name) {
+    try {
+      const fallback = await fetchWikidataFallback(name);
+      if (!profile.education && fallback.education) {
+        profile.education = fallback.education;
+        profile.educationSource = "wikidata";
+      }
+      if (!profile.profession && fallback.profession) {
+        profile.profession = fallback.profession;
+        profile.professionSource = "wikidata";
+      }
+    } catch (e) {
+      profile.errors.push(`wikidata fallback: ${e.message}`);
+    }
+  }
+
+  // 2. Career timeline
+  try {
+    const res = await fetch(`https://sansad.in/api_ls/member/positionHeld?mpCode=${mpsno}&locale=en`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const positions = await res.json();
+    if (Array.isArray(positions)) {
+      profile.careerTimeline = positions.map((p) => ({
+        period: p.period || p.periodFrom || null,
+        position: p.positionHeld || p.position || null,
+      }));
+    }
+  } catch (e) {
+    profile.errors.push(`career timeline: ${e.message}`);
+  }
+
+  // 3 & 4. Attendance, averaged per Lok Sabha term, excluding "Not Required" days entirely.
+  // Ministers often show 100% NR since they aren't tracked on the same signing register
+  // as regular members — in that case we deliberately omit the stat rather than show
+  // a misleading 0%. This is genuinely defensive/best-effort code: the exact shape of
+  // the sessions-served response wasn't fully confirmed before writing this, so it
+  // needs verification against a real run before being trusted.
+  try {
+    const res = await fetch(`https://sansad.in/api_ls/member/members-loksabha-session?mpCode=${mpsno}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const sessionsData = await res.json();
+    // Normalize into { loksabhaNumber: [sessionNumbers] } regardless of exact response shape.
+    const termSessions = {};
+    const entries = Array.isArray(sessionsData) ? sessionsData : Object.entries(sessionsData || {});
+    for (const entry of entries) {
+      const loksabha = entry.loksabha ?? entry[0];
+      const sessionList = entry.sessions ?? entry[1] ?? entry.sessionNumbers ?? [];
+      if (loksabha == null) continue;
+      if (!termSessions[loksabha]) termSessions[loksabha] = new Set();
+      (Array.isArray(sessionList) ? sessionList : [sessionList]).forEach((s) => {
+        const sessionNo = s?.sessionNo ?? s?.session ?? s;
+        if (sessionNo != null) termSessions[loksabha].add(sessionNo);
+      });
+    }
+
+    for (const [loksabha, sessionSet] of Object.entries(termSessions)) {
+      let present = 0;
+      let absent = 0;
+      for (const sessionNo of sessionSet) {
+        try {
+          const attRes = await fetch(
+            `https://sansad.in/api_ls/member/getMemberAttendanceByMpsno?loksabha=${loksabha}&session=${sessionNo}&mpsno=${mpsno}`
+          );
+          if (!attRes.ok) continue;
+          const attData = await attRes.json();
+          for (const bucket of attData) {
+            const count = (bucket.dates || []).length;
+            if (["S", "S*", "S#"].includes(bucket.attendanceType)) present += count;
+            else if (["NS", "NS@"].includes(bucket.attendanceType)) absent += count;
+            // NR (Not Required) is deliberately excluded from both counts.
+          }
+        } catch {
+          // Skip this one session on failure; don't let it break the whole term's average.
+        }
+      }
+      const total = present + absent;
+      profile.attendanceByTerm[loksabha] = total > 0 ? Math.round((present / total) * 1000) / 10 : null;
+    }
+  } catch (e) {
+    profile.errors.push(`attendance: ${e.message}`);
+  }
+
+  return profile;
+}
+
+async function fetchMinisterProfiles(ministers) {
+  const profiles = [];
+  for (const m of ministers) {
+    if (!m.mpsno) continue;
+    try {
+      const profile = await fetchOneMinisterProfile(m.mpsno, m.name);
+      profiles.push(profile);
+    } catch (e) {
+      profiles.push({ mpsno: m.mpsno, errors: [`total failure: ${e.message}`] });
+    }
+  }
+  return profiles;
+}
+
+// Falls back to Wikidata (Wikipedia's structured-data companion) for education/
+// profession specifically, only when the government source has nothing. Wikidata
+// gives clean structured facts (P69 = educated at, P106 = occupation) rather than
+// having to parse them out of Wikipedia's prose summary, which is far less reliable.
+// A confidence check (does the entity's description mention "politician" or "India")
+// guards against matching the wrong person entirely, same principle as everywhere
+// else we've been careful about false matches today.
+async function fetchWikidataFallback(name) {
+  try {
+    const searchRes = await fetch(
+      `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(
+        name + " Indian politician"
+      )}&language=en&format=json&limit=1`
+    );
+    if (!searchRes.ok) return { education: null, profession: null };
+    const searchData = await searchRes.json();
+    const entityId = searchData?.search?.[0]?.id;
+    const description = (searchData?.search?.[0]?.description || "").toLowerCase();
+    if (!entityId || !(description.includes("politician") || description.includes("india"))) {
+      return { education: null, profession: null };
+    }
+
+    const entityRes = await fetch(
+      `https://www.wikidata.org/wiki/Special:EntityData/${entityId}.json`
+    );
+    if (!entityRes.ok) return { education: null, profession: null };
+    const entityData = await entityRes.json();
+    const claims = entityData?.entities?.[entityId]?.claims || {};
+
+    const resolveLabel = async (id) => {
+      try {
+        const labelRes = await fetch(
+          `https://www.wikidata.org/wiki/Special:EntityData/${id}.json`
+        );
+        const labelData = await labelRes.json();
+        return labelData?.entities?.[id]?.labels?.en?.value || null;
+      } catch {
+        return null;
+      }
+    };
+
+    let education = null;
+    let profession = null;
+    const eduId = claims.P69?.[0]?.mainsnak?.datavalue?.value?.id;
+    if (eduId) education = await resolveLabel(eduId);
+    const occId = claims.P106?.[0]?.mainsnak?.datavalue?.value?.id;
+    if (occId) profession = await resolveLabel(occId);
+
+    return { education, profession };
+  } catch {
+    return { education: null, profession: null };
+  }
+}
+
 async function fetchCouncilOfMinisters() {
   const res = await fetch("https://www.india.gov.in/directory/whos-who/api", {
     method: "POST",
@@ -319,6 +498,23 @@ async function main() {
     );
     runLog.results.councilOfMinisters = ministers.length;
     console.log(`Council of Ministers: wrote ${ministers.length} records`);
+
+    try {
+      const profiles = await fetchMinisterProfiles(ministers);
+      await writeFile(
+        join(DATA_DIR, "minister-profiles.json"),
+        JSON.stringify(profiles, null, 2)
+      );
+      const succeeded = profiles.filter((p) => !p.errors || p.errors.length === 0).length;
+      runLog.results.ministerProfiles = `${succeeded}/${profiles.length} fully succeeded`;
+      console.log(`Minister profiles: ${succeeded}/${profiles.length} fully succeeded`);
+      profiles.filter((p) => p.errors && p.errors.length > 0).forEach((p) => {
+        console.error(`  mpsno ${p.mpsno}: ${p.errors.join("; ")}`);
+      });
+    } catch (e) {
+      runLog.errors.push(`Minister profiles fetch failed: ${e.message}`);
+      console.error("Minister profiles fetch failed:", e.message);
+    }
   } catch (e) {
     runLog.errors.push(`Ministers fetch failed: ${e.message}`);
     console.error("Ministers fetch failed:", e.message);
