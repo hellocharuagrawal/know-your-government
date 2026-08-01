@@ -129,6 +129,57 @@ async function fetchLokSabhaMembers() {
   }));
 }
 
+// Which alliance each party belongs to. Unlike seat counts, this genuinely can't
+// be fetched live — Parliament doesn't track "alliances" as an official category,
+// it's a political grouping. This stays manually maintained, but changes far less
+// often than headcounts do.
+const BLOC_BY_PARTY = {
+  "BJP": "NDA", "JD(U)": "NDA", "TDP": "NDA", "Shiv Sena (Shinde)": "NDA",
+  "LJP(RV)": "NDA", "RLD": "NDA", "AD(S)": "NDA", "NCP (Ajit Pawar)": "NDA", "HAM(S)": "NDA",
+  "AGP": "NDA", "JnP": "NDA", "JD(S)": "NDA", "SKM": "NDA", "UPPL": "NDA",
+  "INC": "INDIA", "SP": "INDIA", "TMC": "INDIA", "SS(UBT)": "INDIA", "NCP(SP)": "INDIA",
+  "RJD": "INDIA", "CPI(ML)L": "INDIA", "DMK": "INDIA", "CPI": "INDIA", "CPI(M)": "INDIA",
+  "IUML": "INDIA", "JKNC": "INDIA", "JMM": "INDIA", "MDMK": "INDIA", "RSP": "INDIA", "VCK": "INDIA",
+  "Independent": "Others", "AIMIM": "Others", "ASP(KR)": "Others",
+};
+
+async function fetchAllianceRollup(partyRepList) {
+  const rollup = {
+    NDA: { seats: 0, parties: [] },
+    INDIA: { seats: 0, parties: [] },
+    Others: { seats: 0, parties: [] },
+  };
+  for (const p of partyRepList) {
+    const bloc = BLOC_BY_PARTY[p.abbrev] || "Others";
+    rollup[bloc].seats += p.seats;
+    rollup[bloc].parties.push({ party: p.abbrev, seats: p.seats });
+  }
+  for (const bloc of Object.values(rollup)) {
+    bloc.parties.sort((a, b) => b.seats - a.seats);
+  }
+  return rollup;
+}
+
+async function fetchPartyRepresentation() {
+  const res = await fetch(
+    "https://sansad.in/api_ls/member/partyWiseRepresentation?loksabha=18&locale=en"
+  );
+  if (!res.ok) throw new Error(`Upstream error: ${res.status}`);
+  const results = await res.json();
+  if (!results || !results.length) throw new Error("Unexpected response shape from sansad.in");
+
+  // This endpoint returns every party ever tracked, including long-defunct ones at count 0.
+  // Only keep parties that currently hold at least one seat.
+  return results
+    .filter((p) => p.count > 0)
+    .map((p) => ({
+      party: p.partyFname.trim(),
+      abbrev: p.partySname.trim(),
+      seats: p.count,
+    }))
+    .sort((a, b) => b.seats - a.seats);
+}
+
 async function fetchChiefs() {
   const res = await fetch("https://www.india.gov.in/directory/whos-who/api", {
     method: "POST",
@@ -195,6 +246,31 @@ async function fetchCouncilOfMinisters() {
 async function main() {
   await mkdir(DATA_DIR, { recursive: true });
   const runLog = { ranAt: new Date().toISOString(), results: {}, errors: [] };
+
+  try {
+    const partyRep = await fetchPartyRepresentation();
+    await writeFile(
+      join(DATA_DIR, "party-representation.json"),
+      JSON.stringify(partyRep, null, 2)
+    );
+    runLog.results.partyRepresentation = partyRep.length;
+    console.log(`Party representation: wrote ${partyRep.length} parties`);
+
+    const alliances = await fetchAllianceRollup(partyRep);
+    await writeFile(
+      join(DATA_DIR, "alliances.json"),
+      JSON.stringify(alliances, null, 2)
+    );
+    runLog.results.allianceSeats = {
+      NDA: alliances.NDA.seats,
+      INDIA: alliances.INDIA.seats,
+      Others: alliances.Others.seats,
+    };
+    console.log(`Alliances: NDA ${alliances.NDA.seats}, INDIA ${alliances.INDIA.seats}, Others ${alliances.Others.seats}`);
+  } catch (e) {
+    runLog.errors.push(`Party representation fetch failed: ${e.message}`);
+    console.error("Party representation fetch failed:", e.message);
+  }
 
   try {
     const chiefs = await fetchChiefs();

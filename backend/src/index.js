@@ -26,6 +26,26 @@ async function refreshCache(env) {
   const results = { refreshedAt: new Date().toISOString(), errors: [] };
 
   try {
+    const partyRep = await fetchFromGitHub("party-representation.json");
+    await env.GOVT_DATA.put("party-representation", JSON.stringify(partyRep));
+    results.partyRepresentationCount = partyRep.length;
+  } catch (e) {
+    results.errors.push(`Party representation fetch failed: ${e.message}`);
+  }
+
+  try {
+    const alliances = await fetchFromGitHub("alliances.json");
+    await env.GOVT_DATA.put("alliances", JSON.stringify(alliances));
+    results.allianceSeats = {
+      NDA: alliances.NDA?.seats,
+      INDIA: alliances.INDIA?.seats,
+      Others: alliances.Others?.seats,
+    };
+  } catch (e) {
+    results.errors.push(`Alliances fetch failed: ${e.message}`);
+  }
+
+  try {
     const chiefs = await fetchFromGitHub("chiefs.json");
     await env.GOVT_DATA.put("chiefs", JSON.stringify(chiefs));
     results.chiefsCount = chiefs.length;
@@ -90,6 +110,14 @@ export default {
       return respondWithCached(env, "rajya-sabha-members");
     }
 
+    if (url.pathname === "/api/alliances") {
+      return respondWithCached(env, "alliances");
+    }
+
+    if (url.pathname === "/api/party-representation") {
+      return respondWithCached(env, "party-representation");
+    }
+
     if (url.pathname === "/api/chiefs") {
       return respondWithCached(env, "chiefs");
     }
@@ -150,7 +178,7 @@ export default {
     return new Response(
       JSON.stringify({
         message: "Know Your Government API",
-        endpoints: ["/api/chiefs", "/api/lok-sabha-members", "/api/rajya-sabha-members", "/api/council-of-ministers", "/api/image?url=...", "/api/refresh", "/api/status"],
+        endpoints: ["/api/alliances", "/api/party-representation", "/api/chiefs", "/api/lok-sabha-members", "/api/rajya-sabha-members", "/api/council-of-ministers", "/api/image?url=...", "/api/refresh", "/api/status"],
       }),
       { headers: { "content-type": "application/json", ...CORS_HEADERS } }
     );

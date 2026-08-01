@@ -1006,7 +1006,7 @@ if(tab==="people"){
 if(compChart)compChart.destroy();
 compChart=new Chart(document.getElementById("leadership-overview-chart"),{
 type:"doughnut",
-data:{labels:["NDA","INDIA bloc","Others"],datasets:[{data:[293,234,16],backgroundColor:["#ff7a1a","#3b9eff","#5f5e5a"],borderColor:"#101012",borderWidth:2}]},
+data:{labels:["NDA","INDIA bloc","Others"],datasets:[{data:[BLOC_INFO.NDA.seats,BLOC_INFO.INDIA.seats,BLOC_INFO.Others.seats],backgroundColor:["#ff7a1a","#3b9eff","#5f5e5a"],borderColor:"#101012",borderWidth:2}]},
 options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${ctx.parsed} seats`}}},cutout:"62%"}
 });
 }
@@ -1424,6 +1424,28 @@ const RANK_NORMALIZE={
 "Prime Minister":"Prime Minister"
 };
 let ministersLiveStatus="static";
+let allianceDataLive=false;
+async function tryLiveAlliancesFetch(){
+try{
+const res=await fetch(`${API_BASE_URL}/api/alliances`);
+if(!res.ok)throw new Error("HTTP "+res.status);
+const data=await res.json();
+if(!data||!data.NDA)throw new Error("Empty response shape");
+["NDA","INDIA","Others"].forEach((key,i)=>{
+const blocData=data[key];
+if(!blocData)return;
+BLOC_INFO[key].seats=blocData.seats;
+ALLIANCES[i].seats=blocData.seats;
+ALLIANCES[i].parties=blocData.parties.map(p=>({party:p.party,seats:p.seats}));
+});
+allianceDataLive=true;
+console.log("Live alliance data loaded: NDA",data.NDA.seats,"INDIA",data.INDIA.seats,"Others",data.Others.seats);
+renderBlocSummary();
+}catch(e){
+console.warn("Live alliance fetch failed, using static fallback. Error:",e.message);
+}
+}
+tryLiveAlliancesFetch();
 let RAJYA_SABHA=[];
 let rajyaSabhaSearch="",rajyaSabhaPartyFilter="All",rajyaSabhaStateFilter="All";
 async function tryLiveRajyaSabhaFetch(){
