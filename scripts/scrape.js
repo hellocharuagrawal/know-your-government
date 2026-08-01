@@ -244,7 +244,10 @@ async function fetchOneMinisterProfile(mpsno, name) {
       profile.education = wiki.education;
       profile.profession = wiki.profession;
       profile.careerTimeline = wiki.careerTimeline;
-      profile.wikipediaSummary = wiki.summary;
+      profile.knownFor = wiki.knownFor;
+      profile.wikipediaUrl = wiki.wikipediaUrl;
+      profile.criticismSectionUrl = wiki.criticismSectionUrl;
+      profile.legalSectionUrl = wiki.legalSectionUrl;
       profile.dataSource = "wikipedia";
     } else {
       profile.errors.push("No confident Wikipedia/Wikidata match found");
@@ -407,24 +410,49 @@ async function fetchWikipediaProfile(name) {
     careerTimeline.push({ period: `${start || "?"} - ${end || "present"}`, position: posLabel });
   }
 
-  // Prose summary from Wikipedia itself, for a "life before power"-style narrative.
-  let summary = null;
+  // "Known for" — Wikidata's own short description (a few words, e.g. "Indian
+  // politician"). This is a factual label, not substantial creative text, so
+  // reproducing it directly is fine — unlike full prose paragraphs.
+  const knownFor = description || null;
+
+  // Rather than reproducing Wikipedia's prose (a copyright concern at this scale,
+  // even with attribution), we link directly to the real article and, where they
+  // actually exist, the specific Criticism/Controversies and Legal/Cases sections.
+  // This is also just more useful — full context beats an isolated excerpt.
+  let wikipediaUrl = null;
+  let criticismSectionUrl = null;
+  let legalSectionUrl = null;
   const wikiTitle = entity?.sitelinks?.enwiki?.title;
   if (wikiTitle) {
+    wikipediaUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(wikiTitle.replace(/ /g, "_"))}`;
     try {
-      const sumRes = await fetch(
-        `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wikiTitle)}`
+      const sectionsRes = await fetch(
+        `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(wikiTitle)}&prop=sections&format=json&origin=*`
       );
-      if (sumRes.ok) {
-        const sumData = await sumRes.json();
-        summary = sumData.extract || null;
+      if (sectionsRes.ok) {
+        const sectionsData = await sectionsRes.json();
+        const sections = sectionsData?.parse?.sections || [];
+        const criticismSection = sections.find((s) => /criticism|controvers/i.test(s.line));
+        const legalSection = sections.find((s) => /legal|case|investigation|allegation/i.test(s.line));
+        if (criticismSection) criticismSectionUrl = `${wikipediaUrl}#${encodeURIComponent(criticismSection.anchor)}`;
+        if (legalSection) legalSectionUrl = `${wikipediaUrl}#${encodeURIComponent(legalSection.anchor)}`;
       }
     } catch {
-      // Non-fatal; summary just stays null.
+      // Non-fatal; links just stay null.
     }
   }
 
-  return { dateBirth, placeBirth, education, profession, careerTimeline, summary };
+  return {
+    dateBirth,
+    placeBirth,
+    education,
+    profession,
+    careerTimeline,
+    knownFor,
+    wikipediaUrl,
+    criticismSectionUrl,
+    legalSectionUrl,
+  };
 }
 
 async function fetchCouncilOfMinisters() {

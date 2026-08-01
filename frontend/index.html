@@ -1303,6 +1303,9 @@ const sc=SECTION_COLORS[s]||activeMP.partyColor;
 return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div><div style="font-size:12.5px;color:var(--text-primary);line-height:1.55">${body}</div>${source?`<div style="font-size:10.5px;color:var(--text-muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">Source: ${source}</div>`:""}</div>`;
 }
 const ministerProfile=findMinisterProfile(activeMP.mpsno);
+function linkOutCard(title,sc,icon,url,label){
+return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${title}</span></div><div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">We don't reproduce article text directly, but here's the real, full context.</div><a href="${url}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:${sc};text-decoration:none">${label} &rarr;</a></div>`;
+}
 if(s==="Education"&&ministerProfile&&(ministerProfile.education||ministerProfile.profession)){
 const sc=SECTION_COLORS[s]||activeMP.partyColor;
 const parts=[];
@@ -1315,9 +1318,18 @@ const sc=SECTION_COLORS[s]||activeMP.partyColor;
 const rows=ministerProfile.careerTimeline.map(item=>`<div style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border)"><div style="font-size:11px;font-weight:700;color:var(--text-muted);flex-shrink:0;width:110px">${item.period||""}</div><div style="font-size:12.5px;color:var(--text-primary)">${item.position||""}</div></div>`).join("");
 return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div>${rows}<div style="font-size:10.5px;color:var(--text-muted);margin-top:10px">Source: Wikidata</div></div>`;
 }
-if(s==="Life before power"&&ministerProfile&&ministerProfile.wikipediaSummary){
+if(s==="Known for"&&ministerProfile&&ministerProfile.knownFor){
 const sc=SECTION_COLORS[s]||activeMP.partyColor;
-return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div><div style="font-size:12.5px;color:var(--text-primary);line-height:1.55">${ministerProfile.wikipediaSummary}</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">Source: Wikipedia</div></div>`;
+return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div><div style="font-size:12.5px;color:var(--text-primary);line-height:1.55">${ministerProfile.knownFor}</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">Source: Wikidata</div></div>`;
+}
+if(s==="Life before power"&&ministerProfile&&ministerProfile.wikipediaUrl){
+return linkOutCard(s,SECTION_COLORS[s]||activeMP.partyColor,icon,ministerProfile.wikipediaUrl,"Read full biography on Wikipedia");
+}
+if(s==="Criticism"&&ministerProfile&&ministerProfile.criticismSectionUrl){
+return linkOutCard(s,SECTION_COLORS[s]||activeMP.partyColor,icon,ministerProfile.criticismSectionUrl,"Read on Wikipedia");
+}
+if(s==="Past and pending cases"&&ministerProfile&&ministerProfile.legalSectionUrl){
+return linkOutCard(s,SECTION_COLORS[s]||activeMP.partyColor,icon,ministerProfile.legalSectionUrl,"Read on Wikipedia");
 }
 return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px;color:var(--text-muted)">${icon}<span style="font-size:13px;font-weight:800;color:var(--text-primary)">${s}</span></div><div style="font-size:12px;color:var(--text-muted)">Needs sourcing from verified public records for this individual. Not something we'd want to fill in from general knowledge.</div></div>`;
 }).join("");
