@@ -233,49 +233,24 @@ async function fetchOneMinisterProfile(mpsno, name) {
     errors: [],
   };
 
-  // 1. Personal/biographical details
+  // 1. Birth info, education, profession, career timeline — all from Wikidata/Wikipedia,
+  // matched by name with a confidence check (occupation/nationality) since we no longer
+  // have government data to cross-verify against.
   try {
-    const res = await fetch(`https://sansad.in/api_ls/member/${mpsno}?locale=en`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const d = await res.json();
-    profile.placeBirth = d.birthPlace || null;
-    profile.dateBirth = d.dateOfBirth || null;
-    profile.education = stripHtml(d.education) || stripHtml(d.qualificationName) || null;
-    profile.profession = stripHtml(d.mainProfessionName) || stripHtml(d.otherProfessionName) || null;
-  } catch (e) {
-    profile.errors.push(`member details: ${e.message}`);
-  }
-
-  // Fall back to Wikidata only for the specific fields the government source lacks.
-  if ((!profile.education || !profile.profession) && name) {
-    try {
-      const fallback = await fetchWikidataFallback(name);
-      if (!profile.education && fallback.education) {
-        profile.education = fallback.education;
-        profile.educationSource = "wikidata";
-      }
-      if (!profile.profession && fallback.profession) {
-        profile.profession = fallback.profession;
-        profile.professionSource = "wikidata";
-      }
-    } catch (e) {
-      profile.errors.push(`wikidata fallback: ${e.message}`);
-    }
-  }
-
-  // 2. Career timeline
-  try {
-    const res = await fetch(`https://sansad.in/api_ls/member/positionHeld?mpCode=${mpsno}&locale=en`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const positions = await res.json();
-    if (Array.isArray(positions)) {
-      profile.careerTimeline = positions.map((p) => ({
-        period: stripHtml(p.period || p.periodFrom),
-        position: stripHtml(p.positionHeld || p.position),
-      }));
+    const wiki = await fetchWikipediaProfile(name);
+    if (wiki) {
+      profile.dateBirth = wiki.dateBirth;
+      profile.placeBirth = wiki.placeBirth;
+      profile.education = wiki.education;
+      profile.profession = wiki.profession;
+      profile.careerTimeline = wiki.careerTimeline;
+      profile.wikipediaSummary = wiki.summary;
+      profile.dataSource = "wikipedia";
+    } else {
+      profile.errors.push("No confident Wikipedia/Wikidata match found");
     }
   } catch (e) {
-    profile.errors.push(`career timeline: ${e.message}`);
+    profile.errors.push(`wikipedia profile: ${e.message}`);
   }
 
   // 3 & 4. Attendance for the CURRENT Lok Sabha term only, excluding "Not Required"
@@ -350,58 +325,106 @@ async function fetchMinisterProfiles(ministers) {
   return profiles;
 }
 
-// Falls back to Wikidata (Wikipedia's structured-data companion) for education/
-// profession specifically, only when the government source has nothing. Wikidata
-// gives clean structured facts (P69 = educated at, P106 = occupation) rather than
-// having to parse them out of Wikipedia's prose summary, which is far less reliable.
-// A confidence check (does the entity's description mention "politician" or "India")
-// guards against matching the wrong person entirely, same principle as everywhere
-// else we've been careful about false matches today.
-async function fetchWikidataFallback(name) {
-  try {
-    const searchRes = await fetch(
-      `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(
-        name + " Indian politician"
-      )}&language=en&format=json&limit=1`
-    );
-    if (!searchRes.ok) return { education: null, profession: null };
-    const searchData = await searchRes.json();
-    const entityId = searchData?.search?.[0]?.id;
-    const description = (searchData?.search?.[0]?.description || "").toLowerCase();
-    if (!entityId || !(description.includes("politician") || description.includes("india"))) {
-      return { education: null, profession: null };
-    }
+// Full profile from Wikidata (structured facts) + Wikipedia (prose summary), matched
+// by name with a confidence check. Since we're no longer cross-verifying against a
+// government source, the confidence check relies on the Wikidata entity's own
+// description containing "politician" or "india" — not foolproof, but a reasonable
+// safeguard against matching an unrelated namesake.
+async function fetchWikipediaProfile(name) {
+  if (!name) return null;
 
-    const entityRes = await fetch(
-      `https://www.wikidata.org/wiki/Special:EntityData/${entityId}.json`
-    );
-    if (!entityRes.ok) return { education: null, profession: null };
-    const entityData = await entityRes.json();
-    const claims = entityData?.entities?.[entityId]?.claims || {};
-
-    const resolveLabel = async (id) => {
-      try {
-        const labelRes = await fetch(
-          `https://www.wikidata.org/wiki/Special:EntityData/${id}.json`
-        );
-        const labelData = await labelRes.json();
-        return labelData?.entities?.[id]?.labels?.en?.value || null;
-      } catch {
-        return null;
-      }
-    };
-
-    let education = null;
-    let profession = null;
-    const eduId = claims.P69?.[0]?.mainsnak?.datavalue?.value?.id;
-    if (eduId) education = await resolveLabel(eduId);
-    const occId = claims.P106?.[0]?.mainsnak?.datavalue?.value?.id;
-    if (occId) profession = await resolveLabel(occId);
-
-    return { education, profession };
-  } catch {
-    return { education: null, profession: null };
+  const searchRes = await fetch(
+    `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(
+      name + " Indian politician"
+    )}&language=en&format=json&limit=1`
+  );
+  if (!searchRes.ok) return null;
+  const searchData = await searchRes.json();
+  const entityId = searchData?.search?.[0]?.id;
+  const description = (searchData?.search?.[0]?.description || "").toLowerCase();
+  if (!entityId || !(description.includes("politician") || description.includes("india"))) {
+    return null;
   }
+
+  const entityRes = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${entityId}.json`);
+  if (!entityRes.ok) return null;
+  const entityData = await entityRes.json();
+  const entity = entityData?.entities?.[entityId];
+  const claims = entity?.claims || {};
+
+  const resolveLabel = async (id) => {
+    try {
+      await new Promise((r) => setTimeout(r, 100));
+      const res = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${id}.json`);
+      const data = await res.json();
+      return data?.entities?.[id]?.labels?.en?.value || null;
+    } catch {
+      return null;
+    }
+  };
+
+  const formatWikidataDate = (raw) => {
+    if (!raw) return null;
+    // Wikidata dates look like "+1964-10-22T00:00:00Z"
+    const match = raw.match(/^\+?(\d{4})-(\d{2})-(\d{2})/);
+    return match ? `${match[3]}-${match[2]}-${match[1]}` : null;
+  };
+
+  // Date of birth (P569)
+  const dateBirth = formatWikidataDate(claims.P569?.[0]?.mainsnak?.datavalue?.value?.time);
+
+  // Place of birth (P19)
+  let placeBirth = null;
+  const pobId = claims.P19?.[0]?.mainsnak?.datavalue?.value?.id;
+  if (pobId) placeBirth = await resolveLabel(pobId);
+
+  // Education (P69), can be multiple institutions
+  let education = null;
+  const eduIds = (claims.P69 || []).map((c) => c.mainsnak?.datavalue?.value?.id).filter(Boolean);
+  if (eduIds.length) {
+    const labels = [];
+    for (const id of eduIds) labels.push(await resolveLabel(id));
+    education = labels.filter(Boolean).join(", ") || null;
+  }
+
+  // Occupation/profession (P106)
+  let profession = null;
+  const occId = claims.P106?.[0]?.mainsnak?.datavalue?.value?.id;
+  if (occId) profession = await resolveLabel(occId);
+
+  // Career timeline from "position held" (P39), with start/end date qualifiers.
+  // Note: this is typically less complete than a government-sourced timeline would be —
+  // Wikidata's political-office records for Indian politicians are often partial.
+  const careerTimeline = [];
+  const positions = (claims.P39 || []).slice(0, 15); // cap to avoid excessive label lookups
+  for (const p of positions) {
+    const posId = p.mainsnak?.datavalue?.value?.id;
+    if (!posId) continue;
+    const posLabel = await resolveLabel(posId);
+    if (!posLabel) continue;
+    const start = formatWikidataDate(p.qualifiers?.P580?.[0]?.datavalue?.value?.time);
+    const end = formatWikidataDate(p.qualifiers?.P582?.[0]?.datavalue?.value?.time);
+    careerTimeline.push({ period: `${start || "?"} - ${end || "present"}`, position: posLabel });
+  }
+
+  // Prose summary from Wikipedia itself, for a "life before power"-style narrative.
+  let summary = null;
+  const wikiTitle = entity?.sitelinks?.enwiki?.title;
+  if (wikiTitle) {
+    try {
+      const sumRes = await fetch(
+        `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wikiTitle)}`
+      );
+      if (sumRes.ok) {
+        const sumData = await sumRes.json();
+        summary = sumData.extract || null;
+      }
+    } catch {
+      // Non-fatal; summary just stays null.
+    }
+  }
+
+  return { dateBirth, placeBirth, education, profession, careerTimeline, summary };
 }
 
 async function fetchCouncilOfMinisters() {

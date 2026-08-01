@@ -1308,13 +1308,16 @@ const sc=SECTION_COLORS[s]||activeMP.partyColor;
 const parts=[];
 if(ministerProfile.education)parts.push(ministerProfile.education);
 if(ministerProfile.profession)parts.push(`Profession: ${ministerProfile.profession}`);
-const usedFallback=ministerProfile.educationSource==="wikidata"||ministerProfile.professionSource==="wikidata";
-return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div><div style="font-size:12.5px;color:var(--text-primary);line-height:1.55">${parts.join(". ")}</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">Source: ${usedFallback?"Sansad, Wikidata":"Sansad (Parliament of India)"}</div></div>`;
+return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div><div style="font-size:12.5px;color:var(--text-primary);line-height:1.55">${parts.join(". ")}</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">Source: Wikipedia, Wikidata</div></div>`;
 }
 if(s==="Political career"&&ministerProfile&&ministerProfile.careerTimeline&&ministerProfile.careerTimeline.length){
 const sc=SECTION_COLORS[s]||activeMP.partyColor;
 const rows=ministerProfile.careerTimeline.map(item=>`<div style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border)"><div style="font-size:11px;font-weight:700;color:var(--text-muted);flex-shrink:0;width:110px">${item.period||""}</div><div style="font-size:12.5px;color:var(--text-primary)">${item.position||""}</div></div>`).join("");
-return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div>${rows}<div style="font-size:10.5px;color:var(--text-muted);margin-top:10px">Source: Sansad (Parliament of India)</div></div>`;
+return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div>${rows}<div style="font-size:10.5px;color:var(--text-muted);margin-top:10px">Source: Wikidata</div></div>`;
+}
+if(s==="Life before power"&&ministerProfile&&ministerProfile.wikipediaSummary){
+const sc=SECTION_COLORS[s]||activeMP.partyColor;
+return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;color:${sc}">${icon}<span style="font-size:13px;font-weight:800">${s}</span></div><div style="font-size:12.5px;color:var(--text-primary);line-height:1.55">${ministerProfile.wikipediaSummary}</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">Source: Wikipedia</div></div>`;
 }
 return `<div class="card"><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px;color:var(--text-muted)">${icon}<span style="font-size:13px;font-weight:800;color:var(--text-primary)">${s}</span></div><div style="font-size:12px;color:var(--text-muted)">Needs sourcing from verified public records for this individual. Not something we'd want to fill in from general knowledge.</div></div>`;
 }).join("");
@@ -1495,9 +1498,9 @@ return MINISTER_PROFILES.find(p=>String(p.mpsno)===String(mpsno))||null;
 }
 function computeAge(dobString){
 if(!dobString)return null;
-const parts=dobString.match(/(\d{1,2})[\-\/](\w+|\d{1,2})[\-\/](\d{4})/);
-const parsed=new Date(dobString);
-const dob=isNaN(parsed)&&parts?new Date(`${parts[2]} ${parts[1]}, ${parts[3]}`):parsed;
+const parts=dobString.match(/^(\d{1,2})-(\d{1,2})-(\d{4})$/);
+if(!parts)return null;
+const dob=new Date(Number(parts[3]),Number(parts[2])-1,Number(parts[1]));
 if(isNaN(dob))return null;
 const diff=Date.now()-dob.getTime();
 const age=Math.floor(diff/(365.25*24*60*60*1000));
