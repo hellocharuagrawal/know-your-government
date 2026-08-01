@@ -198,7 +198,10 @@ async function fetchOneLeadershipRole(role, url) {
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
-  if (/vacant/i.test(html)) {
+  // Note: a bare "vacant" check is too broad — the site's shared navigation menu
+// includes a "Vacant Constituencies" link present on every page, which falsely
+// matched every role as vacant. This requires the actual vacancy statement phrasing.
+  if (/has\s+been\s+vacant\s+since/i.test(html)) {
     return { role, status: "vacant", name: null, photoUrl: null };
   }
 
