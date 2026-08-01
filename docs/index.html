@@ -1496,7 +1496,7 @@ if(row.capacity<=0)return;
 for(let j=0;j<row.capacity;j++){
 const angleDeg=170-(160*(j+0.5)/row.capacity);
 const angleRad=angleDeg*Math.PI/180;
-const x=cx-row.radius*Math.cos(angleRad);
+const x=cx+row.radius*Math.cos(angleRad);
 const y=cy-row.radius*Math.sin(angleRad);
 const owner=partyForAngle(angleDeg);
 const color=colorForParty(owner?owner.party:"");
@@ -1695,6 +1695,7 @@ avatarEl.outerHTML=`<img id="om-birla-avatar" class="org-avatar" src="${omBirlaM
 }
 const summary=document.getElementById("bloc-summary");
 const keys=Object.keys(BLOC_INFO);
+const totalHouseSeats=keys.reduce((sum,k)=>sum+BLOC_INFO[k].seats,0);
 const cards=keys.map((key,i)=>{
 const info=BLOC_INFO[key];
 const leaderMP=info.leader?MPS.find(mp=>mp.name===info.leader):null;
@@ -1707,7 +1708,10 @@ ${isLast?"":`<div style="position:absolute;left:0;top:18px;bottom:-14px;width:2p
 <div style="font-size:14px;font-weight:800">${info.label}</div>
 <span style="font-size:16px;color:var(--text-muted)">&rsaquo;</span>
 </div>
-<div style="font-size:10.5px;color:var(--text-muted);margin-top:2px;margin-bottom:${info.leader?'10px':'0'}">${info.seats} seats</div>
+<div style="display:flex;align-items:baseline;gap:4px;margin-top:6px;margin-bottom:${info.leader?'10px':'2px'}">
+<span style="font-size:22px;font-weight:800;color:${info.color}">${info.seats}</span>
+<span style="font-size:12px;color:var(--text-muted)">/ ${totalHouseSeats} seats</span>
+</div>
 ${info.leader?`<div style="display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid var(--border)">
 ${avatarHTML(info.leader,leaderMP?leaderMP.photoUrl:null,info.color,26,10)}
 <div><span style="font-size:12px;font-weight:700">${info.leader}</span><span style="font-size:10px;color:var(--text-muted)"> &middot; ${info.leaderRole}</span></div>
