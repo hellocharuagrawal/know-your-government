@@ -360,34 +360,79 @@ async function fetchWikipediaProfile(name) {
   if (!results.length) {
     return { error: `no Wikipedia search results (raw: ${JSON.stringify(searchData).slice(0, 300)})` };
   }
-  const wikiTitle = results[0].title;
 
-  // Resolve the confirmed Wikipedia page to its linked Wikidata entity, so we can
-  // still pull the same clean structured facts (birth date, education, positions
-  // held) — just from a reliably-resolved page instead of an independent, fragile
-  // search.
-  const pagepropsRes = await fetch(
-    `https://en.wikipedia.org/w/api.php?action=query&prop=pageprops&titles=${encodeURIComponent(
-      wikiTitle
-    )}&format=json`,
-    { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
-  );
-  if (!pagepropsRes.ok) return { error: `pageprops HTTP ${pagepropsRes.status}` };
-  const pagepropsData = await pagepropsRes.json();
-  const pages = pagepropsData?.query?.pages || {};
-  const page = Object.values(pages)[0];
-  const entityId = page?.pageprops?.wikibase_item;
-  if (!entityId) {
-    return { error: `resolved to "${wikiTitle}" but it has no linked Wikidata item` };
+  // Verify candidates rather than blindly trusting the top search result — this was
+  // the actual cause of several ministers resolving to a DIFFERENT, more Wikipedia-
+  // prominent person (e.g. an obscure minister's search returning a better-known
+  // namesake or unrelated politician as the "best match"). Check name similarity
+  // AND occupation plausibility together, trying up to 3 candidates in order.
+  const cleanWords = (s) =>
+    s
+      .toLowerCase()
+      .replace(/[.,()]/g, "")
+      .split(/\s+/)
+      .filter((w) => w.length > 2 && !["shri", "smt", "dr", "km", "kumari", "mr", "mrs", "prof", "adv"].includes(w));
+  const originalWords = new Set(cleanWords(name));
+
+  let wikiTitle = null;
+  let entityId = null;
+  let entity = null;
+  let claims = null;
+  let candidateErrors = [];
+
+  for (const candidate of results.slice(0, 3)) {
+    const titleWords = cleanWords(candidate.title.replace(/_/g, " "));
+    const overlap = titleWords.filter((w) => originalWords.has(w)).length;
+    if (titleWords.length === 0 || overlap / titleWords.length < 0.5) {
+      candidateErrors.push(`"${candidate.title}" — name doesn't sufficiently match "${name}"`);
+      continue;
+    }
+
+    const pagepropsRes = await fetch(
+      `https://en.wikipedia.org/w/api.php?action=query&prop=pageprops&titles=${encodeURIComponent(
+        candidate.title
+      )}&format=json`,
+      { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
+    );
+    if (!pagepropsRes.ok) {
+      candidateErrors.push(`"${candidate.title}" — pageprops HTTP ${pagepropsRes.status}`);
+      continue;
+    }
+    const pagepropsData = await pagepropsRes.json();
+    const pages = pagepropsData?.query?.pages || {};
+    const page = Object.values(pages)[0];
+    const candidateEntityId = page?.pageprops?.wikibase_item;
+    if (!candidateEntityId) {
+      candidateErrors.push(`"${candidate.title}" — no linked Wikidata item`);
+      continue;
+    }
+
+    const entityRes = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${candidateEntityId}.json`, {
+      headers: { "User-Agent": WIKIMEDIA_USER_AGENT },
+    });
+    if (!entityRes.ok) {
+      candidateErrors.push(`"${candidate.title}" — entity HTTP ${entityRes.status}`);
+      continue;
+    }
+    const entityData = await entityRes.json();
+    const candidateEntity = entityData?.entities?.[candidateEntityId];
+    const description = (candidateEntity?.descriptions?.en?.value || "").toLowerCase();
+    if (!(description.includes("politician") || description.includes("india"))) {
+      candidateErrors.push(`"${candidate.title}" — description doesn't confirm politician/India: "${description}"`);
+      continue;
+    }
+
+    // Passed both checks.
+    wikiTitle = candidate.title;
+    entityId = candidateEntityId;
+    entity = candidateEntity;
+    claims = candidateEntity?.claims || {};
+    break;
   }
 
-  const entityRes = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${entityId}.json`, {
-    headers: { "User-Agent": WIKIMEDIA_USER_AGENT },
-  });
-  if (!entityRes.ok) return { error: `entity HTTP ${entityRes.status}` };
-  const entityData = await entityRes.json();
-  const entity = entityData?.entities?.[entityId];
-  const claims = entity?.claims || {};
+  if (!wikiTitle) {
+    return { error: `${results.length} candidates found, none verified. Details: ${candidateErrors.join(" | ")}` };
+  }
   const match = { description: entity?.descriptions?.en?.value || null };
 
   const resolveLabel = async (id) => {
