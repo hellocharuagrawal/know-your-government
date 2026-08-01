@@ -1501,7 +1501,7 @@ return partyRanges[partyRanges.length-1];
 }
 const rows=computeHemicycleRows(totalSeats);
 const width=340,height=185;
-const cx=width/2,cy=height-8;
+const cx=width/2,cy=8;
 let svg=`<svg viewBox="0 0 ${width} ${height}" width="100%" style="display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">`;
 rows.forEach(row=>{
 if(row.capacity<=0)return;
@@ -1509,7 +1509,7 @@ for(let j=0;j<row.capacity;j++){
 const angleDeg=170-(160*(j+0.5)/row.capacity);
 const angleRad=angleDeg*Math.PI/180;
 const x=cx-row.radius*Math.cos(angleRad);
-const y=cy-row.radius*Math.sin(angleRad);
+const y=cy+row.radius*Math.sin(angleRad);
 const owner=partyForAngle(angleDeg);
 const color=colorForParty(owner?owner.party:"");
 svg+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.3" fill="${color}" data-party="${owner?owner.party.replace(/"/g,'&quot;'):''}" data-seats="${owner?owner.seats:''}" class="hemicycle-dot" style="cursor:pointer"/>`;
