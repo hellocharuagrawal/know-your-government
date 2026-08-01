@@ -345,18 +345,28 @@ async function fetchWikipediaProfile(name) {
 
   const searchRes = await fetch(
     `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(
-      name + " Indian politician"
-    )}&language=en&format=json&limit=1`,
+      name
+    )}&language=en&format=json&limit=5`,
     { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
   );
   if (!searchRes.ok) return { error: `search HTTP ${searchRes.status}` };
   const searchData = await searchRes.json();
-  const entityId = searchData?.search?.[0]?.id;
-  const description = (searchData?.search?.[0]?.description || "").toLowerCase();
-  if (!entityId) return { error: "no search results at all" };
-  if (!(description.includes("politician") || description.includes("india"))) {
-    return { error: `top result description didn't pass confidence check: "${description}"` };
+  const candidates = searchData?.search || [];
+  if (!candidates.length) {
+    return { error: `no search results at all (raw response: ${JSON.stringify(searchData).slice(0, 300)})` };
   }
+  const match = candidates.find((c) => {
+    const desc = (c.description || "").toLowerCase();
+    return desc.includes("politician") || desc.includes("india");
+  });
+  if (!match) {
+    return {
+      error: `${candidates.length} candidates found, none passed confidence check. Descriptions: ${candidates
+        .map((c) => c.description)
+        .join(" | ")}`,
+    };
+  }
+  const entityId = match.id;
 
   const entityRes = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${entityId}.json`, {
     headers: { "User-Agent": WIKIMEDIA_USER_AGENT },
