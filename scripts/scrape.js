@@ -343,30 +343,43 @@ const WIKIMEDIA_USER_AGENT =
 async function fetchWikipediaProfile(name) {
   if (!name) return { error: "no name provided" };
 
+  // Search Wikipedia itself (real full-text, relevance-ranked search — not the
+  // rigid literal label-matching Wikidata's own search does, which was failing on
+  // every single name here because of the "Shri"/"Smt." honorific prefixes still
+  // attached to government-sourced names). This naturally tolerates extra words,
+  // prefixes, and minor name variations the way an actual search engine would.
   const searchRes = await fetch(
-    `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(
-      name
-    )}&language=en&format=json&limit=5`,
+    `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(
+      name + " Indian politician"
+    )}&format=json&srlimit=3`,
     { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
   );
-  if (!searchRes.ok) return { error: `search HTTP ${searchRes.status}` };
+  if (!searchRes.ok) return { error: `wikipedia search HTTP ${searchRes.status}` };
   const searchData = await searchRes.json();
-  const candidates = searchData?.search || [];
-  if (!candidates.length) {
-    return { error: `no search results at all (raw response: ${JSON.stringify(searchData).slice(0, 300)})` };
+  const results = searchData?.query?.search || [];
+  if (!results.length) {
+    return { error: `no Wikipedia search results (raw: ${JSON.stringify(searchData).slice(0, 300)})` };
   }
-  const match = candidates.find((c) => {
-    const desc = (c.description || "").toLowerCase();
-    return desc.includes("politician") || desc.includes("india");
-  });
-  if (!match) {
-    return {
-      error: `${candidates.length} candidates found, none passed confidence check. Descriptions: ${candidates
-        .map((c) => c.description)
-        .join(" | ")}`,
-    };
+  const wikiTitle = results[0].title;
+
+  // Resolve the confirmed Wikipedia page to its linked Wikidata entity, so we can
+  // still pull the same clean structured facts (birth date, education, positions
+  // held) — just from a reliably-resolved page instead of an independent, fragile
+  // search.
+  const pagepropsRes = await fetch(
+    `https://en.wikipedia.org/w/api.php?action=query&prop=pageprops&titles=${encodeURIComponent(
+      wikiTitle
+    )}&format=json`,
+    { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
+  );
+  if (!pagepropsRes.ok) return { error: `pageprops HTTP ${pagepropsRes.status}` };
+  const pagepropsData = await pagepropsRes.json();
+  const pages = pagepropsData?.query?.pages || {};
+  const page = Object.values(pages)[0];
+  const entityId = page?.pageprops?.wikibase_item;
+  if (!entityId) {
+    return { error: `resolved to "${wikiTitle}" but it has no linked Wikidata item` };
   }
-  const entityId = match.id;
 
   const entityRes = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${entityId}.json`, {
     headers: { "User-Agent": WIKIMEDIA_USER_AGENT },
@@ -375,6 +388,7 @@ async function fetchWikipediaProfile(name) {
   const entityData = await entityRes.json();
   const entity = entityData?.entities?.[entityId];
   const claims = entity?.claims || {};
+  const match = { description: entity?.descriptions?.en?.value || null };
 
   const resolveLabel = async (id) => {
     try {
@@ -436,7 +450,7 @@ async function fetchWikipediaProfile(name) {
   // "Known for" — Wikidata's own short description (a few words, e.g. "Indian
   // politician"). This is a factual label, not substantial creative text, so
   // reproducing it directly is fine — unlike full prose paragraphs.
-  const knownFor = description || null;
+  const knownFor = match.description || null;
 
   // Rather than reproducing Wikipedia's prose (a copyright concern at this scale,
   // even with attribution), we link directly to the real article and, where they
@@ -445,7 +459,6 @@ async function fetchWikipediaProfile(name) {
   let wikipediaUrl = null;
   let criticismSectionUrl = null;
   let legalSectionUrl = null;
-  const wikiTitle = entity?.sitelinks?.enwiki?.title;
   if (wikiTitle) {
     wikipediaUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(wikiTitle.replace(/ /g, "_"))}`;
     try {
