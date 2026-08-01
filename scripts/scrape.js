@@ -212,6 +212,14 @@ async function fetchChiefs() {
   }));
 }
 
+// Some government fields (education, older career-timeline entries) come back with
+// raw HTML embedded (<body>, <br>, <sup> tags) rather than plain text. Strip it.
+function stripHtml(text) {
+  if (!text) return null;
+  const stripped = text.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  return stripped.length ? stripped : null;
+}
+
 async function fetchOneMinisterProfile(mpsno, name) {
   const profile = {
     mpsno,
@@ -231,8 +239,8 @@ async function fetchOneMinisterProfile(mpsno, name) {
     const d = await res.json();
     profile.placeBirth = d.birthPlace || null;
     profile.dateBirth = d.dateOfBirth || null;
-    profile.education = d.education || d.qualificationName || null;
-    profile.profession = d.mainProfessionName || d.otherProfessionName || null;
+    profile.education = stripHtml(d.education) || stripHtml(d.qualificationName) || null;
+    profile.profession = stripHtml(d.mainProfessionName) || stripHtml(d.otherProfessionName) || null;
   } catch (e) {
     profile.errors.push(`member details: ${e.message}`);
   }
@@ -261,8 +269,8 @@ async function fetchOneMinisterProfile(mpsno, name) {
     const positions = await res.json();
     if (Array.isArray(positions)) {
       profile.careerTimeline = positions.map((p) => ({
-        period: p.period || p.periodFrom || null,
-        position: p.positionHeld || p.position || null,
+        period: stripHtml(p.period || p.periodFrom),
+        position: stripHtml(p.positionHeld || p.position),
       }));
     }
   } catch (e) {
@@ -296,12 +304,16 @@ async function fetchOneMinisterProfile(mpsno, name) {
     for (const [loksabha, sessionSet] of Object.entries(termSessions)) {
       let present = 0;
       let absent = 0;
+      let sessionFailures = 0;
       for (const sessionNo of sessionSet) {
         try {
           const attRes = await fetch(
             `https://sansad.in/api_ls/member/getMemberAttendanceByMpsno?loksabha=${loksabha}&session=${sessionNo}&mpsno=${mpsno}`
           );
-          if (!attRes.ok) continue;
+          if (!attRes.ok) {
+            sessionFailures++;
+            continue;
+          }
           const attData = await attRes.json();
           for (const bucket of attData) {
             const count = (bucket.dates || []).length;
@@ -310,8 +322,16 @@ async function fetchOneMinisterProfile(mpsno, name) {
             // NR (Not Required) is deliberately excluded from both counts.
           }
         } catch {
-          // Skip this one session on failure; don't let it break the whole term's average.
+          sessionFailures++;
         }
+        // Small pacing delay between attendance sub-requests. With 73 ministers and
+        // some serving 15+ sessions each, this adds up to thousands of rapid calls
+        // without it — plausible cause of an earlier run where attendance came back
+        // empty despite no top-level errors being thrown.
+        await new Promise((r) => setTimeout(r, 150));
+      }
+      if (sessionFailures > 0) {
+        profile.errors.push(`attendance term ${loksabha}: ${sessionFailures}/${sessionSet.size} session requests failed`);
       }
       const total = present + absent;
       profile.attendanceByTerm[loksabha] = total > 0 ? Math.round((present / total) * 1000) / 10 : null;
