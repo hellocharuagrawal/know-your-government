@@ -6,7 +6,12 @@ on:
   schedule:
     # Runs daily at 3:00 AM UTC. Cron syntax: minute hour day month weekday.
     - cron: "0 3 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      minister_profile_limit:
+        description: "Only fetch this many minister profiles (leave blank for all 73). Useful for a fast test run — writes to minister-profiles-test.json instead of the real file."
+        required: false
+        type: string
 
 jobs:
   scrape:
@@ -24,6 +29,8 @@ jobs:
 
       - name: Run scraper
         run: node scripts/scrape.js
+        env:
+          MINISTER_PROFILE_LIMIT: ${{ github.event.inputs.minister_profile_limit }}
 
       - name: Commit updated data if anything changed
         run: |

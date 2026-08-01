@@ -601,14 +601,20 @@ async function main() {
     console.log(`Council of Ministers: wrote ${ministers.length} records`);
 
     try {
-      const profiles = await fetchMinisterProfiles(ministers);
+      // Optional: set MINISTER_PROFILE_LIMIT to a small number (e.g. 1) for a fast
+      // test run against just the first N ministers, instead of waiting through
+      // all 73 to check whether a fix actually worked.
+      const limit = process.env.MINISTER_PROFILE_LIMIT ? parseInt(process.env.MINISTER_PROFILE_LIMIT, 10) : null;
+      const ministersToFetch = limit ? ministers.slice(0, limit) : ministers;
+      const profiles = await fetchMinisterProfiles(ministersToFetch);
+      const outputFilename = limit ? "minister-profiles-test.json" : "minister-profiles.json";
       await writeFile(
-        join(DATA_DIR, "minister-profiles.json"),
+        join(DATA_DIR, outputFilename),
         JSON.stringify(profiles, null, 2)
       );
       const succeeded = profiles.filter((p) => !p.errors || p.errors.length === 0).length;
-      runLog.results.ministerProfiles = `${succeeded}/${profiles.length} fully succeeded`;
-      console.log(`Minister profiles: ${succeeded}/${profiles.length} fully succeeded`);
+      runLog.results.ministerProfiles = `${succeeded}/${profiles.length} fully succeeded${limit ? " (TEST MODE, wrote to " + outputFilename + ")" : ""}`;
+      console.log(`Minister profiles: ${succeeded}/${profiles.length} fully succeeded${limit ? ` (TEST MODE: only first ${limit}, wrote to ${outputFilename})` : ""}`);
       profiles.filter((p) => p.errors && p.errors.length > 0).forEach((p) => {
         console.error(`  mpsno ${p.mpsno}: ${p.errors.join("; ")}`);
       });
