@@ -9,7 +9,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Rajnath Singh\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Amit Shah\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -35,7 +35,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Nitin Jairam Gadkari\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -48,7 +48,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Jagat Prakash Nadda\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -62,7 +62,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Shivraj Singh Chouhan\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -75,7 +75,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Smt. Nirmala Sitharaman\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -89,7 +89,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri S. Jaishankar\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -103,7 +103,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Manohar Lal\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -116,7 +116,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri H D Kumaraswamy\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -129,7 +129,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Piyush Vedprakash Goyal\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -142,7 +142,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Jitan Ram Manjhi\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -155,7 +155,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Rajiv Ranjan Singh\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -168,7 +168,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Sarbananda Sonowal\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -181,7 +181,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Dr. Virendra Kumar\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -194,7 +194,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Kinjarapu Rammohan Naidu\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -207,7 +207,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Pralhad Joshi\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -220,7 +220,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Jual Oram\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -233,7 +233,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Giriraj Singh\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -246,7 +246,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Ashwini Vaishnaw\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -260,7 +260,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Jyotiraditya M Scindia\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -273,7 +273,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Bhupender Yadav\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -286,7 +286,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Gajendra Singh Shekhawat\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -299,7 +299,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Smt. Annpurna Devi\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -312,7 +312,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Kiren Rijiju\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -325,7 +325,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Hardeep Singh Puri\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -339,7 +339,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Dr. Mansukh Mandaviya\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -352,7 +352,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri G Kishan Reddy\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -365,7 +365,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Chirag Paswan\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -378,7 +378,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Chandrakant Raghunath Patil\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -391,7 +391,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Rao Inderjit Singh\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -404,7 +404,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Dr. Jitendra Singh\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -417,7 +417,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Arjun Ram Meghwal\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -430,7 +430,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Prataprao Ganpatrao Jadhav\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -443,7 +443,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Jayant Chaudhary\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -457,7 +457,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Rao Inderjit Singh\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -470,7 +470,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Dr. Jitendra Singh\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -483,7 +483,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Arjun Ram Meghwal\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -496,7 +496,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Prataprao Ganpatrao Jadhav\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -509,7 +509,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Jayant Chaudhary\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -523,7 +523,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Jitin Prasada\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -536,7 +536,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Shripad Yesso Naik\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -549,7 +549,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Pankaj Choudhary\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -562,7 +562,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Krishan Pal Gurjar\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -575,7 +575,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Ramdas Athawale\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -589,7 +589,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Ram Nath Thakur\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -603,7 +603,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Nityanand Rai\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -616,7 +616,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Smt. Anupriya Patel\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -629,7 +629,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri V Somanna\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -642,7 +642,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia profile: description is not defined"
     ]
   },
   {
@@ -655,7 +655,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Prof. S P Singh Baghel\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -668,7 +668,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Km. Shobha Karandlaje\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -681,7 +681,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Kirti Vardhan Singh\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -694,7 +694,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri B.L. Verma\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -708,7 +708,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Shantanu Thakur\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -721,7 +721,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Suresh Gopi\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -734,7 +734,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Dr. L. Murugan\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -748,7 +748,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Ajay Tamta\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -761,7 +761,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Bandi Sanjay Kumar\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -774,7 +774,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Kamlesh Paswan\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -787,7 +787,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Bhagirath Choudhary\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -800,7 +800,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Satish Chandra Dubey\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -814,7 +814,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Sanjay Seth\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   },
@@ -828,7 +828,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Durgadas D D Uikey\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -841,7 +841,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Smt. Raksha Nikhil Khadse\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -854,7 +854,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Dr. Sukanta Majumdar\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -867,7 +867,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Smt. Savitri Thakur\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -880,7 +880,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Tokhan Sahu\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -893,7 +893,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia profile: description is not defined"
     ]
   },
   {
@@ -906,7 +906,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Srinivasa Varma B J P Varma Bhupathiraju\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -919,7 +919,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Harsh Malhotra\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -932,7 +932,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Smt. Nimuben Jayantibhai Bambhaniya\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -945,7 +945,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no search results at all"
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Murlidhar Mohol\"},\"search\":[],\"success\":1})"
     ]
   },
   {
@@ -958,7 +958,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no search results at all",
+      "wikipedia match: no search results at all (raw response: {\"searchinfo\":{\"search\":\"Shri Pabitra Margherita\"},\"search\":[],\"success\":1})",
       "attendance: Unexpected response shape"
     ]
   }
