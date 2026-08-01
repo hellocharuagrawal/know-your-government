@@ -1456,25 +1456,6 @@ console.warn("Live alliance fetch failed, using static fallback. Error:",e.messa
 }
 }
 tryLiveAlliancesFetch();
-async function tryLiveLeadershipRolesFetch(){
-try{
-const res=await fetch(`${API_BASE_URL}/api/leadership-roles`);
-if(!res.ok)throw new Error("HTTP "+res.status);
-const roles=await res.json();
-if(!roles||!roles.length)throw new Error("Empty response shape");
-const roleLabels={"Speaker":"Speaker of the Lok Sabha","Deputy Speaker":"Deputy Speaker of the Lok Sabha","Leader of the House":"Leader of the House","Leader of the Opposition":"Leader of the Opposition"};
-roles.forEach(r=>{
-if(r.status==="occupied"&&r.name){
-const cleanedName=r.name.replace(/^(Shri|Smt\.|Dr\.|Kumari)\s+/,"").trim();
-ROLES[cleanedName]=roleLabels[r.role]||r.role;
-}
-});
-console.log("Live leadership roles loaded:",roles.map(r=>`${r.role}: ${r.status}${r.name?" ("+r.name+")":""}`).join(", "));
-}catch(e){
-console.warn("Live leadership roles fetch failed, using static fallback. Error:",e.message);
-}
-}
-tryLiveLeadershipRolesFetch();
 let PARTY_REPRESENTATION=[];
 async function tryLivePartyRepFetch(){
 try{
