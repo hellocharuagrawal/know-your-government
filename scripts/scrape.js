@@ -228,7 +228,8 @@ async function fetchOneMinisterProfile(mpsno, name) {
     education: null,
     profession: null,
     careerTimeline: [],
-    attendanceByTerm: {},
+    attendanceCurrentTerm: null,
+    attendanceLoksabha: null,
     errors: [],
   };
 
@@ -277,38 +278,32 @@ async function fetchOneMinisterProfile(mpsno, name) {
     profile.errors.push(`career timeline: ${e.message}`);
   }
 
-  // 3 & 4. Attendance, averaged per Lok Sabha term, excluding "Not Required" days entirely.
-  // Ministers often show 100% NR since they aren't tracked on the same signing register
-  // as regular members — in that case we deliberately omit the stat rather than show
-  // a misleading 0%. This is genuinely defensive/best-effort code: the exact shape of
-  // the sessions-served response wasn't fully confirmed before writing this, so it
-  // needs verification against a real run before being trusted.
+  // 3 & 4. Attendance for the CURRENT Lok Sabha term only, excluding "Not Required"
+  // days entirely. Ministers often show 100% NR since they aren't tracked on the same
+  // signing register as regular members — in that case we deliberately omit the stat
+  // rather than show a misleading 0%.
   try {
     const res = await fetch(`https://sansad.in/api_ls/member/members-loksabha-session?mpCode=${mpsno}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const sessionsData = await res.json();
-    // Normalize into { loksabhaNumber: [sessionNumbers] } regardless of exact response shape.
-    const termSessions = {};
-    const entries = Array.isArray(sessionsData) ? sessionsData : Object.entries(sessionsData || {});
-    for (const entry of entries) {
-      const loksabha = entry.loksabha ?? entry[0];
-      const sessionList = entry.sessions ?? entry[1] ?? entry.sessionNumbers ?? [];
-      if (loksabha == null) continue;
-      if (!termSessions[loksabha]) termSessions[loksabha] = new Set();
-      (Array.isArray(sessionList) ? sessionList : [sessionList]).forEach((s) => {
-        const sessionNo = s?.sessionNo ?? s?.session ?? s;
-        if (sessionNo != null) termSessions[loksabha].add(sessionNo);
-      });
-    }
+    if (!Array.isArray(sessionsData) || !sessionsData.length) throw new Error("Unexpected response shape");
 
-    for (const [loksabha, sessionSet] of Object.entries(termSessions)) {
+    // Only the highest (most recent) Lok Sabha number — i.e. the current term.
+    const currentTermEntry = sessionsData.reduce((latest, entry) =>
+      !latest || entry.loksabha > latest.loksabha ? entry : latest, null);
+    const currentLoksabha = currentTermEntry?.loksabha;
+    const sessionNumbers = (currentTermEntry?.sessions || [])
+      .map((s) => s.sessionNo)
+      .filter((n) => n != null);
+
+    if (currentLoksabha != null && sessionNumbers.length) {
       let present = 0;
       let absent = 0;
       let sessionFailures = 0;
-      for (const sessionNo of sessionSet) {
+      for (const sessionNo of sessionNumbers) {
         try {
           const attRes = await fetch(
-            `https://sansad.in/api_ls/member/getMemberAttendanceByMpsno?loksabha=${loksabha}&session=${sessionNo}&mpsno=${mpsno}`
+            `https://sansad.in/api_ls/member/getMemberAttendanceByMpsno?loksabha=${currentLoksabha}&session=${sessionNo}&mpsno=${mpsno}`
           );
           if (!attRes.ok) {
             sessionFailures++;
@@ -324,17 +319,15 @@ async function fetchOneMinisterProfile(mpsno, name) {
         } catch {
           sessionFailures++;
         }
-        // Small pacing delay between attendance sub-requests. With 73 ministers and
-        // some serving 15+ sessions each, this adds up to thousands of rapid calls
-        // without it — plausible cause of an earlier run where attendance came back
-        // empty despite no top-level errors being thrown.
+        // Small pacing delay to avoid hammering the endpoint with rapid-fire requests.
         await new Promise((r) => setTimeout(r, 150));
       }
       if (sessionFailures > 0) {
-        profile.errors.push(`attendance term ${loksabha}: ${sessionFailures}/${sessionSet.size} session requests failed`);
+        profile.errors.push(`attendance: ${sessionFailures}/${sessionNumbers.length} session requests failed`);
       }
       const total = present + absent;
-      profile.attendanceByTerm[loksabha] = total > 0 ? Math.round((present / total) * 1000) / 10 : null;
+      profile.attendanceCurrentTerm = total > 0 ? Math.round((present / total) * 1000) / 10 : null;
+      profile.attendanceLoksabha = currentLoksabha;
     }
   } catch (e) {
     profile.errors.push(`attendance: ${e.message}`);
