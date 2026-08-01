@@ -1720,12 +1720,12 @@ ${isLast?"":`<div style="position:absolute;left:0;top:18px;bottom:-14px;width:2p
 <div style="font-size:14px;font-weight:800">${info.label}</div>
 <span style="font-size:16px;color:var(--text-muted)">&rsaquo;</span>
 </div>
-<div style="display:flex;align-items:baseline;justify-content:flex-end;gap:6px;margin-top:6px;margin-bottom:${info.leader?'10px':'2px'}">
+<div style="display:flex;align-items:baseline;justify-content:flex-end;gap:6px;margin-top:8px;margin-bottom:4px">
 <span style="font-size:24px;font-weight:800;color:${info.color}">${info.seats}</span>
 <span style="font-size:16px;font-weight:700;color:var(--text-secondary)">/ ${totalHouseSeats}</span>
 <span style="font-size:11px;color:var(--text-muted)">seats</span>
 </div>
-${info.leader?`<div style="display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid var(--border)">
+${info.leader?`<div style="display:flex;align-items:center;gap:8px;margin-top:8px;padding-top:10px;border-top:1px solid var(--border)">
 ${avatarHTML(info.leader,leaderMP?leaderMP.photoUrl:null,info.color,26,10)}
 <div><span style="font-size:12px;font-weight:700">${info.leader}</span><span style="font-size:10px;color:var(--text-muted)"> &middot; ${info.leaderRole}</span></div>
 </div>`:""}
