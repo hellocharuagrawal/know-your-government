@@ -238,7 +238,7 @@ async function fetchOneMinisterProfile(mpsno, name) {
   // have government data to cross-verify against.
   try {
     const wiki = await fetchWikipediaProfile(name);
-    if (wiki) {
+    if (wiki && !wiki.error) {
       profile.dateBirth = wiki.dateBirth;
       profile.placeBirth = wiki.placeBirth;
       profile.education = wiki.education;
@@ -250,7 +250,7 @@ async function fetchOneMinisterProfile(mpsno, name) {
       profile.legalSectionUrl = wiki.legalSectionUrl;
       profile.dataSource = "wikipedia";
     } else {
-      profile.errors.push("No confident Wikipedia/Wikidata match found");
+      profile.errors.push(`wikipedia match: ${wiki?.error || "unknown failure"}`);
     }
   } catch (e) {
     profile.errors.push(`wikipedia profile: ${e.message}`);
@@ -333,24 +333,35 @@ async function fetchMinisterProfiles(ministers) {
 // government source, the confidence check relies on the Wikidata entity's own
 // description containing "politician" or "india" — not foolproof, but a reasonable
 // safeguard against matching an unrelated namesake.
+// Wikimedia's APIs actively enforce a policy requiring a descriptive User-Agent
+// identifying the calling application — requests without one are commonly blocked
+// or silently degraded. This was very likely the actual cause of every single
+// minister failing to match on the previous run, not a real matching problem.
+const WIKIMEDIA_USER_AGENT =
+  "KnowYourGovernmentApp/1.0 (https://github.com/hellocharuagrawal/know-your-government; civic-education tool)";
+
 async function fetchWikipediaProfile(name) {
-  if (!name) return null;
+  if (!name) return { error: "no name provided" };
 
   const searchRes = await fetch(
     `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(
       name + " Indian politician"
-    )}&language=en&format=json&limit=1`
+    )}&language=en&format=json&limit=1`,
+    { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
   );
-  if (!searchRes.ok) return null;
+  if (!searchRes.ok) return { error: `search HTTP ${searchRes.status}` };
   const searchData = await searchRes.json();
   const entityId = searchData?.search?.[0]?.id;
   const description = (searchData?.search?.[0]?.description || "").toLowerCase();
-  if (!entityId || !(description.includes("politician") || description.includes("india"))) {
-    return null;
+  if (!entityId) return { error: "no search results at all" };
+  if (!(description.includes("politician") || description.includes("india"))) {
+    return { error: `top result description didn't pass confidence check: "${description}"` };
   }
 
-  const entityRes = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${entityId}.json`);
-  if (!entityRes.ok) return null;
+  const entityRes = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${entityId}.json`, {
+    headers: { "User-Agent": WIKIMEDIA_USER_AGENT },
+  });
+  if (!entityRes.ok) return { error: `entity HTTP ${entityRes.status}` };
   const entityData = await entityRes.json();
   const entity = entityData?.entities?.[entityId];
   const claims = entity?.claims || {};
@@ -358,7 +369,9 @@ async function fetchWikipediaProfile(name) {
   const resolveLabel = async (id) => {
     try {
       await new Promise((r) => setTimeout(r, 100));
-      const res = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${id}.json`);
+      const res = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${id}.json`, {
+        headers: { "User-Agent": WIKIMEDIA_USER_AGENT },
+      });
       const data = await res.json();
       return data?.entities?.[id]?.labels?.en?.value || null;
     } catch {
@@ -427,7 +440,8 @@ async function fetchWikipediaProfile(name) {
     wikipediaUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(wikiTitle.replace(/ /g, "_"))}`;
     try {
       const sectionsRes = await fetch(
-        `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(wikiTitle)}&prop=sections&format=json&origin=*`
+        `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(wikiTitle)}&prop=sections&format=json&origin=*`,
+        { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
       );
       if (sectionsRes.ok) {
         const sectionsData = await sectionsRes.json();
