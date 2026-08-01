@@ -3,11 +3,11 @@
     "mpsno": "4268",
     "placeBirth": "Vill. Bhaubhora, Distt. Chandauli, Uttar Pradesh",
     "dateBirth": "10-Jul-1951",
-    "education": "<body>\n M.Sc. (Physics)<br> Educated at Gorakhpur University,Gorakhpur, Uttar Pradesh<br> Gorakhpur University,Gorakhpur, Uttar Pradesh\n</body>",
+    "education": "M.Sc. (Physics) Educated at Gorakhpur University,Gorakhpur, Uttar Pradesh Gorakhpur University,Gorakhpur, Uttar Pradesh",
     "profession": "TEACHER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister, Ministry of Defence"
       },
       {
@@ -20,7 +20,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": "8 Oct. 2014",
@@ -32,7 +32,7 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (2 nd term)"
       },
       {
         "period": "7 Oct. 2009",
@@ -40,10 +40,10 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Elected to 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 15 th Lok Sabha"
       },
       {
-        "period": "2005 - 2009 ",
+        "period": "2005 - 2009",
         "position": "National President, Bharatiya Janata Party (BJP)"
       },
       {
@@ -52,7 +52,7 @@
       },
       {
         "period": "2000-2002",
-        "position": "Chief Minister, Govt. of  Uttar Pradesh"
+        "position": "Chief Minister, Govt. of Uttar Pradesh"
       },
       {
         "period": "1999-2000",
@@ -75,24 +75,20 @@
         "position": "Member, Uttar Pradesh Legislative Assembly (Three Terms)"
       }
     ],
-    "attendanceByTerm": {
-      "15": 76.8,
-      "16": null,
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5021",
     "placeBirth": "Mumbai, Maharashtra",
     "dateBirth": "22-Oct-1964",
-    "education": "<body>\n S.Y. B.Sc. <br>Educated at Gujarat University, Ahmedabad<br> Gujarat University, Ahmedabad\n</body>",
-    "profession": " ",
+    "education": "S.Y. B.Sc. Educated at Gujarat University, Ahmedabad Gujarat University, Ahmedabad",
+    "profession": "FARMER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Home Affairs; and  Minister of Cooperation. "
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Home Affairs; and Minister of Cooperation."
       },
       {
         "period": "June 2024",
@@ -108,7 +104,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Elected to 17<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 17 th Lok Sabha"
       },
       {
         "period": "2017 - 2019",
@@ -123,22 +119,20 @@
         "position": "Member, Gujarat Legislative Assembly (Four Terms)"
       }
     ],
-    "attendanceByTerm": {
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4923",
     "placeBirth": "Nagpur (Maharashtra)",
     "dateBirth": "27-May-1957",
-    "education": "<body>\n B.Com., LL.B.<br> G.S. Commerce College, Nagpur University and University College of Law, Main Branch, Nagpur\n</body>",
+    "education": "B.Com., LL.B. G.S. Commerce College, Nagpur University and University College of Law, Main Branch, Nagpur",
     "profession": "POLITICAL AND SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Road Transport and Highways. "
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Road Transport and Highways."
       },
       {
         "period": "June 2024",
@@ -154,7 +148,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "3 Sept. 2017 - 25 May 2019",
@@ -162,15 +156,15 @@
       },
       {
         "period": "4 June 2014 - 9 Nov. 2014",
-        "position": "Union Cabinet Minister, Rural Development;  Panchayati Raj and  Drinking Water and Sanitation (Additional Charge)"
+        "position": "Union Cabinet Minister, Rural Development; Panchayati Raj and Drinking Water and Sanitation (Additional Charge)"
       },
       {
-        "period": "27 May 2014  - 25 May 2019",
+        "period": "27 May 2014 - 25 May 2019",
         "position": "Union Cabinet Minister, Road Transport and Highways; and Shipping"
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       },
       {
         "period": "1999 - 2005",
@@ -185,11 +179,8 @@
         "position": "Member, Maharashtra Legislative Council"
       }
     ],
-    "attendanceByTerm": {
-      "16": null,
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -197,21 +188,24 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "96",
     "placeBirth": "Vill. Jait, Distt. Sehore (Madhya Pradesh)",
     "dateBirth": "05-Mar-1959",
-    "education": "<body>\n M.A. (Philosophy) (Gold Medalist) <br>Educated at Bhopal University, Bhopal (Madhya Pradesh) <br> Bhopal University, Bhopal (Madhya Pradesh)\n</body>",
+    "education": "M.A. (Philosophy) (Gold Medalist) Educated at Bhopal University, Bhopal (Madhya Pradesh) Bhopal University, Bhopal (Madhya Pradesh)",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Agriculture and Farmers Welfare; and  Minister of Rural Development."
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Agriculture and Farmers Welfare; and Minister of Rural Development."
       },
       {
         "period": "June 2024",
@@ -219,7 +213,7 @@
       },
       {
         "period": null,
-        "position": "President, Madhya Pradesh,  BJP"
+        "position": "President, Madhya Pradesh, BJP"
       },
       {
         "period": "2005",
@@ -279,7 +273,7 @@
       },
       {
         "period": "1999",
-        "position": "Re-elected to 13th Lok Sabha (4th term) \r\n"
+        "position": "Re-elected to 13th Lok Sabha (4th term)"
       },
       {
         "period": null,
@@ -287,7 +281,7 @@
       },
       {
         "period": null,
-        "position": "Member, Committee on Urban and Rural Development and its Sub-Committee-II \r\n                                       on Ministry of Rural Areas & Employment"
+        "position": "Member, Committee on Urban and Rural Development and its Sub-Committee-II on Ministry of Rural Areas & Employment"
       },
       {
         "period": "1998-99",
@@ -295,11 +289,11 @@
       },
       {
         "period": "1998",
-        "position": "Re-elected to 12th Lok Sabha (3rd term) \r\n\r\n"
+        "position": "Re-elected to 12th Lok Sabha (3rd term)"
       },
       {
         "period": null,
-        "position": "General-Secretary, B.J.P., Madhya Pradesh \r\n"
+        "position": "General-Secretary, B.J.P., Madhya Pradesh"
       },
       {
         "period": "1997-98",
@@ -311,11 +305,11 @@
       },
       {
         "period": "1996-97",
-        "position": "Member, Committee on Urban and Rural Development \r\n"
+        "position": "Member, Committee on Urban and Rural Development"
       },
       {
         "period": "1996",
-        "position": "Re-elected to 11th Lok Sabha (2nd term) \r\n"
+        "position": "Re-elected to 11th Lok Sabha (2nd term)"
       },
       {
         "period": "1995-96",
@@ -323,11 +317,11 @@
       },
       {
         "period": "1994-96",
-        "position": "Member, Hindi Salahkar Samiti \r\n"
+        "position": "Member, Hindi Salahkar Samiti"
       },
       {
         "period": "1993-96",
-        "position": "Member, Committee on Labour and Welfare \r\n"
+        "position": "Member, Committee on Labour and Welfare"
       },
       {
         "period": "1992-96",
@@ -343,7 +337,7 @@
       },
       {
         "period": "1991-92",
-        "position": "Convenor, Akhil Bharatiya Keshariya Vahini \r\n"
+        "position": "Convenor, Akhil Bharatiya Keshariya Vahini"
       },
       {
         "period": "1991",
@@ -359,7 +353,7 @@
       },
       {
         "period": "1985-88",
-        "position": "General Secretary, Yuva Morcha, B.J.P., Madhya Pradesh \r\n"
+        "position": "General Secretary, Yuva Morcha, B.J.P., Madhya Pradesh"
       },
       {
         "period": "1984-85",
@@ -383,13 +377,11 @@
       },
       {
         "period": "1977 onwards",
-        "position": "Swayamsewak, Rashtriya Swayamsewak Sangh (R.S.S.) \r\n"
+        "position": "Swayamsewak, Rashtriya Swayamsewak Sangh (R.S.S.)"
       }
     ],
-    "attendanceByTerm": {
-      "14": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -397,31 +389,37 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "2426",
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "5792",
     "placeBirth": "Rohtak",
     "dateBirth": "05-May-1954",
-    "education": "<body>\n B.A.<br> Delhi University\n</body>",
+    "education": "B.A. Delhi University",
     "profession": "AGRICULTURIST & POLITICS",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Housing and Urban Affairs; and  Minister of Power. "
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Housing and Urban Affairs; and Minister of Power."
       },
       {
         "period": "June 2024",
@@ -432,16 +430,15 @@
         "position": "Haryana"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "3711",
     "placeBirth": "Hassan",
     "dateBirth": "16-Dec-1959",
-    "education": "<body>\n B.Sc.<br> B.Sc.\n</body>",
+    "education": "B.Sc. B.Sc.",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
@@ -453,8 +450,8 @@
         "position": null
       },
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Heavy Industries; and  Minister of Steel."
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Heavy Industries; and Minister of Steel."
       },
       {
         "period": "June 2024",
@@ -493,21 +490,19 @@
         "position": "Elected to 11th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "15": 31.6,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5551",
     "placeBirth": "Mumbai (Maharashtra)",
     "dateBirth": "13-Jun-1964",
-    "education": "<body>\n B.Com., LL.B., F.C.A. <br> Don Bosco High School, Mumbai, Jai Hind College, Mumbai, H.R. College of Commerce and Economics, Mumbai, Government Law College, Mumbai and Institute of Chartered Accountants of India, New Delhi\n</body>",
+    "education": "B.Com., LL.B., F.C.A. Don Bosco High School, Mumbai, Jai Hind College, Mumbai, H.R. College of Commerce and Economics, Mumbai, Government Law College, Mumbai and Institute of Chartered Accountants of India, New Delhi",
     "profession": "Chartered Accountant",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Commerce and Industry."
       },
       {
@@ -559,7 +554,7 @@
         "position": null
       },
       {
-        "period": "14 May 2018 - 22 Aug. 2018    ",
+        "period": "14 May 2018 - 22 Aug. 2018",
         "position": "Minister of Finance; and"
       },
       {
@@ -575,7 +570,7 @@
         "position": null
       },
       {
-        "period": "3 Sept. 2017             ",
+        "period": "3 Sept. 2017",
         "position": "Minister of State (Independent Charge) of the Ministry of Coal; and"
       },
       {
@@ -583,7 +578,7 @@
         "position": "Minister of State (Independent Charge) of the Ministry of Mines"
       },
       {
-        "period": "July 2016             ",
+        "period": "July 2016",
         "position": "Re-elected to Rajya Sabha (second term)"
       },
       {
@@ -591,24 +586,24 @@
         "position": "Minister of State (Independent Charge) of the Ministry of Power;"
       },
       {
-        "period": "Aug. 2012  - May 2014",
+        "period": "Aug. 2012 - May 2014",
         "position": "Member, Committee on Provision of Computer Equipment to Members of Rajya Sabha"
       },
       {
         "period": "Nov. 2010 - May 2014",
-        "position": "Member, Consultative Committee for the Ministry of  Defence"
+        "position": "Member, Consultative Committee for the Ministry of Defence"
       },
       {
         "period": "Aug. 2010 - May 2014",
         "position": "Member, Committee on Finance"
       },
       {
-        "period": "01-Jul-2010 - ",
+        "period": "01-Jul-2010 -",
         "position": "Elected to Rajya Sabha"
       },
       {
         "period": "March 2010 - May 2014",
-        "position": "National Treasurer, Bharatiya  Janata Party"
+        "position": "National Treasurer, Bharatiya Janata Party"
       },
       {
         "period": "2004-2008",
@@ -623,20 +618,19 @@
         "position": "Director (Government nominee), Bank of Baroda"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5558",
     "placeBirth": "Village Mahkar",
     "dateBirth": "06-Oct-1944",
-    "education": "<body>\n BA(Hons)<br> Magadh University, Bodhgaya\n</body>",
+    "education": "BA(Hons) Magadh University, Bodhgaya",
     "profession": "Social Activist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Micro, Small and Medium Enterprises."
       },
       {
@@ -676,21 +670,20 @@
         "position": "Member"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4134",
     "placeBirth": "Patna  (Bihar)",
     "dateBirth": "24-Jan-1955",
-    "education": "<body>\n B.A. (Hons.), History <br>Educated at T.N.B. College, Bhagalpur University, Bihar<br> T.N.B. College, Bhagalpur University, Bihar\n</body>",
+    "education": "B.A. (Hons.), History Educated at T.N.B. College, Bhagalpur University, Bihar T.N.B. College, Bhagalpur University, Bihar",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Panchayati Raj; and   Minister of Fisheries, Animal Husbandry and Dairying."
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Panchayati Raj; and Minister of Fisheries, Animal Husbandry and Dairying."
       },
       {
         "period": "June 2024",
@@ -730,7 +723,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": null,
@@ -809,19 +802,15 @@
         "position": null
       }
     ],
-    "attendanceByTerm": {
-      "14": 87.3,
-      "15": 92.9,
-      "17": 91.2,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4163",
     "placeBirth": "Muluk Gaon, Bindhakata, P.S. Chabua Distt. Dibrugarh, Assam",
     "dateBirth": "31-Oct-1962",
-    "education": "<body>\n B.A., L.L.B., B.C.J.<br> Educated at D.H.S.K. College,; Dibrugarh University, G.U. Law College and Gauhati University\n</body>",
+    "education": "B.A., L.L.B., B.C.J. Educated at D.H.S.K. College,; Dibrugarh University, G.U. Law College and Gauhati University",
     "profession": "POLITICAL AND SOCIAL WORKER",
     "careerTimeline": [
       {
@@ -841,7 +830,7 @@
         "position": "Chief Minister of Assam"
       },
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Ports, Shipping and Waterways"
       },
       {
@@ -865,7 +854,7 @@
         "position": "Re-elected to 16th Lok Sabha (2nd term)"
       },
       {
-        "period": "5 Aug. 2007 ",
+        "period": "5 Aug. 2007",
         "position": "Member, Committee on Commerce"
       },
       {
@@ -882,29 +871,26 @@
       },
       {
         "period": "2004",
-        "position": "<body>\n Elected to 14<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 14 th Lok Sabha"
       },
       {
         "period": "2001-2004",
-        "position": "Member,  Assam Legislative Assembly"
+        "position": "Member, Assam Legislative Assembly"
       }
     ],
-    "attendanceByTerm": {
-      "14": 53.3,
-      "16": 5.2,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "515",
     "placeBirth": "Sagar (Madhya Pradesh)",
     "dateBirth": "27-Feb-1954",
-    "education": "<body>\n M.A. (Economics), Ph.D (Child Labour)<br>Educated at Dr. Harisingh Gaur University, Sagar, Madhya Pradesh<br> Dr. Harisingh Gaur University, Sagar, Madhya Pradesh\n</body>",
+    "education": "M.A. (Economics), Ph.D (Child Labour) Educated at Dr. Harisingh Gaur University, Sagar, Madhya Pradesh Dr. Harisingh Gaur University, Sagar, Madhya Pradesh",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Social Justice and Empowerment"
       },
       {
@@ -941,7 +927,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (7<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (7 th term)"
       },
       {
         "period": "3 Sept. 2017 - 25 May 2019",
@@ -969,7 +955,7 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (6<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (6 th term)"
       },
       {
         "period": "1 May 2010",
@@ -989,7 +975,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of  Railways"
+        "position": "Member, Consultative Committee, Ministry of Railways"
       },
       {
         "period": "31 Aug. 2009",
@@ -1001,7 +987,7 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Re-elected to 15<sup>th</sup> Lok Sabha (5<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 15 th Lok Sabha (5 th term)"
       },
       {
         "period": "5 Aug. 2007 - May 2009",
@@ -1025,7 +1011,7 @@
       },
       {
         "period": "2004",
-        "position": "<body>\n Re-elected to 14<sup>th</sup> Lok Sabha (4<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 14 th Lok Sabha (4 th term)"
       },
       {
         "period": null,
@@ -1049,11 +1035,11 @@
       },
       {
         "period": "1999",
-        "position": "<body>\n Re-elected to 13<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 13 th Lok Sabha (3 rd term)"
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of  Health and Family Welfare"
+        "position": "Member, Consultative Committee, Ministry of Health and Family Welfare"
       },
       {
         "period": null,
@@ -1065,7 +1051,7 @@
       },
       {
         "period": "1998",
-        "position": "<body>\n Re-elected to 12<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 12 th Lok Sabha (2 nd term)"
       },
       {
         "period": null,
@@ -1077,7 +1063,7 @@
       },
       {
         "period": "1996",
-        "position": "<body>\n Elected to 11<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 11 th Lok Sabha"
       },
       {
         "period": "1994",
@@ -1093,7 +1079,7 @@
       },
       {
         "period": "1982-84",
-        "position": "General-Secretary, Bharatiya Janata Yuva Morcha (B.J.Y.M.), District Sagar, \r\n                              Madhya Pradesh"
+        "position": "General-Secretary, Bharatiya Janata Yuva Morcha (B.J.Y.M.), District Sagar, Madhya Pradesh"
       },
       {
         "period": "1979-82",
@@ -1101,27 +1087,22 @@
       },
       {
         "period": "1977-79",
-        "position": "Convenor, Akhil Bharatiya Vidyarthi Parishad \r\n                              (A.B.V.P.), District Sagar, Madhya Pradesh \r\n\r\n"
+        "position": "Convenor, Akhil Bharatiya Vidyarthi Parishad (A.B.V.P.), District Sagar, Madhya Pradesh"
       }
     ],
-    "attendanceByTerm": {
-      "14": 96.7,
-      "15": 95.5,
-      "16": null,
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4771",
     "placeBirth": "Nimmada, Srikakulam, Andhra Pradesh",
     "dateBirth": "18-Dec-1987",
-    "education": "<body>\n M.B.A., B. S. (Electrical Engineering) <br> Educated at Long Island University, New York, U.S.A. and Purdue University, Indiana, U.S.A. <br> Long Island University, New York, U.S.A. and Purdue University, Indiana, U.S.A.\n</body>",
+    "education": "M.B.A., B. S. (Electrical Engineering) Educated at Long Island University, New York, U.S.A. and Purdue University, Indiana, U.S.A. Long Island University, New York, U.S.A. and Purdue University, Indiana, U.S.A.",
     "profession": "BUSINESSPERSON",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Civil Aviation"
       },
       {
@@ -1146,7 +1127,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": null,
@@ -1174,26 +1155,23 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "16": 92.4,
-      "17": 83.6,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "3982",
     "placeBirth": "Vijayapur (Karnataka)",
     "dateBirth": "27-Nov-1962",
-    "education": "<body>\n B.A. <br>Educated at K.S. Arts College, Hubli and Karnataka University, Dharwad, Karnataka<br> K.S. Arts College, Hubli and Karnataka University, Dharwad, Karnataka\n</body>",
+    "education": "B.A. Educated at K.S. Arts College, Hubli and Karnataka University, Dharwad, Karnataka K.S. Arts College, Hubli and Karnataka University, Dharwad, Karnataka",
     "profession": "BUSINESSPERSON",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Consumer Affairs, Food and Public  Distribution; and  Minister of New and Renewable Energy"
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Consumer Affairs, Food and Public Distribution; and Minister of New and Renewable Energy"
       },
       {
         "period": "June 2024",
@@ -1213,18 +1191,18 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (4<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (4 th term)"
       },
       {
-        "period": "7 Sept. 2018  - 25 May 2019",
+        "period": "7 Sept. 2018 - 25 May 2019",
         "position": "Member, Committee on Privileges"
       },
       {
-        "period": "29 Jan. 2015  - 25 May 2019",
+        "period": "29 Jan. 2015 - 25 May 2019",
         "position": "Member, General Purposes Committee"
       },
       {
-        "period": "1 Sep. 2014  - 25 May 2019",
+        "period": "1 Sep. 2014 - 25 May 2019",
         "position": "Chairperson, Standing Committee on Petroleum and Natural Gas"
       },
       {
@@ -1232,24 +1210,24 @@
         "position": "Member, Consultative Committee, Ministry of Urban Development, Housing and Urban Poverty Alleviation"
       },
       {
-        "period": "15 Sep. 2014  - 25 May 2019",
+        "period": "15 Sep. 2014 - 25 May 2019",
         "position": "Member, Committee on Ethics"
       },
       {
-        "period": "13 June 2014  - 25 May 2019",
-        "position": "<body>\n Member, Business Advisory Committee,<br>Member, Consultative Committee, Ministry of Urban Development, Housing and Urban Poverty Alleviation\n</body>"
+        "period": "13 June 2014 - 25 May 2019",
+        "position": "Member, Business Advisory Committee, Member, Consultative Committee, Ministry of Urban Development, Housing and Urban Poverty Alleviation"
       },
       {
-        "period": "9 June 2014  - 25 May 2019",
+        "period": "9 June 2014 - 25 May 2019",
         "position": "Member, Panel of Chairpersons, Lok Sabha"
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (3 rd term)"
       },
       {
         "period": "2013 onwards",
-        "position": "President,  B.J.P.,  Karnataka State Unit"
+        "position": "President, B.J.P., Karnataka State Unit"
       },
       {
         "period": "21 Apr. 2010",
@@ -1261,10 +1239,10 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Re-elected to 15<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 15 th Lok Sabha (2 nd term)"
       },
       {
-        "period": "20 Mar. 2007 ",
+        "period": "20 Mar. 2007",
         "position": "Member, Standing Committee on Transport, Tourism & Culture"
       },
       {
@@ -1281,35 +1259,30 @@
       },
       {
         "period": "2004",
-        "position": "<body>\n Elected to 14<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 14 th Lok Sabha"
       },
       {
         "period": "1995 - 1998",
-        "position": "President,  B.J.P., Dharwad District"
+        "position": "President, B.J.P., Dharwad District"
       },
       {
         "period": "1998 - 2003",
         "position": "General Secretary, B.J.P. Dharwad District"
       }
     ],
-    "attendanceByTerm": {
-      "14": 65.6,
-      "15": 74.2,
-      "16": 84.8,
-      "17": 0.4,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "279",
     "placeBirth": "Kendudihi, Lahunipara, Distt. Sundargarh (Odisha)",
     "dateBirth": "22-Mar-1961",
-    "education": "<body>\n Diploma in Electrical Engineering <br>Educated at U.G.I.E., Rourkela (Odisha)<br> U.G.I.E., Rourkela (Odisha)\n</body>",
+    "education": "Diploma in Electrical Engineering Educated at U.G.I.E., Rourkela (Odisha) U.G.I.E., Rourkela (Odisha)",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Tribal Affairs"
       },
       {
@@ -1326,7 +1299,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (5<sup>th</sup> Term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (5 th Term)"
       },
       {
         "period": "27 May 2014 - 25 May 2019",
@@ -1338,7 +1311,7 @@
       },
       {
         "period": "2012 - 2014",
-        "position": "National Vice-President and Member, Central Election Committee,  B.J.P."
+        "position": "National Vice-President and Member, Central Election Committee, B.J.P."
       },
       {
         "period": "2009 - 2011",
@@ -1346,7 +1319,7 @@
       },
       {
         "period": "2006 - 2009",
-        "position": "National Vice-President,  B.J.P."
+        "position": "National Vice-President, B.J.P."
       },
       {
         "period": "5 Aug. 2007",
@@ -1369,8 +1342,8 @@
         "position": "President, Odisha State, B.J.P. (2nd Term)"
       },
       {
-        "period": "13 Oct. 1999 -    May 2004",
-        "position": "Union Cabinet Minister, Tribal Affairs \r\n\r\n"
+        "period": "13 Oct. 1999 - May 2004",
+        "position": "Union Cabinet Minister, Tribal Affairs"
       },
       {
         "period": "1999",
@@ -1378,11 +1351,11 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of Coal "
+        "position": "Member, Consultative Committee, Ministry of Coal"
       },
       {
         "period": null,
-        "position": "Member, Standing  Committee on Industry "
+        "position": "Member, Standing Committee on Industry"
       },
       {
         "period": "1998-99",
@@ -1421,23 +1394,19 @@
         "position": "Joined Bharatiya Janata Party (B.J.P.)"
       }
     ],
-    "attendanceByTerm": {
-      "14": 68,
-      "16": null,
-      "17": 87.2,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4641",
     "placeBirth": "Barahiya, Distt. Lakhisarai, Bihar",
     "dateBirth": "08-Sep-1952",
-    "education": "<body>\n Graduate<br> Educated at Magadh University<br> Graduate<br> Educated at Magadh University\n</body>",
+    "education": "Graduate Educated at Magadh University Graduate Educated at Magadh University",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Textiles"
       },
       {
@@ -1454,7 +1423,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "3 Sept. 2017 - 25 May 2019",
@@ -1465,16 +1434,16 @@
         "position": "Union Minister of State, Ministry of Micro, Small and Medium Enterprises"
       },
       {
-        "period": "2 Sep. 2014 - 9 Nov. 2014 ",
+        "period": "2 Sep. 2014 - 9 Nov. 2014",
         "position": "Member, Joint Committee on Salaries and Allowances of Members of Parliament"
       },
       {
-        "period": "1 Sep. 2014 - 9 Nov. 2014 ",
+        "period": "1 Sep. 2014 - 9 Nov. 2014",
         "position": "Member, Standing Committee on Labour"
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       },
       {
         "period": "2010 - 2013",
@@ -1489,11 +1458,8 @@
         "position": "Member, Bihar Legislative Council"
       }
     ],
-    "attendanceByTerm": {
-      "16": null,
-      "17": 0.4,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -1501,16 +1467,19 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "3958",
     "placeBirth": "Mumbai (Maharashtra)",
     "dateBirth": "01-Jan-1971",
-    "education": "<body>\n B.A., M.B.A. Educated at Doon School, Dehradun, Harvard University (U.S.A.) and Stanford University (Graduate School of Business), California (U.S.A.) <br> B.A., M.B.A. Educated at Doon School, Dehradun, Harvard University (U.S.A.) and Stanford University (Graduate School of Business), California (U.S.A.)\n</body>",
+    "education": "B.A., M.B.A. Educated at Doon School, Dehradun, Harvard University (U.S.A.) and Stanford University (Graduate School of Business), California (U.S.A.) B.A., M.B.A. Educated at Doon School, Dehradun, Harvard University (U.S.A.) and Stanford University (Graduate School of Business), California (U.S.A.)",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
@@ -1542,8 +1511,8 @@
         "position": "Member, Consultative Committee for the Ministry of Home Affairs"
       },
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Communications; and  Minister of Development of North Eastern Region"
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Communications; and Minister of Development of North Eastern Region"
       },
       {
         "period": "June 2024",
@@ -1567,7 +1536,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of   Home Affairs"
+        "position": "Member, Consultative Committee, Ministry of Home Affairs"
       },
       {
         "period": null,
@@ -1598,7 +1567,7 @@
         "position": "Union Minister of State (Independent Charge) of the Ministry of Power"
       },
       {
-        "period": "28 Oct. 2012 ",
+        "period": "28 Oct. 2012",
         "position": "Union Minister of State (Independent Charge), Power"
       },
       {
@@ -1611,14 +1580,14 @@
       },
       {
         "period": "2009",
-        "position": "Re-elected to 15th Lok Sabha (3rd  term)"
+        "position": "Re-elected to 15th Lok Sabha (3rd term)"
       },
       {
         "period": "06-Apr-2008 - 22-May-2009",
         "position": "Minister of State in the Ministry of Communications and Information Technology"
       },
       {
-        "period": "6 April 2008 ",
+        "period": "6 April 2008",
         "position": "Minister of State, Ministry of Communications and Information Technology"
       },
       {
@@ -1658,35 +1627,31 @@
         "position": "Elected to 13th Lok Sabha (elected in a bye-election)"
       }
     ],
-    "attendanceByTerm": {
-      "14": null,
-      "15": null,
-      "16": 74.7,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5541",
     "placeBirth": "Ajmer, Rajasthan",
     "dateBirth": "30-Jun-1969",
-    "education": "<body>\n B.A., LL.B.<br> Govt College, Ajmer, Rajasthan\n</body>",
+    "education": "B.A., LL.B. Govt College, Ajmer, Rajasthan",
     "profession": "Advocate",
     "careerTimeline": [
       {
-        "period": "April - July 2017 ",
+        "period": "April - July 2017",
         "position": "Chairman, Committee of Rajya Sabha on the Constitution (One Hundred and Twenty Third Amendment) Bill, 2017"
       },
       {
-        "period": "Aug. 2020 - July 2021 ",
+        "period": "Aug. 2020 - July 2021",
         "position": "Convenor Working Group-I- (Civil) of the Public Accounts Committee"
       },
       {
-        "period": "June 2014 - July 2021 ",
+        "period": "June 2014 - July 2021",
         "position": "Member, Business Advisory Committee"
       },
       {
-        "period": "Aug. 2017 - 1 Aug. 2018 ",
+        "period": "Aug. 2017 - 1 Aug. 2018",
         "position": "Chairman, Joint Committee on the Financial Resolution and Deposit Insurance Bill, 2017"
       },
       {
@@ -1698,19 +1663,19 @@
         "position": "Member, Committee on Home Affairs"
       },
       {
-        "period": "April 2012 ",
+        "period": "April 2012",
         "position": "Elected to Rajya Sabha"
       },
       {
-        "period": "May 2012 - May 2014 and Sept. 2014 - July 2016 ",
+        "period": "May 2012 - May 2014 and Sept. 2014 - July 2016",
         "position": "Member, Committee on Subordinate Legislation"
       },
       {
-        "period": "June - Nov. 2012 ",
+        "period": "June - Nov. 2012",
         "position": "Member, Committee of Rajya Sabha on the Lokpal and Lokayuktas Bill, 2011"
       },
       {
-        "period": "Sept. 2014 - July 2016 ",
+        "period": "Sept. 2014 - July 2016",
         "position": "Member, Committee on IndustryS"
       },
       {
@@ -1718,67 +1683,67 @@
         "position": "Member, Consultative Committee for the Ministry of Defence"
       },
       {
-        "period": "Dec. 2014 - Feb.2015 ",
+        "period": "Dec. 2014 - Feb.2015",
         "position": "Chairman, Select Committee of Rajya Sabha on the Repealing and Amending Bill, 2014"
       },
       {
-        "period": "March 2015 ",
+        "period": "March 2015",
         "position": "Chairman, Committee of Rajya Sabha on the Mines and Minerals (Development and Regulation) Amendment Bill, 2015"
       },
       {
-        "period": "May - July 2015 ",
+        "period": "May - July 2015",
         "position": "Chairman, Select Committee of Rajya Sabha on the Constitution (One Hundred and Twenty Second Amendment) Bill, 2014"
       },
       {
-        "period": "Dec. 2015 - Aug. 2016 ",
+        "period": "Dec. 2015 - Aug. 2016",
         "position": "Chairman, Select Committee of Rajya Sabha on the Prevention of Corruption (Amendment) Bill, 2013"
       },
       {
-        "period": "Jan. - April 2016 ",
+        "period": "Jan. - April 2016",
         "position": "Chairman, Joint Committee on the Insolvency and Bankruptcy Code, 2015"
       },
       {
-        "period": "March - May 2016 ",
+        "period": "March - May 2016",
         "position": "Chairman, Select Committee of Rajya Sabha on the Enemy Property (Amendment and Validation) Bill, 2016"
       },
       {
-        "period": "May - July 2016 ",
+        "period": "May - July 2016",
         "position": "Chairman, Joint Committee on the Enforcement of Security Interest and Recovery of Debts Laws and Miscellaneous Provisions (Amendment) Bill, 2016"
       },
       {
-        "period": "July - Aug. 2016 ",
+        "period": "July - Aug. 2016",
         "position": "Member, Committee of Transport, Tourism and Culture"
       },
       {
-        "period": "July 2016 - Aug. 2017 ",
+        "period": "July 2016 - Aug. 2017",
         "position": "Chairman, Committee on Commerce Member, General Purposes Committee"
       },
       {
-        "period": "Aug. 2016 - July 2021 ",
+        "period": "Aug. 2016 - July 2021",
         "position": "Member, Committee on Public Accounts"
       },
       {
-        "period": "May 2017 - May 2019 ",
+        "period": "May 2017 - May 2019",
         "position": "Member, Content Advisory Committee of Rajya Sabha Television"
       },
       {
-        "period": "Sept. 2017 - May 2019 and Sept. 2019 - July 2021 ",
+        "period": "Sept. 2017 - May 2019 and Sept. 2019 - July 2021",
         "position": "Chairman, Committee on Personnel, Public Grievances, Law and Justice"
       },
       {
-        "period": "Oct. 2018 - July 2021 ",
+        "period": "Oct. 2018 - July 2021",
         "position": "Member, General Purposes Committee"
       },
       {
-        "period": "Oct. 2019 - July 2021 ",
+        "period": "Oct. 2019 - July 2021",
         "position": "Member, Consultative Committee for the Ministry of Finance"
       },
       {
-        "period": "Nov. 2019 - Feb. 2020 ",
+        "period": "Nov. 2019 - Feb. 2020",
         "position": "Chairman, Committee of Rajya Sabha on Surrogacy (Regulation) Bill, 2019"
       },
       {
-        "period": "Dec. 2019 - July 2021 ",
+        "period": "Dec. 2019 - July 2021",
         "position": "Member, Joint Committee on the Personal Data Protection Bill, 2019"
       },
       {
@@ -1790,15 +1755,15 @@
         "position": "Member, Working Group-IV (Finance) of the Committee on Public Accounts"
       },
       {
-        "period": "Nov. 2022 ",
+        "period": "Nov. 2022",
         "position": "Member, Business Advisory Committee"
       },
       {
-        "period": "April 2018 ",
+        "period": "April 2018",
         "position": "Re-elected to Rajya Sabha (second term)"
       },
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Environment, Forest and Climate Change"
       },
       {
@@ -1810,25 +1775,24 @@
         "position": "Minister of Environment, Forest and Climate Change; and Minister of Labour and Employment"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4670",
     "placeBirth": "Jaisalmer (Rajasthan)",
     "dateBirth": "03-Oct-1967",
-    "education": "<body>\n M.A. (Philosophy) <br> JNV University, Jodhpur, Rajasthan\n</body>",
+    "education": "M.A. (Philosophy) JNV University, Jodhpur, Rajasthan",
     "profession": "BUSINESSPERSON",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Culture; and  Minister of Tourism"
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Culture; and Minister of Tourism"
       },
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Culture; and  Minister of Tourism"
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Culture; and Minister of Tourism"
       },
       {
         "period": "June 2024",
@@ -1840,7 +1804,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "3 Sept. 2017 - 25 May 2019",
@@ -1852,7 +1816,7 @@
       },
       {
         "period": "12 Aug. 2016 - 25 May 2019",
-        "position": "Chairperson, Fellowship Committee, Lok  Sabha Secretariat"
+        "position": "Chairperson, Fellowship Committee, Lok Sabha Secretariat"
       },
       {
         "period": "27 Jul. 2016 - 25 May 2019",
@@ -1868,7 +1832,7 @@
       },
       {
         "period": null,
-        "position": "Member, Governing Council ,  All India Institute of Medical Sciences (AIIMS) Jodhpur"
+        "position": "Member, Governing Council , All India Institute of Medical Sciences (AIIMS) Jodhpur"
       },
       {
         "period": null,
@@ -1891,22 +1855,19 @@
         "position": "Member, BJP Pradesh Karyakarni (Rajasthan)"
       }
     ],
-    "attendanceByTerm": {
-      "16": null,
-      "17": 0,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5116",
     "placeBirth": "Ajmeri, Dumka, Jharkhand",
     "dateBirth": "02-Feb-1970",
-    "education": "<body>\n Post Graduate <br>Educated at Ranchi University, Jharkhand<br> Ranchi University, Jharkhand\n</body>",
-    "profession": " ",
+    "education": "Post Graduate Educated at Ranchi University, Jharkhand Ranchi University, Jharkhand",
+    "profession": null,
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Women and Child Development"
       },
       {
@@ -1931,7 +1892,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Elected to 17<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 17 th Lok Sabha"
       },
       {
         "period": "2012 - 2014",
@@ -1958,22 +1919,20 @@
         "position": "Member, Bihar Legislative Assembly"
       }
     ],
-    "attendanceByTerm": {
-      "17": 33.9,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "3972",
     "placeBirth": "Nakhu, Distt. West Kameng (Arunachal Pradesh)",
     "dateBirth": "19-Nov-1971",
-    "education": "<body>\n B.A., LL.B.<br> Hansraj College, Delhi Campus Law Centre, Faculty of Law, University of Delhi\n</body>",
+    "education": "B.A., LL.B. Hansraj College, Delhi Campus Law Centre, Faculty of Law, University of Delhi",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Parliamentary Affairs; and  Minister of Minority Affairs"
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Parliamentary Affairs; and Minister of Minority Affairs"
       },
       {
         "period": "June 2024",
@@ -1997,7 +1956,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": "27 May 2014 - 25 May 2019",
@@ -2005,7 +1964,7 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (2 nd term)"
       },
       {
         "period": "5 Aug. 2007",
@@ -2021,15 +1980,11 @@
       },
       {
         "period": "2004",
-        "position": "<body>\n Elected to 14<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 14 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "14": 91.8,
-      "16": null,
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -2037,16 +1992,19 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "5555",
     "placeBirth": "Hanol, Bhavnagar, Gujarat",
     "dateBirth": "01-Jun-1972",
-    "education": "<body>\n PhD<br> Maharaja Krishnakumarsinhji Bhavnagar University\n</body>",
+    "education": "PhD Maharaja Krishnakumarsinhji Bhavnagar University",
     "profession": "POLITICIAN",
     "careerTimeline": [
       {
@@ -2054,12 +2012,12 @@
         "position": "Elected to Rajya Sabha"
       },
       {
-        "period": " April 2018",
+        "period": "April 2018",
         "position": "Re-elected to Rajya Sabha (second term)"
       },
       {
         "period": "May 2015 - July 2015",
-        "position": "Member, Select Committee of Rajya Sabha on the Real Estate (Regulation and Development) Bill, 2013; Member, Consultative Committee for the Ministry of Textiles and  Member, Consultative Committee for the Ministry of Environment, Forest and Climate Change"
+        "position": "Member, Select Committee of Rajya Sabha on the Real Estate (Regulation and Development) Bill, 2013; Member, Consultative Committee for the Ministry of Textiles and Member, Consultative Committee for the Ministry of Environment, Forest and Climate Change"
       },
       {
         "period": "Dec. 2014 - July 2016",
@@ -2070,8 +2028,8 @@
         "position": "Member, Committee on Industry"
       },
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Labour and Employment; and  Minister of Youth Affairs and Sports"
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Labour and Employment; and Minister of Youth Affairs and Sports"
       },
       {
         "period": "07-Jul-2021 - 2024",
@@ -2098,21 +2056,20 @@
         "position": "Member, Gujarat Legislative Assembly"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5084",
     "placeBirth": "Timmapur Kandukur, Ranga Reddy, Telangana",
     "dateBirth": "15-Jun-1960",
-    "education": "<body>\n Diploma in Tool Engineering <br>Educated at Central Institute of Tool Engineering , Balanagar, Hyderabad, Telangana<br> Central Institute of Tool Engineering , Balanagar, Hyderabad, Telangana\n</body>",
+    "education": "Diploma in Tool Engineering Educated at Central Institute of Tool Engineering , Balanagar, Hyderabad, Telangana Central Institute of Tool Engineering , Balanagar, Hyderabad, Telangana",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Cabinet Minister of Coal; and  Minister of Mines"
+        "period": "09-Jun-2024 -",
+        "position": "Union Cabinet Minister of Coal; and Minister of Mines"
       },
       {
         "period": "June 2024",
@@ -2128,7 +2085,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Elected to 17<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 17 th Lok Sabha"
       },
       {
         "period": "2014 - 2018",
@@ -2139,21 +2096,19 @@
         "position": "Member, Andhra Pradesh Legislative Assembly (Two terms)"
       }
     ],
-    "attendanceByTerm": {
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4777",
     "placeBirth": "Delhi",
     "dateBirth": "31-Oct-1982",
-    "education": "<body>\n B. Tech (Computer Science)<br> B. Tech (Computer Science)\n</body>",
-    "profession": " ",
+    "education": "B. Tech (Computer Science) B. Tech (Computer Science)",
+    "profession": null,
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Food Processing Industries"
       },
       {
@@ -2178,7 +2133,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "11 May 2016 - 25 May 2019",
@@ -2186,7 +2141,7 @@
       },
       {
         "period": "13 May 2015 - 25 May 2019",
-        "position": "Member, \tJoint Committee on the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Second Amendment) Bill, 2015"
+        "position": "Member, Joint Committee on the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Second Amendment) Bill, 2015"
       },
       {
         "period": "25 March, 2015 - 25 May 2019",
@@ -2198,7 +2153,7 @@
       },
       {
         "period": null,
-        "position": "Member, Committee on Hindi Advisory, Departments of Economic Affairs and Financial Services, Ministry of Finance "
+        "position": "Member, Committee on Hindi Advisory, Departments of Economic Affairs and Financial Services, Ministry of Finance"
       },
       {
         "period": "15 Sep. 2014 - 25 May 2019",
@@ -2206,7 +2161,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of  Human Resource Development"
+        "position": "Member, Consultative Committee, Ministry of Human Resource Development"
       },
       {
         "period": "1 Sep. 2014 - 25 May 2019",
@@ -2214,25 +2169,22 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "16": 88.1,
-      "17": 55.1,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4452",
     "placeBirth": "Pimpry Akaraut, Edlabad, Jalgaon (Maharashtra)",
     "dateBirth": "16-Mar-1955",
-    "education": "<body>\n I.T.I <br> Educated at Industrial Training Institute, Surat<br> Industrial Training Institute, Surat\n</body>",
+    "education": "I.T.I Educated at Industrial Training Institute, Surat Industrial Training Institute, Surat",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Cabinet Minister of Jal Shakti"
       },
       {
@@ -2261,7 +2213,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": "11 Aug. 2015 - 25 May 2019",
@@ -2281,7 +2233,7 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (2 nd term)"
       },
       {
         "period": null,
@@ -2321,7 +2273,7 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Elected to 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 15 th Lok Sabha"
       },
       {
         "period": null,
@@ -2352,31 +2304,27 @@
         "position": "Joined Bharatiya Janata Party"
       }
     ],
-    "attendanceByTerm": {
-      "15": 77.3,
-      "16": 90.9,
-      "17": 73.7,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "3904",
     "placeBirth": "Rewari (Haryana)",
     "dateBirth": "11-Feb-1950",
-    "education": "<body>\n ISC:- Lawrence School, Sanawar (HP)<br> B.A. (Hons.):- Hindu College, Delhi University <br> LL.B.:- Law Faculty, Delhi University<br> ISC:- Lawrence School, Sanawar (HP)<br> B.A. (Hons.):- Hindu College, Delhi University <br> LL.B.:- Law Faculty, Delhi University\n</body>",
+    "education": "ISC:- Lawrence School, Sanawar (HP) B.A. (Hons.):- Hindu College, Delhi University LL.B.:- Law Faculty, Delhi University ISC:- Lawrence School, Sanawar (HP) B.A. (Hons.):- Hindu College, Delhi University LL.B.:- Law Faculty, Delhi University",
     "profession": "POLITICAL AND SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State (Independent Charge) of the Ministry  of Statistics and Programme Implementation;   Minister of State (Independent Charge) of the Ministry  of Planning; and  Minister of State in the Ministry of Culture"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State (Independent Charge) of the Ministry of Statistics and Programme Implementation; Minister of State (Independent Charge) of the Ministry of Planning; and Minister of State in the Ministry of Culture"
       },
       {
         "period": "June 2024",
         "position": "Elected to 18th Lok Sabha"
       },
       {
-        "period": "7 July  2021 onwards",
+        "period": "7 July 2021 onwards",
         "position": "Union Minister of State , Ministry of Corporate Affairs"
       },
       {
@@ -2385,7 +2333,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (5<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (5 th term)"
       },
       {
         "period": "3 Sept. 2017 - May 2019",
@@ -2393,11 +2341,11 @@
       },
       {
         "period": "5 July 2016 - 2 Sept. 2017",
-        "position": "<body>\n Union Minister of State (Independent Charge) Ministry of Planning; <br>Union Minister of State, Ministry of Urban Development and <br>Ministry of Housing and Urban Poverty Alleviation. <i>(The Ministry of Urban Development and Ministry of Housing and Urban Poverty Alleviation were merged into single Ministry viz. Ministry of Housing and Urban Affairs w.e.f. 6th July, 2017)</i>\n</body>"
+        "position": "Union Minister of State (Independent Charge) Ministry of Planning; Union Minister of State, Ministry of Urban Development and Ministry of Housing and Urban Poverty Alleviation. (The Ministry of Urban Development and Ministry of Housing and Urban Poverty Alleviation were merged into single Ministry viz. Ministry of Housing and Urban Affairs w.e.f. 6th July, 2017)"
       },
       {
         "period": "9 Nov. 2014 - 5 July 2016",
-        "position": "<body>\n Union Minister of State (Independent Charge) , Ministry of Planning ; and <br>Union Minister of State, Ministry of Defence\n</body>"
+        "position": "Union Minister of State (Independent Charge) , Ministry of Planning ; and Union Minister of State, Ministry of Defence"
       },
       {
         "period": "27 May 2014 - 8 Nov. 2014",
@@ -2405,19 +2353,19 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (4<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (4 th term)"
       },
       {
         "period": "5 Apr. 2014",
-        "position": "<body>\n Resigned from 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Resigned from 15 th Lok Sabha"
       },
       {
-        "period": "31 Aug. 2009 - 5 Apr. 2014 ",
+        "period": "31 Aug. 2009 - 5 Apr. 2014",
         "position": "Chairman, Standing Committee on Information Technology"
       },
       {
         "period": "2009",
-        "position": "<body>\n Re-elected to 15<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 15 th Lok Sabha (3 rd term)"
       },
       {
         "period": "Feb. 2006-2009",
@@ -2425,11 +2373,11 @@
       },
       {
         "period": "May 2004-2006",
-        "position": "Union Minister of State,  External Affairs"
+        "position": "Union Minister of State, External Affairs"
       },
       {
         "period": "2004",
-        "position": "<body>\n Elected to 14<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Elected to 14 th Lok Sabha (2 nd term)"
       },
       {
         "period": "1998-1999",
@@ -2437,7 +2385,7 @@
       },
       {
         "period": "1998",
-        "position": "<body>\n Elected to 12<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 12 th Lok Sabha"
       },
       {
         "period": "1991-1996",
@@ -2448,29 +2396,24 @@
         "position": "Minister of State (Independent Charge), Food and Civil Supplies, Govt. of Haryana"
       },
       {
-        "period": "<body>\n 1977-1982, 1982-1987<br>1991-1996, 2000-2004\n</body>",
-        "position": "Elected as MLA 4 Times  from Jatusana Vidhan Sabha (Haryana)"
+        "period": "1977-1982, 1982-1987 1991-1996, 2000-2004",
+        "position": "Elected as MLA 4 Times from Jatusana Vidhan Sabha (Haryana)"
       }
     ],
-    "attendanceByTerm": {
-      "14": null,
-      "15": 79.3,
-      "16": null,
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4718",
     "placeBirth": "Jammu (Jammu and Kashmir)",
     "dateBirth": "15-Sep-1956",
-    "education": "<body>\n M.B.B.S. (Stanley, Chennai), M.D. (Medicine) Fellowship (Diabetes)AIIMS New Delhi, MNAMS (Diabetes and Endocrinology), Ph.D.(Hon) Amity University, Ph.D. (Hon)Central University Jammu, Fellow ‘Indian College of Physicians” (ICP), Life Patron RSSDI (Research Society for Study of Diabetes in India)<br> M.B.B.S. (Stanley, Chennai), M.D. (Medicine) Fellowship (Diabetes)AIIMS New Delhi, MNAMS (Diabetes and Endocrinology), Ph.D.(Hon) Amity University, Ph.D. (Hon)Central University Jammu, Fellow ‘Indian College of Physicians” (ICP), Life Patron RSSDI (Research Society for Study of Diabetes in India)\n</body>",
+    "education": "M.B.B.S. (Stanley, Chennai), M.D. (Medicine) Fellowship (Diabetes)AIIMS New Delhi, MNAMS (Diabetes and Endocrinology), Ph.D.(Hon) Amity University, Ph.D. (Hon)Central University Jammu, Fellow ‘Indian College of Physicians” (ICP), Life Patron RSSDI (Research Society for Study of Diabetes in India) M.B.B.S. (Stanley, Chennai), M.D. (Medicine) Fellowship (Diabetes)AIIMS New Delhi, MNAMS (Diabetes and Endocrinology), Ph.D.(Hon) Amity University, Ph.D. (Hon)Central University Jammu, Fellow ‘Indian College of Physicians” (ICP), Life Patron RSSDI (Research Society for Study of Diabetes in India)",
     "profession": "MEDICAL PRACTITIONER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State (Independent Charge) of the Ministry  of Science and Technology;  Minister of State (Independent Charge) of the Ministry  of Earth Sciences;  Minister of State in the Prime Minister’s Office;  Minister of State in the Ministry of Personnel, Public  Grievances and Pensions;   Minister of State in the Department of Atomic Energy;  and   Minister of State in the Department of Space"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State (Independent Charge) of the Ministry of Science and Technology; Minister of State (Independent Charge) of the Ministry of Earth Sciences; Minister of State in the Prime Minister’s Office; Minister of State in the Ministry of Personnel, Public Grievances and Pensions; Minister of State in the Department of Atomic Energy; and Minister of State in the Department of Space"
       },
       {
         "period": "June 2024",
@@ -2478,7 +2421,7 @@
       },
       {
         "period": "7 July 2021 onwards",
-        "position": "<body>\n Union Minister of State (Independent charge), Ministry of Science and Technology; and<br>Union Minister of State (Independent charge), Ministry of Earth Sciences\n</body>"
+        "position": "Union Minister of State (Independent charge), Ministry of Science and Technology; and Union Minister of State (Independent charge), Ministry of Earth Sciences"
       },
       {
         "period": "30 May 2019 onwards",
@@ -2490,7 +2433,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "22 May 2016 - 28 May 2016",
@@ -2510,26 +2453,23 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "16": null,
-      "17": 76.3,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4399",
     "placeBirth": "Vill. Kishmideshar, Distt. Bikaner (Rajasthan)",
     "dateBirth": "20-Dec-1953",
-    "education": "<body>\n M.A. (Pol. Science), LL.B., M.B.A <br>Educated at Sri Dungar College, Bikaner and University of Philippine, Philippines<br> Sri Dungar College, Bikaner and University of Philippine, Philippines\n</body>",
+    "education": "M.A. (Pol. Science), LL.B., M.B.A Educated at Sri Dungar College, Bikaner and University of Philippine, Philippines Sri Dungar College, Bikaner and University of Philippine, Philippines",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State (Independent Charge) of the Ministry  of Law and Justice; and   Minister of State in the Ministry of Parliamentary  Affairs"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State (Independent Charge) of the Ministry of Law and Justice; and Minister of State in the Ministry of Parliamentary Affairs"
       },
       {
         "period": "June 2024",
@@ -2552,12 +2492,12 @@
         "position": "Special Invitee, Business Advisory Committee"
       },
       {
-        "period": "<body>\n 30 May 2019-7 July 2021<br><br>30 May 2019 onwards\n</body>",
-        "position": "<body>\n Union Minister of State, Ministry of Heavy Industries and Public Enterprises<br> Union Minister of State, Ministry of Parliamentary Affairs\n</body>"
+        "period": "30 May 2019-7 July 2021 30 May 2019 onwards",
+        "position": "Union Minister of State, Ministry of Heavy Industries and Public Enterprises Union Minister of State, Ministry of Parliamentary Affairs"
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": "3 Sept. 2017 - 25 May 2019",
@@ -2568,7 +2508,7 @@
         "position": "Union Minister of State, Ministry of Finance; and Ministry of Corporate Affairs"
       },
       {
-        "period": "3 July 2015 ",
+        "period": "3 July 2015",
         "position": "Member, Sub-Committee-III, Committee on Estimates"
       },
       {
@@ -2601,7 +2541,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of  External Affairs and Overseas Indian Affairs"
+        "position": "Member, Consultative Committee, Ministry of External Affairs and Overseas Indian Affairs"
       },
       {
         "period": "15 Sep. 2014 - 5 July 2016",
@@ -2621,18 +2561,18 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (2 nd term)"
       },
       {
-        "period": "21 April 2013 ",
+        "period": "21 April 2013",
         "position": "Member, Committee on Absence of Member from the Sitting of the House"
       },
       {
-        "period": "01 May 2012 ",
+        "period": "01 May 2012",
         "position": "Member, Committee on the Welfare of Scheduled Castes and Scheduled Tribes"
       },
       {
-        "period": "01 Dec. 2011 ",
+        "period": "01 Dec. 2011",
         "position": "Member, Zonal Railway User`s Consultative Committee (ZRUCC)"
       },
       {
@@ -2648,7 +2588,7 @@
         "position": "Member, Standing Committee on Science and Technology, Environment and Forest"
       },
       {
-        "period": "2010 ",
+        "period": "2010",
         "position": "Vice-President, Bharatiya Janata Party (B.J.P.) Rajasthan"
       },
       {
@@ -2665,31 +2605,27 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Elected to 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 15 th Lok Sabha"
       },
       {
-        "period": "2009 ",
+        "period": "2009",
         "position": "Member, Consultative Committee, External Affairs"
       }
     ],
-    "attendanceByTerm": {
-      "15": 98.9,
-      "16": null,
-      "17": 0.4,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4373",
     "placeBirth": "Mehkar, Distt. Buldhana (Maharashtra)",
     "dateBirth": "25-Nov-1960",
-    "education": "<body>\n B.A. (II year) Educated at Shri Shivaji College, Chikhili, Buldhana, Maharashtra<br> Shri Shivaji College, Chikhili, Buldhana, Maharashtra\n</body>",
+    "education": "B.A. (II year) Educated at Shri Shivaji College, Chikhili, Buldhana, Maharashtra Shri Shivaji College, Chikhili, Buldhana, Maharashtra",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State (Independent Charge) of the Ministry  of Ayush; and  Minister of State in the Ministry of Health and Family  Welfare"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State (Independent Charge) of the Ministry of Ayush; and Minister of State in the Ministry of Health and Family Welfare"
       },
       {
         "period": "June 2024",
@@ -2721,7 +2657,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": "9 Sep. 2015 - 25 May 2019",
@@ -2733,7 +2669,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of   Food Processing Industries"
+        "position": "Member, Consultative Committee, Ministry of Food Processing Industries"
       },
       {
         "period": "1 Sep. 2014 - 31 Aug. 2015",
@@ -2741,11 +2677,11 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (2 nd term)"
       },
       {
         "period": null,
-        "position": "Member, Standing  Committee on Rural Development"
+        "position": "Member, Standing Committee on Rural Development"
       },
       {
         "period": "1 Dec. 2009",
@@ -2757,7 +2693,7 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Elected to 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 15 th Lok Sabha"
       },
       {
         "period": "1997-1999",
@@ -2768,12 +2704,8 @@
         "position": "Member, Maharashtra Legislative Assembly (three terms)"
       }
     ],
-    "attendanceByTerm": {
-      "15": 64,
-      "16": 69.8,
-      "17": 70.8,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -2781,28 +2713,31 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "3904",
     "placeBirth": "Rewari (Haryana)",
     "dateBirth": "11-Feb-1950",
-    "education": "<body>\n ISC:- Lawrence School, Sanawar (HP)<br> B.A. (Hons.):- Hindu College, Delhi University <br> LL.B.:- Law Faculty, Delhi University<br> ISC:- Lawrence School, Sanawar (HP)<br> B.A. (Hons.):- Hindu College, Delhi University <br> LL.B.:- Law Faculty, Delhi University\n</body>",
+    "education": "ISC:- Lawrence School, Sanawar (HP) B.A. (Hons.):- Hindu College, Delhi University LL.B.:- Law Faculty, Delhi University ISC:- Lawrence School, Sanawar (HP) B.A. (Hons.):- Hindu College, Delhi University LL.B.:- Law Faculty, Delhi University",
     "profession": "POLITICAL AND SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State (Independent Charge) of the Ministry  of Statistics and Programme Implementation;   Minister of State (Independent Charge) of the Ministry  of Planning; and  Minister of State in the Ministry of Culture"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State (Independent Charge) of the Ministry of Statistics and Programme Implementation; Minister of State (Independent Charge) of the Ministry of Planning; and Minister of State in the Ministry of Culture"
       },
       {
         "period": "June 2024",
         "position": "Elected to 18th Lok Sabha"
       },
       {
-        "period": "7 July  2021 onwards",
+        "period": "7 July 2021 onwards",
         "position": "Union Minister of State , Ministry of Corporate Affairs"
       },
       {
@@ -2811,7 +2746,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (5<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (5 th term)"
       },
       {
         "period": "3 Sept. 2017 - May 2019",
@@ -2819,11 +2754,11 @@
       },
       {
         "period": "5 July 2016 - 2 Sept. 2017",
-        "position": "<body>\n Union Minister of State (Independent Charge) Ministry of Planning; <br>Union Minister of State, Ministry of Urban Development and <br>Ministry of Housing and Urban Poverty Alleviation. <i>(The Ministry of Urban Development and Ministry of Housing and Urban Poverty Alleviation were merged into single Ministry viz. Ministry of Housing and Urban Affairs w.e.f. 6th July, 2017)</i>\n</body>"
+        "position": "Union Minister of State (Independent Charge) Ministry of Planning; Union Minister of State, Ministry of Urban Development and Ministry of Housing and Urban Poverty Alleviation. (The Ministry of Urban Development and Ministry of Housing and Urban Poverty Alleviation were merged into single Ministry viz. Ministry of Housing and Urban Affairs w.e.f. 6th July, 2017)"
       },
       {
         "period": "9 Nov. 2014 - 5 July 2016",
-        "position": "<body>\n Union Minister of State (Independent Charge) , Ministry of Planning ; and <br>Union Minister of State, Ministry of Defence\n</body>"
+        "position": "Union Minister of State (Independent Charge) , Ministry of Planning ; and Union Minister of State, Ministry of Defence"
       },
       {
         "period": "27 May 2014 - 8 Nov. 2014",
@@ -2831,19 +2766,19 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (4<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (4 th term)"
       },
       {
         "period": "5 Apr. 2014",
-        "position": "<body>\n Resigned from 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Resigned from 15 th Lok Sabha"
       },
       {
-        "period": "31 Aug. 2009 - 5 Apr. 2014 ",
+        "period": "31 Aug. 2009 - 5 Apr. 2014",
         "position": "Chairman, Standing Committee on Information Technology"
       },
       {
         "period": "2009",
-        "position": "<body>\n Re-elected to 15<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 15 th Lok Sabha (3 rd term)"
       },
       {
         "period": "Feb. 2006-2009",
@@ -2851,11 +2786,11 @@
       },
       {
         "period": "May 2004-2006",
-        "position": "Union Minister of State,  External Affairs"
+        "position": "Union Minister of State, External Affairs"
       },
       {
         "period": "2004",
-        "position": "<body>\n Elected to 14<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Elected to 14 th Lok Sabha (2 nd term)"
       },
       {
         "period": "1998-1999",
@@ -2863,7 +2798,7 @@
       },
       {
         "period": "1998",
-        "position": "<body>\n Elected to 12<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 12 th Lok Sabha"
       },
       {
         "period": "1991-1996",
@@ -2874,29 +2809,24 @@
         "position": "Minister of State (Independent Charge), Food and Civil Supplies, Govt. of Haryana"
       },
       {
-        "period": "<body>\n 1977-1982, 1982-1987<br>1991-1996, 2000-2004\n</body>",
-        "position": "Elected as MLA 4 Times  from Jatusana Vidhan Sabha (Haryana)"
+        "period": "1977-1982, 1982-1987 1991-1996, 2000-2004",
+        "position": "Elected as MLA 4 Times from Jatusana Vidhan Sabha (Haryana)"
       }
     ],
-    "attendanceByTerm": {
-      "14": null,
-      "15": 79.3,
-      "16": null,
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4718",
     "placeBirth": "Jammu (Jammu and Kashmir)",
     "dateBirth": "15-Sep-1956",
-    "education": "<body>\n M.B.B.S. (Stanley, Chennai), M.D. (Medicine) Fellowship (Diabetes)AIIMS New Delhi, MNAMS (Diabetes and Endocrinology), Ph.D.(Hon) Amity University, Ph.D. (Hon)Central University Jammu, Fellow ‘Indian College of Physicians” (ICP), Life Patron RSSDI (Research Society for Study of Diabetes in India)<br> M.B.B.S. (Stanley, Chennai), M.D. (Medicine) Fellowship (Diabetes)AIIMS New Delhi, MNAMS (Diabetes and Endocrinology), Ph.D.(Hon) Amity University, Ph.D. (Hon)Central University Jammu, Fellow ‘Indian College of Physicians” (ICP), Life Patron RSSDI (Research Society for Study of Diabetes in India)\n</body>",
+    "education": "M.B.B.S. (Stanley, Chennai), M.D. (Medicine) Fellowship (Diabetes)AIIMS New Delhi, MNAMS (Diabetes and Endocrinology), Ph.D.(Hon) Amity University, Ph.D. (Hon)Central University Jammu, Fellow ‘Indian College of Physicians” (ICP), Life Patron RSSDI (Research Society for Study of Diabetes in India) M.B.B.S. (Stanley, Chennai), M.D. (Medicine) Fellowship (Diabetes)AIIMS New Delhi, MNAMS (Diabetes and Endocrinology), Ph.D.(Hon) Amity University, Ph.D. (Hon)Central University Jammu, Fellow ‘Indian College of Physicians” (ICP), Life Patron RSSDI (Research Society for Study of Diabetes in India)",
     "profession": "MEDICAL PRACTITIONER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State (Independent Charge) of the Ministry  of Science and Technology;  Minister of State (Independent Charge) of the Ministry  of Earth Sciences;  Minister of State in the Prime Minister’s Office;  Minister of State in the Ministry of Personnel, Public  Grievances and Pensions;   Minister of State in the Department of Atomic Energy;  and   Minister of State in the Department of Space"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State (Independent Charge) of the Ministry of Science and Technology; Minister of State (Independent Charge) of the Ministry of Earth Sciences; Minister of State in the Prime Minister’s Office; Minister of State in the Ministry of Personnel, Public Grievances and Pensions; Minister of State in the Department of Atomic Energy; and Minister of State in the Department of Space"
       },
       {
         "period": "June 2024",
@@ -2904,7 +2834,7 @@
       },
       {
         "period": "7 July 2021 onwards",
-        "position": "<body>\n Union Minister of State (Independent charge), Ministry of Science and Technology; and<br>Union Minister of State (Independent charge), Ministry of Earth Sciences\n</body>"
+        "position": "Union Minister of State (Independent charge), Ministry of Science and Technology; and Union Minister of State (Independent charge), Ministry of Earth Sciences"
       },
       {
         "period": "30 May 2019 onwards",
@@ -2916,7 +2846,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "22 May 2016 - 28 May 2016",
@@ -2936,26 +2866,23 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "16": null,
-      "17": 76.3,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4399",
     "placeBirth": "Vill. Kishmideshar, Distt. Bikaner (Rajasthan)",
     "dateBirth": "20-Dec-1953",
-    "education": "<body>\n M.A. (Pol. Science), LL.B., M.B.A <br>Educated at Sri Dungar College, Bikaner and University of Philippine, Philippines<br> Sri Dungar College, Bikaner and University of Philippine, Philippines\n</body>",
+    "education": "M.A. (Pol. Science), LL.B., M.B.A Educated at Sri Dungar College, Bikaner and University of Philippine, Philippines Sri Dungar College, Bikaner and University of Philippine, Philippines",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State (Independent Charge) of the Ministry  of Law and Justice; and   Minister of State in the Ministry of Parliamentary  Affairs"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State (Independent Charge) of the Ministry of Law and Justice; and Minister of State in the Ministry of Parliamentary Affairs"
       },
       {
         "period": "June 2024",
@@ -2978,12 +2905,12 @@
         "position": "Special Invitee, Business Advisory Committee"
       },
       {
-        "period": "<body>\n 30 May 2019-7 July 2021<br><br>30 May 2019 onwards\n</body>",
-        "position": "<body>\n Union Minister of State, Ministry of Heavy Industries and Public Enterprises<br> Union Minister of State, Ministry of Parliamentary Affairs\n</body>"
+        "period": "30 May 2019-7 July 2021 30 May 2019 onwards",
+        "position": "Union Minister of State, Ministry of Heavy Industries and Public Enterprises Union Minister of State, Ministry of Parliamentary Affairs"
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": "3 Sept. 2017 - 25 May 2019",
@@ -2994,7 +2921,7 @@
         "position": "Union Minister of State, Ministry of Finance; and Ministry of Corporate Affairs"
       },
       {
-        "period": "3 July 2015 ",
+        "period": "3 July 2015",
         "position": "Member, Sub-Committee-III, Committee on Estimates"
       },
       {
@@ -3027,7 +2954,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of  External Affairs and Overseas Indian Affairs"
+        "position": "Member, Consultative Committee, Ministry of External Affairs and Overseas Indian Affairs"
       },
       {
         "period": "15 Sep. 2014 - 5 July 2016",
@@ -3047,18 +2974,18 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (2 nd term)"
       },
       {
-        "period": "21 April 2013 ",
+        "period": "21 April 2013",
         "position": "Member, Committee on Absence of Member from the Sitting of the House"
       },
       {
-        "period": "01 May 2012 ",
+        "period": "01 May 2012",
         "position": "Member, Committee on the Welfare of Scheduled Castes and Scheduled Tribes"
       },
       {
-        "period": "01 Dec. 2011 ",
+        "period": "01 Dec. 2011",
         "position": "Member, Zonal Railway User`s Consultative Committee (ZRUCC)"
       },
       {
@@ -3074,7 +3001,7 @@
         "position": "Member, Standing Committee on Science and Technology, Environment and Forest"
       },
       {
-        "period": "2010 ",
+        "period": "2010",
         "position": "Vice-President, Bharatiya Janata Party (B.J.P.) Rajasthan"
       },
       {
@@ -3091,31 +3018,27 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Elected to 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 15 th Lok Sabha"
       },
       {
-        "period": "2009 ",
+        "period": "2009",
         "position": "Member, Consultative Committee, External Affairs"
       }
     ],
-    "attendanceByTerm": {
-      "15": 98.9,
-      "16": null,
-      "17": 0.4,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4373",
     "placeBirth": "Mehkar, Distt. Buldhana (Maharashtra)",
     "dateBirth": "25-Nov-1960",
-    "education": "<body>\n B.A. (II year) Educated at Shri Shivaji College, Chikhili, Buldhana, Maharashtra<br> Shri Shivaji College, Chikhili, Buldhana, Maharashtra\n</body>",
+    "education": "B.A. (II year) Educated at Shri Shivaji College, Chikhili, Buldhana, Maharashtra Shri Shivaji College, Chikhili, Buldhana, Maharashtra",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State (Independent Charge) of the Ministry  of Ayush; and  Minister of State in the Ministry of Health and Family  Welfare"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State (Independent Charge) of the Ministry of Ayush; and Minister of State in the Ministry of Health and Family Welfare"
       },
       {
         "period": "June 2024",
@@ -3147,7 +3070,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": "9 Sep. 2015 - 25 May 2019",
@@ -3159,7 +3082,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of   Food Processing Industries"
+        "position": "Member, Consultative Committee, Ministry of Food Processing Industries"
       },
       {
         "period": "1 Sep. 2014 - 31 Aug. 2015",
@@ -3167,11 +3090,11 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (2 nd term)"
       },
       {
         "period": null,
-        "position": "Member, Standing  Committee on Rural Development"
+        "position": "Member, Standing Committee on Rural Development"
       },
       {
         "period": "1 Dec. 2009",
@@ -3183,7 +3106,7 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Elected to 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 15 th Lok Sabha"
       },
       {
         "period": "1997-1999",
@@ -3194,12 +3117,8 @@
         "position": "Member, Maharashtra Legislative Assembly (three terms)"
       }
     ],
-    "attendanceByTerm": {
-      "15": 64,
-      "16": 69.8,
-      "17": 70.8,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -3207,21 +3126,24 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "4065",
     "placeBirth": "New Delhi",
     "dateBirth": "29-Nov-1973",
-    "education": "<body>\n M.B.A<br> International Management Institute Delhi\n</body>",
+    "education": "M.B.A International Management Institute Delhi",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Commerce and  Industry; and  Minister of State in the Ministry of Electronics and  Information Technology"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Commerce and Industry; and Minister of State in the Ministry of Electronics and Information Technology"
       },
       {
         "period": "June 2024",
@@ -3232,11 +3154,11 @@
         "position": "Cabinet Minister for PWD"
       },
       {
-        "period": "28 Oct. 2012 ",
+        "period": "28 Oct. 2012",
         "position": "Union Minister of State, Human Resource Development"
       },
       {
-        "period": "19 Jan 2011 -   28 Oct. 2012",
+        "period": "19 Jan 2011 - 28 Oct. 2012",
         "position": "Union Minister of State, Road Transport and Highways"
       },
       {
@@ -3249,7 +3171,7 @@
       },
       {
         "period": "April 2008-May 2009",
-        "position": "Minister of State,  Steel"
+        "position": "Minister of State, Steel"
       },
       {
         "period": null,
@@ -3268,23 +3190,20 @@
         "position": "Elected to 14th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "14": null,
-      "15": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "273",
     "placeBirth": "Adpai,  North Goa District, Goa",
     "dateBirth": "04-Oct-1952",
-    "education": "<body>\n B.A. <br>Educated at Bombay University, Mumbai, Maharashtra<br> Bombay University, Mumbai, Maharashtra\n</body>",
+    "education": "B.A. Educated at Bombay University, Mumbai, Maharashtra Bombay University, Mumbai, Maharashtra",
     "profession": "BUSINESSPERSON",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Power; and  Minister of State in the Ministry of New and Renewable  Energy"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Power; and Minister of State in the Ministry of New and Renewable Energy"
       },
       {
         "period": "June 2024",
@@ -3296,11 +3215,11 @@
       },
       {
         "period": "30 May 2019 - 7 July 2021",
-        "position": "<body>\n Union Minister of State (Independent Charge) Ministry of Ayurveda, Yoga &amp; Naturopathy, Unani, Siddha and Homoeopathy (AYUSH); and<br>Union Minister of State, Ministry of Defence\n</body>"
+        "position": "Union Minister of State (Independent Charge) Ministry of Ayurveda, Yoga &amp; Naturopathy, Unani, Siddha and Homoeopathy (AYUSH); and Union Minister of State, Ministry of Defence"
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (5<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (5 th term)"
       },
       {
         "period": "5 July 2016 - 25 May 2019",
@@ -3308,15 +3227,15 @@
       },
       {
         "period": "9 Nov. 2014 - 5 July 2016",
-        "position": "<body>\n Union Minister of State (Independent Charge) Ministry of Ayurveda, Yoga &amp; Naturopathy, Unani, Siddha and Homoeopathy (AYUSH);<br>Union Minister of State, Ministry of Health and Family Welfare\n</body>"
+        "position": "Union Minister of State (Independent Charge) Ministry of Ayurveda, Yoga &amp; Naturopathy, Unani, Siddha and Homoeopathy (AYUSH); Union Minister of State, Ministry of Health and Family Welfare"
       },
       {
         "period": "27 May 2014 - 9 Nov. 2014",
-        "position": "Union Minister of State (Independent Charge) Ministry of Culture; and  Ministry of Tourism."
+        "position": "Union Minister of State (Independent Charge) Ministry of Culture; and Ministry of Tourism."
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (4<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (4 th term)"
       },
       {
         "period": "2012-13",
@@ -3324,7 +3243,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of  Tourism and Ministry of Urban Poverty Alleviation"
+        "position": "Member, Consultative Committee, Ministry of Tourism and Ministry of Urban Poverty Alleviation"
       },
       {
         "period": "7 Oct. 2009",
@@ -3336,10 +3255,10 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Re-elected to 15<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 15 th Lok Sabha (3 rd term)"
       },
       {
-        "period": "7 Aug. 2007 ",
+        "period": "7 Aug. 2007",
         "position": "Member, Committee on Members of Parliament Local Area Development Scheme (MPLADS)"
       },
       {
@@ -3356,7 +3275,7 @@
       },
       {
         "period": "2004",
-        "position": "<body>\n Re-elected to 14<sup>th</sup> Lok Sabha( 2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 14 th Lok Sabha( 2 nd term)"
       },
       {
         "period": "8 Sep. 2003 - 22 May 2004",
@@ -3376,11 +3295,11 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of Rural Development \r\n"
+        "position": "Member, Consultative Committee, Ministry of Rural Development"
       },
       {
         "period": null,
-        "position": "Member, Committee on Absences of Members from the Sittings of                                         the House "
+        "position": "Member, Committee on Absences of Members from the Sittings of the House"
       },
       {
         "period": "1999 - 2000",
@@ -3388,7 +3307,7 @@
       },
       {
         "period": "1999",
-        "position": "<body>\n Elected to 13<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 13 th Lok Sabha"
       },
       {
         "period": null,
@@ -3407,24 +3326,19 @@
         "position": "Member, Goa Legislative Assembly"
       }
     ],
-    "attendanceByTerm": {
-      "14": 61.5,
-      "15": 81,
-      "16": null,
-      "17": 0.7,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "3479",
     "placeBirth": "Gorakhpur, Distt. Gorakhpur (Uttar Pradesh)",
     "dateBirth": "20-Nov-1964",
-    "education": "<body>\n BA<br> Educated at Gorakhpur University, Gorakhpur (Uttar Pradesh)\n</body>",
+    "education": "BA Educated at Gorakhpur University, Gorakhpur (Uttar Pradesh)",
     "profession": "BUSINESSPERSON",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Minister of State in the Ministry of Finance"
       },
       {
@@ -3437,7 +3351,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of Rural Development, Ministry of Panchayati Raj "
+        "position": "Member, Consultative Committee, Ministry of Rural Development, Ministry of Panchayati Raj"
       },
       {
         "period": "13 Sept. 2019 - 7 July 2021",
@@ -3445,7 +3359,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (6<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (6 th term)"
       },
       {
         "period": "1 Sept. 2018 - 25 May 2019",
@@ -3469,15 +3383,15 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (5<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (5 th term)"
       },
       {
-        "period": "7 Aug. 2007 ",
+        "period": "7 Aug. 2007",
         "position": "Member, Committee on Members of Parliament Local Area Development Scheme (MPLADS)"
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of  Tourism"
+        "position": "Member, Consultative Committee, Ministry of Tourism"
       },
       {
         "period": null,
@@ -3489,7 +3403,7 @@
       },
       {
         "period": "2004",
-        "position": "<body>\n Re-elected to 14<sup>th</sup> Lok Sabha (4<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 14 th Lok Sabha (4 th term)"
       },
       {
         "period": null,
@@ -3505,7 +3419,7 @@
       },
       {
         "period": "1998",
-        "position": "<body>\n Re-elected to 12<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 12 th Lok Sabha (3 rd term)"
       },
       {
         "period": null,
@@ -3517,7 +3431,7 @@
       },
       {
         "period": "1996",
-        "position": "<body>\n Re-elected to 11<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 11 th Lok Sabha (2 nd term)"
       },
       {
         "period": null,
@@ -3529,10 +3443,10 @@
       },
       {
         "period": "1991",
-        "position": "<body>\n Elected to 10<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 10 th Lok Sabha"
       },
       {
-        "period": "1991 ",
+        "period": "1991",
         "position": "Member, Working Committee, Bharatiya Janata Party (B.J.P.)"
       },
       {
@@ -3544,23 +3458,19 @@
         "position": "Member, Municipal Corporation, Gorakhpur, Uttar Pradesh"
       }
     ],
-    "attendanceByTerm": {
-      "14": 65.6,
-      "16": 82,
-      "17": null,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4629",
     "placeBirth": "Mevla Maharajpur, Distt. Faridabad (Haryana)",
     "dateBirth": "04-Feb-1957",
-    "education": "<body>\n B.A., LL.B. <br> Educated at Govt. College, Faridabad, M.D. University, Rohtak, Haryana and M.M.H. College, (Chaudhary Charan Singh University), Uttar Pradesh<br> Govt. College, Faridabad, M.D. University, Rohtak, Haryana and M.M.H. College, (Chaudhary Charan Singh University), Uttar Pradesh\n</body>",
+    "education": "B.A., LL.B. Educated at Govt. College, Faridabad, M.D. University, Rohtak, Haryana and M.M.H. College, (Chaudhary Charan Singh University), Uttar Pradesh Govt. College, Faridabad, M.D. University, Rohtak, Haryana and M.M.H. College, (Chaudhary Charan Singh University), Uttar Pradesh",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Minister of State in the Ministry of Cooperation"
       },
       {
@@ -3572,12 +3482,12 @@
         "position": "Union Minister of State, Ministry of Power; and Union Minister of State, Ministry of Heavy Industries"
       },
       {
-        "period": "30 May 2019 - 7 July 2021 ",
+        "period": "30 May 2019 - 7 July 2021",
         "position": "Union Minister of State, Ministry of Social Justice and Empowerment"
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "9 Nov. 2014 - 25 May 2019",
@@ -3589,7 +3499,7 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       },
       {
         "period": "2009 - 2013",
@@ -3604,11 +3514,8 @@
         "position": "Member, Haryana Legislative Assembly (Three Terms)"
       }
     ],
-    "attendanceByTerm": {
-      "16": null,
-      "17": 0,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -3616,30 +3523,36 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "2268",
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "4625",
     "placeBirth": "Hajipur, Vaishali (Bihar)",
     "dateBirth": "01-Jan-1966",
-    "education": "<body>\n B.A. (Hons.) Educated at Raj Narayan College, Hajipur, Bihar<br> Raj Narayan College, Hajipur, Bihar\n</body>",
+    "education": "B.A. (Hons.) Educated at Raj Narayan College, Hajipur, Bihar Raj Narayan College, Hajipur, Bihar",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Minister of State in the Ministry of Home Affairs"
       },
       {
@@ -3652,7 +3565,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "1 Sept. 2018 - 25 May 2019",
@@ -3660,7 +3573,7 @@
       },
       {
         "period": "13 May 2015 - 25 May 2019",
-        "position": "Member, \tJoint Committee on the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Second Amendment) Bill, 2015"
+        "position": "Member, Joint Committee on the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Second Amendment) Bill, 2015"
       },
       {
         "period": null,
@@ -3672,34 +3585,31 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       },
       {
         "period": "2006 - 2010",
         "position": "Whip, Bihar Legislature"
       },
       {
-        "period": "2000 - May 2014 ",
+        "period": "2000 - May 2014",
         "position": "Member, Bihar Legislative Assembly (Three Terms)"
       }
     ],
-    "attendanceByTerm": {
-      "16": 68.9,
-      "17": 0.7,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4662",
     "placeBirth": "Kanpur (Uttar Pradesh)",
     "dateBirth": "28-April-1981",
-    "education": "<body>\n B.A. from Lady Shri Ram College, University of Delhi; <br> MBA from Chhatrapati Shahuji Maharaj University, Kanpur, Uttar Pradesh; <br> PG Diploma in Counselling Psychology from Amity University, Noida.<br> B.A. from Lady Shri Ram College, University of Delhi; <br> MBA from Chhatrapati Shahuji Maharaj University, Kanpur, Uttar Pradesh; <br> PG Diploma in Counselling Psychology from Amity University, Noida.\n</body>",
+    "education": "B.A. from Lady Shri Ram College, University of Delhi; MBA from Chhatrapati Shahuji Maharaj University, Kanpur, Uttar Pradesh; PG Diploma in Counselling Psychology from Amity University, Noida. B.A. from Lady Shri Ram College, University of Delhi; MBA from Chhatrapati Shahuji Maharaj University, Kanpur, Uttar Pradesh; PG Diploma in Counselling Psychology from Amity University, Noida.",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Health and Family  Welfare; and  Minister of State in the Ministry of Chemicals and  Fertilizers"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Health and Family Welfare; and Minister of State in the Ministry of Chemicals and Fertilizers"
       },
       {
         "period": "June 2024",
@@ -3723,7 +3633,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected as Member of Parliament 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected as Member of Parliament 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "5 July, 2016 - 29 May 2019",
@@ -3751,30 +3661,27 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Elected as Member of Parliament 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected as Member of Parliament 16 th Lok Sabha"
       },
       {
         "period": "2012 - 2014",
         "position": "Member, Uttar Pradesh Legislative Assembly"
       }
     ],
-    "attendanceByTerm": {
-      "16": null,
-      "17": 40.1,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5625",
     "placeBirth": "Doddamaralavadi Ramanagara",
     "dateBirth": "20-Jul-1951",
-    "education": "<body>\n B A (Under Graduate)<br> B A (Under Graduate)\n</body>",
+    "education": "B A (Under Graduate) B A (Under Graduate)",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Jal Shakti; and  Minister of State in the Ministry of Railways"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Jal Shakti; and Minister of State in the Ministry of Railways"
       },
       {
         "period": "June 2024",
@@ -3821,42 +3728,40 @@
         "position": "MLA"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5636",
     "placeBirth": "Narsaraopet",
     "dateBirth": "07-Mar-1976",
-    "education": "<body>\n MD<br> Geisinger Health Systems, USA\n</body>",
+    "education": "MD Geisinger Health Systems, USA",
     "profession": "Doctor",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Rural Development;  and  Minister of State in the Ministry of Communications"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Rural Development; and Minister of State in the Ministry of Communications"
       },
       {
         "period": "June 2024",
         "position": "Elected to 18th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "31",
     "placeBirth": "Bhatpura, P.O. Umari, Distt. Auraiya,  Uttar Pradesh",
     "dateBirth": "21-Jun-1960",
-    "education": "<body>\n M.Sc. (Military Science), LL.B. , Ph.D., M.A. (History) <br>Educated at Maharaja Jiyaji Rao University, Gwalior, Madhya Pradesh; Meerut University, Meerut; Chaudhary Charan Singh University, Meerut and Dr. BR Ambedkar University, Agra, Uttar Pradesh <br> Maharaja Jiyaji Rao University, Gwalior, Madhya Pradesh; Meerut University, Meerut; Chaudhary Charan Singh University, Meerut and Dr. BR Ambedkar University, Agra, Uttar Pradesh\n</body>",
+    "education": "M.Sc. (Military Science), LL.B. , Ph.D., M.A. (History) Educated at Maharaja Jiyaji Rao University, Gwalior, Madhya Pradesh; Meerut University, Meerut; Chaudhary Charan Singh University, Meerut and Dr. BR Ambedkar University, Agra, Uttar Pradesh Maharaja Jiyaji Rao University, Gwalior, Madhya Pradesh; Meerut University, Meerut; Chaudhary Charan Singh University, Meerut and Dr. BR Ambedkar University, Agra, Uttar Pradesh",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Fisheries, Animal  Husbandry and Dairying; and  Minister of State in the Ministry of Panchayati Raj"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Fisheries, Animal Husbandry and Dairying; and Minister of State in the Ministry of Panchayati Raj"
       },
       {
         "period": "June 2024",
@@ -3884,7 +3789,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (4<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (4 th term)"
       },
       {
         "period": "2017 - 15 June 2019",
@@ -3940,11 +3845,11 @@
       },
       {
         "period": "2000-2004",
-        "position": "<body>\n Member, Consultative Committee, Ministry of Home Affairs<br> Member, Committee on Public Undertaking\n</body>"
+        "position": "Member, Consultative Committee, Ministry of Home Affairs Member, Committee on Public Undertaking"
       },
       {
         "period": "1999-2000",
-        "position": "<body>\n Member, Committee on Food, Civil Supplies and Public Distribution <br> Member, Committee on Estimates\n</body>"
+        "position": "Member, Committee on Food, Civil Supplies and Public Distribution Member, Committee on Estimates"
       },
       {
         "period": "1999",
@@ -3967,23 +3872,20 @@
         "position": "Elected to 12th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "14": 70.8,
-      "17": 40.1,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4616",
     "placeBirth": "Puttur, Dakshina Kannda (Karnataka)",
     "dateBirth": "23-Oct-1966",
-    "education": "<body>\n MSW, M.A.<br> Mangalore University, Mysore University\n</body>",
+    "education": "MSW, M.A. Mangalore University, Mysore University",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Micro, Small and  Medium Enterprises; and  Minister of State in the Ministry of Labour and  Employment"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Micro, Small and Medium Enterprises; and Minister of State in the Ministry of Labour and Employment"
       },
       {
         "period": "June 2024",
@@ -4011,11 +3913,11 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "13 May 2015 - 25 May 2019",
-        "position": "Member, \tJoint Committee on the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Second Amendment) Bill, 2015"
+        "position": "Member, Joint Committee on the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Second Amendment) Bill, 2015"
       },
       {
         "period": null,
@@ -4027,11 +3929,11 @@
       },
       {
         "period": "1 Sep. 2014 - 03 Dec. 2014",
-        "position": "Member,  Committee on Empowerment of Women"
+        "position": "Member, Committee on Empowerment of Women"
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       },
       {
         "period": "2010 - 2012",
@@ -4054,23 +3956,20 @@
         "position": "Member, Karnataka Legislative Council"
       }
     ],
-    "attendanceByTerm": {
-      "16": 89.3,
-      "17": 37.6,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "3926",
     "placeBirth": "Lucknow (Uttar Pradesh)",
     "dateBirth": "01-Mar-1966",
-    "education": "<body>\n M.Sc. (Geology) <br>Educated at Lucknow University, Lucknow, Uttar Pradesh<br> Lucknow University, Lucknow, Uttar Pradesh\n</body>",
+    "education": "M.Sc. (Geology) Educated at Lucknow University, Lucknow, Uttar Pradesh Lucknow University, Lucknow, Uttar Pradesh",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Environment, Forest  and Climate Change; and  Minister of State in the Ministry of External Affairs"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Environment, Forest and Climate Change; and Minister of State in the Ministry of External Affairs"
       },
       {
         "period": "June 2024",
@@ -4082,7 +3981,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (4<sup>th</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (4 th term)"
       },
       {
         "period": "1 Sept. 2018 - 25 May 2019",
@@ -4106,14 +4005,14 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (3 rd term)"
       },
       {
         "period": "23 March, 2009",
         "position": "Resigned on 23 March, 2009"
       },
       {
-        "period": "5 Aug. 2007 ",
+        "period": "5 Aug. 2007",
         "position": "Member, Standing Committee on Science & Technology, Environment & Forests"
       },
       {
@@ -4122,11 +4021,11 @@
       },
       {
         "period": "2004",
-        "position": "<body>\n Re-elected to 14<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 14 th Lok Sabha (2 nd term)"
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of\r\nDefence"
+        "position": "Member, Consultative Committee, Ministry of Defence"
       },
       {
         "period": "1998-99",
@@ -4134,15 +4033,11 @@
       },
       {
         "period": "1998",
-        "position": "<body>\n Elected to 12<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 12 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "14": 33.6,
-      "16": 76.2,
-      "17": 70.4,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -4150,21 +4045,24 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "5036",
     "placeBirth": "Thakur Nagar, 24 Parganas North, West Bengal",
     "dateBirth": "03-Aug-1982",
-    "education": "<body>\n Graduation English (Hon.), Advance Diploma in Hospitality Management <br>Educated at Karnataka Open University and Victoria University, Sydney, Australia<br> Graduation English (Hon.), Advance Diploma in Hospitality Management <br>Educated at Karnataka Open University and Victoria University, Sydney, Australia\n</body>",
+    "education": "Graduation English (Hon.), Advance Diploma in Hospitality Management Educated at Karnataka Open University and Victoria University, Sydney, Australia Graduation English (Hon.), Advance Diploma in Hospitality Management Educated at Karnataka Open University and Victoria University, Sydney, Australia",
     "profession": "SOCIAL SERVICE & POLITICS",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Ports, Shipping and  Waterways"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Ports, Shipping and Waterways"
       },
       {
         "period": "June 2024",
@@ -4176,7 +4074,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of Rural Development, Ministry of Panchayati Raj "
+        "position": "Member, Consultative Committee, Ministry of Rural Development, Ministry of Panchayati Raj"
       },
       {
         "period": "13 Sept. 2019 - 7 July 2021",
@@ -4184,20 +4082,18 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Elected to 17<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 17 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "17": 31.4,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5552",
     "placeBirth": "Alappuzha",
     "dateBirth": "26-Jun-1958",
-    "education": "<body>\n MA (English Language &amp; Literature) B.Sc.(Zoology)<br> Fathima Mata National College, University of Kerala, Kollam\n</body>",
+    "education": "MA (English Language &amp; Literature) B.Sc.(Zoology) Fathima Mata National College, University of Kerala, Kollam",
     "profession": "Actor",
     "careerTimeline": [
       {
@@ -4205,17 +4101,16 @@
         "position": "Member of Parliament"
       },
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Petroleum and  Natural Gas; and  Minister of State in the Ministry of Tourism"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Petroleum and Natural Gas; and Minister of State in the Ministry of Tourism"
       },
       {
         "period": "June 2024",
         "position": "Elected to 18th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -4223,21 +4118,24 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "4651",
     "placeBirth": "Almora (Uttarakhand)",
     "dateBirth": "16-Jul-1972",
-    "education": "<body>\n Intermediate <br>Educated at U.P. Board <br> U.P. Board\n</body>",
+    "education": "Intermediate Educated at U.P. Board U.P. Board",
     "profession": "Transport",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Road Transport and  Highways"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Road Transport and Highways"
       },
       {
         "period": "June 2024",
@@ -4257,7 +4155,7 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "5 July 2016 - 25 May 2019",
@@ -4277,37 +4175,34 @@
       },
       {
         "period": "May 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       },
       {
         "period": "2008 - 2009",
-        "position": "Cabinet Minister,  Government of Uttarakhand"
+        "position": "Cabinet Minister, Government of Uttarakhand"
       },
       {
         "period": "2007 - 2008",
-        "position": "Minister of State,  Government of Uttarakhand"
+        "position": "Minister of State, Government of Uttarakhand"
       },
       {
         "period": "2007 - 2012 & 2012 - 2014",
         "position": "Member, Uttarakhand Legislative Assembly (Two Terms)"
       }
     ],
-    "attendanceByTerm": {
-      "16": null,
-      "17": 88.7,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5076",
     "placeBirth": "Karimnagar, Telangana",
     "dateBirth": "11-Jul-1971",
-    "education": "<body>\n M.A. (Public Admn.) <br>Educated at Madurai Kamraj University<br> Madurai Kamraj University\n</body>",
+    "education": "M.A. (Public Admn.) Educated at Madurai Kamraj University Madurai Kamraj University",
     "profession": "SOCIAL SERVICE & POLITICS",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Minister of State in the Ministry of Home Affairs"
       },
       {
@@ -4328,24 +4223,22 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Elected to 17<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 17 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "17": 74.1,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4303",
     "placeBirth": "Gorakhpur (Uttar Pradesh)",
     "dateBirth": "06-Aug-1976",
-    "education": "<body>\n M.A. (Pol. Science)<br> Educated at D.D.U. Gorakhpur University<br> M.A. (Pol. Science)<br> Educated at D.D.U. Gorakhpur University\n</body>",
+    "education": "M.A. (Pol. Science) Educated at D.D.U. Gorakhpur University M.A. (Pol. Science) Educated at D.D.U. Gorakhpur University",
     "profession": "BUSINESSPERSON",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Minister of State in the Ministry of Rural Development"
       },
       {
@@ -4366,11 +4259,11 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (3<sup>rd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (3 rd term)"
       },
       {
         "period": "28 July 2016 - 25 May 2019",
-        "position": "Member, Committee on the Welfare of Scheduled Castes  and Scheduled Tribes"
+        "position": "Member, Committee on the Welfare of Scheduled Castes and Scheduled Tribes"
       },
       {
         "period": null,
@@ -4382,7 +4275,7 @@
       },
       {
         "period": null,
-        "position": "Member,  Standing Committee on Food, Consumer Affairs and Public Distribution"
+        "position": "Member, Standing Committee on Food, Consumer Affairs and Public Distribution"
       },
       {
         "period": "1 Sep. 2014 - 25 May 2019",
@@ -4390,7 +4283,7 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Re-elected to 16<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 16 th Lok Sabha (2 nd term)"
       },
       {
         "period": "31 August 2009",
@@ -4398,31 +4291,27 @@
       },
       {
         "period": "2009",
-        "position": "<body>\n Elected to 15<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 15 th Lok Sabha"
       },
       {
         "period": "2002-2007",
         "position": "Member, Uttar Pradesh Legislative Assembly"
       }
     ],
-    "attendanceByTerm": {
-      "15": 80.2,
-      "16": 74.1,
-      "17": 87.2,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5203",
     "placeBirth": "Manpura, Ajmer, Rajasthan",
     "dateBirth": "01-Jun-1954",
-    "education": "<body>\n BA, Second Year Pass, Rajasthan University, Jaipur<br> University of Rajasthan\n</body>",
-    "profession": " ",
+    "education": "BA, Second Year Pass, Rajasthan University, Jaipur University of Rajasthan",
+    "profession": "Agriculturist, HORTICULTURIST",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Agriculture and  Farmers Welfare"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Agriculture and Farmers Welfare"
       },
       {
         "period": "June 2024",
@@ -4438,17 +4327,15 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Elected to 17<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 17 th Lok Sabha"
       },
       {
         "period": "2003-2008 & 2013-2018",
         "position": "Rajasthan Legislative Assembly (two terms)"
       }
     ],
-    "attendanceByTerm": {
-      "17": 100,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -4456,30 +4343,36 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "2351",
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   },
   {
     "mpsno": "5057",
     "placeBirth": "Mirapur, Betul, Madhya Pradesh",
     "dateBirth": "29-Oct-1963",
-    "education": "<body>\n M.A, B.Ed. <br> Educated at Jaywanti Haksar Government Post Graduate College, Betul and B.Ed. College, Khandwa<br> Sagar University Sagar (MP)\n</body>",
+    "education": "M.A, B.Ed. Educated at Jaywanti Haksar Government Post Graduate College, Betul and B.Ed. College, Khandwa Sagar University Sagar (MP)",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Minister of State in the Ministry of Tribal Affairs"
       },
       {
@@ -4496,25 +4389,23 @@
       },
       {
         "period": "May 2019",
-        "position": "<body>\n Elected to 17<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 17 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "17": 95.6,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4722",
     "placeBirth": "Khetiya, Madhya Pradesh",
     "dateBirth": "13-May-1987",
-    "education": "<body>\n B.Sc (Computer Science)<br>Educated at K.T.H.M. College, Nashik, Maharashtra; Anand, Gujarat and Jalgaon<br> K.T.H.M. College, Nashik, Maharashtra; Anand, Gujarat and Jalgaon\n</body>",
+    "education": "B.Sc (Computer Science) Educated at K.T.H.M. College, Nashik, Maharashtra; Anand, Gujarat and Jalgaon K.T.H.M. College, Nashik, Maharashtra; Anand, Gujarat and Jalgaon",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Youth Affairs and  Sports"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Youth Affairs and Sports"
       },
       {
         "period": "June 2024",
@@ -4522,7 +4413,7 @@
       },
       {
         "period": null,
-        "position": "Member, Consultative Committee, Ministry of Culture  and Tourism"
+        "position": "Member, Consultative Committee, Ministry of Culture and Tourism"
       },
       {
         "period": "11 Oct. 2019 onwards",
@@ -4542,7 +4433,7 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Re-elected to 17<sup>th</sup> Lok Sabha (2<sup>nd</sup> term)\n</body>"
+        "position": "Re-elected to 17 th Lok Sabha (2 nd term)"
       },
       {
         "period": "1 Sept. 2017 - 25 May 2019",
@@ -4566,7 +4457,7 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       },
       {
         "period": "02 Apr. 2012 onwards",
@@ -4577,23 +4468,20 @@
         "position": "Sarpanch, Kothali, Tal-Muktainagar, Dist-Jalgaon, Maharashtra"
       }
     ],
-    "attendanceByTerm": {
-      "16": 73.8,
-      "17": 75.5,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5035",
     "placeBirth": "Balurghat, Dakshin Dinajpur, West Bengal",
     "dateBirth": "29-Dec-1979",
-    "education": "<body>\n M.Sc., B.Ed., Ph.D. (Botany) <br>Educated at University of North Bengal, Siliguri, West Bengal<br> University of North Bengal, Siliguri, West Bengal\n</body>",
-    "profession": " ",
+    "education": "M.Sc., B.Ed., Ph.D. (Botany) Educated at University of North Bengal, Siliguri, West Bengal University of North Bengal, Siliguri, West Bengal",
+    "profession": null,
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Education; and  Minister of State in the Ministry of Development of  North Eastern Region"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Education; and Minister of State in the Ministry of Development of North Eastern Region"
       },
       {
         "period": "June 2024",
@@ -4613,25 +4501,23 @@
       },
       {
         "period": "May, 2019",
-        "position": "<body>\n Elected to 17<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 17 th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "17": 73.4,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "4596",
     "placeBirth": "Kalikiray, Distt. Dhar, Madhya Pradesh",
     "dateBirth": "01-Jun-1978",
-    "education": "<body>\n Inter/Higher Secondary<br> Inter/Higher Secondary\n</body>",
+    "education": "Inter/Higher Secondary Inter/Higher Secondary",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Women and Child  Development"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Women and Child Development"
       },
       {
         "period": "June 2024",
@@ -4651,29 +4537,27 @@
       },
       {
         "period": "May, 2014",
-        "position": "<body>\n Elected to 16<sup>th</sup> Lok Sabha\n</body>"
+        "position": "Elected to 16 th Lok Sabha"
       },
       {
         "period": "2004 - 2009",
         "position": "Chairman, Zila Panchayat"
       }
     ],
-    "attendanceByTerm": {
-      "16": 91.5,
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5700",
     "placeBirth": "Dindouri",
     "dateBirth": "15-Oct-1969",
-    "education": "<body>\n M.com<br> C M D Bilaspur\n</body>",
+    "education": "M.com C M D Bilaspur",
     "profession": "SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Housing and Urban  Affairs"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Housing and Urban Affairs"
       },
       {
         "period": "June 2024",
@@ -4684,20 +4568,19 @@
         "position": "MLA"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5568",
     "placeBirth": "Begusarai",
     "dateBirth": "04-Jul-1977",
-    "education": "<body>\n MD<br> Lalit Narayan Mithila University, Darbhanga\n</body>",
+    "education": "MD Lalit Narayan Mithila University, Darbhanga",
     "profession": "Doctor",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
+        "period": "09-Jun-2024 -",
         "position": "Union Minister of State in the Ministry of Jal Shakti"
       },
       {
@@ -4705,63 +4588,60 @@
         "position": "Elected to 18th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5745",
     "placeBirth": "Bhimavaram",
     "dateBirth": "04-Aug-1967",
-    "education": "<body>\n M.A., M.A., M.L.I.Sc, B.L<br> M.A., M.A., M.L.I.Sc, B.L\n</body>",
+    "education": "M.A., M.A., M.L.I.Sc, B.L M.A., M.A., M.L.I.Sc, B.L",
     "profession": "POLITICAL AND SOCIAL WORKER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Heavy Industries;  and  Minister of State in the Ministry of Steel"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Heavy Industries; and Minister of State in the Ministry of Steel"
       },
       {
         "period": "June 2024",
         "position": "Elected to 18th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5563",
     "placeBirth": "Delhi",
     "dateBirth": "24-April-1964",
-    "education": "<body>\n BSc (Hons) Botany, LLB<br> Delhi University\n</body>",
+    "education": "BSc (Hons) Botany, LLB Delhi University",
     "profession": "BUSINESSPERSON",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Corporate Affairs;  and  Minister of State in the Ministry of Road Transport and  Highways"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Corporate Affairs; and Minister of State in the Ministry of Road Transport and Highways"
       },
       {
         "period": "June 2024",
         "position": "Elected to 18th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5614",
     "placeBirth": " ",
     "dateBirth": "08-Sep-1966",
-    "education": "<body>\n B.Sc., B. Ed. (Maths)<br> Sir P. P. Institute of Science, Bhavnagar, Gujarat\n</body>",
+    "education": "B.Sc., B. Ed. (Maths) Sir P. P. Institute of Science, Bhavnagar, Gujarat",
     "profession": "TEACHER",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Consumer Affairs,  Food and Public Distribution"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Consumer Affairs, Food and Public Distribution"
       },
       {
         "period": "June 2024",
@@ -4776,30 +4656,28 @@
         "position": "Mayor"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
     "mpsno": "5705",
     "placeBirth": "Pune",
     "dateBirth": "09-Nov-1974",
-    "education": "<body>\n Bachelor of Arts<br> Bachelor of Arts\n</body>",
+    "education": "Bachelor of Arts Bachelor of Arts",
     "profession": "Agriculturist",
     "careerTimeline": [
       {
-        "period": "09-Jun-2024 - ",
-        "position": "Union Minister of State in the Ministry of Cooperation; and  Minister of State in the Ministry of Civil Aviation"
+        "period": "09-Jun-2024 -",
+        "position": "Union Minister of State in the Ministry of Cooperation; and Minister of State in the Ministry of Civil Aviation"
       },
       {
         "period": "June 2024",
         "position": "Elected to 18th Lok Sabha"
       }
     ],
-    "attendanceByTerm": {
-      "18": null
-    },
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
     "errors": []
   },
   {
@@ -4807,9 +4685,12 @@
     "placeBirth": " ",
     "dateBirth": " ",
     "education": null,
-    "profession": " ",
+    "profession": null,
     "careerTimeline": [],
-    "attendanceByTerm": {},
-    "errors": []
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: Unexpected response shape"
+    ]
   }
 ]
