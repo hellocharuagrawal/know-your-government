@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-08-01T10:55:03.462Z",
+  "ranAt": "2026-08-01T11:48:26.532Z",
   "results": {
     "partyRepresentation": 42,
     "allianceSeats": {
@@ -7,6 +7,7 @@
       "INDIA": 179,
       "Others": 90
     },
+    "leadershipRoles": "4/4 parsed",
     "chiefs": 2,
     "rajyaSabhaMembers": 241,
     "lokSabhaMembers": 540,
