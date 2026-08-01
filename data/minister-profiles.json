@@ -136,18 +136,42 @@
   },
   {
     "mpsno": "2204",
-    "placeBirth": "Patna",
-    "dateBirth": "02-12-1960",
-    "education": "Patna University, St. Xavier's High School, Patna, Himachal Pradesh University",
+    "placeBirth": "Pune",
+    "dateBirth": "30-01-1951",
+    "education": "Savitribai Phule Pune University",
     "profession": "politician",
     "careerTimeline": [
       {
-        "period": "03-04-2012 - present",
+        "period": "03-04-2018 - present",
         "position": "member of Rajya Sabha"
       },
       {
-        "period": "09-11-2014 - 30-05-2019",
-        "position": "Minister of Health and Family Welfare"
+        "period": "00-00-1990 - 00-00-2002",
+        "position": "Member of the Maharashtra Legislature"
+      },
+      {
+        "period": "26-05-2014 - 09-11-2014",
+        "position": "Minister of Information and Broadcasting"
+      },
+      {
+        "period": "30-05-2019 - 07-07-2021",
+        "position": "Minister of Information and Broadcasting"
+      },
+      {
+        "period": "30-05-2019 - 07-07-2021",
+        "position": "Minister of Environment and Forests"
+      },
+      {
+        "period": "26-05-2014 - 05-07-2016",
+        "position": "Minister of Environment and Forests"
+      },
+      {
+        "period": "12-11-2019 - 07-07-2021",
+        "position": "Minister of Heavy Industries and Public Enterprises"
+      },
+      {
+        "period": "05-07-2016 - 30-05-2019",
+        "position": "Minister of Human Resource Development"
       }
     ],
     "attendanceCurrentTerm": null,
@@ -155,8 +179,8 @@
     "errors": [
       "attendance: Unexpected response shape"
     ],
-    "knownFor": "11th President of the Bharatiya Janata Party",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/J._P._Nadda",
+    "knownFor": "Indian politician",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Prakash_Javadekar",
     "criticismSectionUrl": null,
     "legalSectionUrl": null,
     "dataSource": "wikipedia"
@@ -212,70 +236,17 @@
   },
   {
     "mpsno": "2288",
-    "placeBirth": "Prayagraj",
-    "dateBirth": "19-11-1917",
-    "education": "Somerville College, Visva-Bharati University, Badminton School, Patha Bhavana",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "19-07-1984 - 31-10-1984",
-        "position": "Minister of External Affairs"
-      },
-      {
-        "period": "14-01-1980 - 31-10-1984",
-        "position": "Prime Minister of India"
-      },
-      {
-        "period": "24-01-1966 - 24-03-1977",
-        "position": "Prime Minister of India"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the Lok Sabha"
-      },
-      {
-        "period": "00-00-1964 - 00-00-1984",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "14-01-1980 - 15-01-1982",
-        "position": "Minister of Defence"
-      },
-      {
-        "period": "27-06-1970 - 04-02-1973",
-        "position": "Minister of Home Affairs"
-      },
-      {
-        "period": "16-07-1969 - 27-06-1970",
-        "position": "Minister of Finance"
-      },
-      {
-        "period": "01-01-1964 - 01-01-1966",
-        "position": "Minister of Information and Broadcasting"
-      },
-      {
-        "period": "30-11-1975 - 20-12-1975",
-        "position": "Minister of Defence"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 7th Lok Sabha"
-      },
-      {
-        "period": "06-09-1967 - 13-02-1969",
-        "position": "Minister of External Affairs"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Indira Gandhi\" — name doesn't sufficiently match \"Smt. Nirmala Sitharaman\" | \"Maneka Gandhi\" — name doesn't sufficiently match \"Smt. Nirmala Sitharaman\" | \"Smriti Irani\" — name doesn't sufficiently match \"Smt. Nirmala Sitharaman\"",
       "attendance: Unexpected response shape"
-    ],
-    "knownFor": "Prime Minister of India (1966-1977; 1980-1984)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Indira_Gandhi",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    ]
   },
   {
     "mpsno": "2426",
@@ -339,40 +310,16 @@
   },
   {
     "mpsno": "3711",
-    "placeBirth": "Haradanahalli",
-    "dateBirth": "16-12-1959",
+    "placeBirth": null,
+    "dateBirth": null,
     "education": null,
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "03-02-2006 - 09-10-2007",
-        "position": "Chief Minister of Karnataka"
-      },
-      {
-        "period": "13-05-2023 - 04-06-2024",
-        "position": "Member of the Karnataka Legislative Assembly"
-      },
-      {
-        "period": "23-05-2018 - 26-07-2019",
-        "position": "Chief Minister of Karnataka"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 11th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 15th Lok Sabha"
-      }
-    ],
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "12th Chief Minister of Karnataka",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/H._D._Kumaraswamy",
-    "criticismSectionUrl": "https://en.wikipedia.org/wiki/H._D._Kumaraswamy#Controversies",
-    "legalSectionUrl": "https://en.wikipedia.org/wiki/H._D._Kumaraswamy#Vishwabharati_case",
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"H. D. Kumaraswamy\" — description doesn't confirm politician/India: \"12th chief minister of karnataka\" | \"H. D. Deve Gowda\" — name doesn't sufficiently match \"Shri H D Kumaraswamy\" | \"M. B. Patil\" — name doesn't sufficiently match \"Shri H D Kumaraswamy\""
+    ]
   },
   {
     "mpsno": "5551",
@@ -437,77 +384,29 @@
   },
   {
     "mpsno": "5558",
-    "placeBirth": "Bikaner",
-    "dateBirth": "07-12-1954",
-    "education": "Dungar College",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "? - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 15th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "00-00-2024 - present",
-        "position": "Member of the Lok Sabha"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Arjun_Ram_Meghwal",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Ram Vilas Paswan\" — name doesn't sufficiently match \"Shri Jitan Ram Manjhi\" | \"Arjun Ram Meghwal\" — name doesn't sufficiently match \"Shri Jitan Ram Manjhi\" | \"List of Dalits\" — name doesn't sufficiently match \"Shri Jitan Ram Manjhi\""
+    ]
   },
   {
     "mpsno": "4134",
-    "placeBirth": "Murshidabad",
-    "dateBirth": "02-04-1956",
+    "placeBirth": null,
+    "dateBirth": null,
     "education": null,
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "? - present",
-        "position": "Member of the 12th West Bengal Legislative Assembly"
-      },
-      {
-        "period": "00-00-1999 - 00-00-2004",
-        "position": "Member of the 13th Lok Sabha"
-      },
-      {
-        "period": "00-00-2004 - 00-00-2009",
-        "position": "Member of the 14th Lok Sabha"
-      },
-      {
-        "period": "00-00-2009 - 00-00-2014",
-        "position": "Member of the 15th Lok Sabha"
-      },
-      {
-        "period": "18-05-2014 - 24-05-2019",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "30-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      }
-    ],
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Adhir_Ranjan_Chowdhury",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Adhir Ranjan Chowdhury\" — name doesn't sufficiently match \"Shri Rajiv Ranjan Singh\" | \"Chandra Shekhar\" — name doesn't sufficiently match \"Shri Rajiv Ranjan Singh\" | \"Ramchandra Prasad Singh\" — name doesn't sufficiently match \"Shri Rajiv Ranjan Singh\""
+    ]
   },
   {
     "mpsno": "4163",
@@ -593,24 +492,16 @@
   },
   {
     "mpsno": "4771",
-    "placeBirth": "Chataparru",
-    "dateBirth": "24-06-1940",
+    "placeBirth": null,
+    "dateBirth": null,
     "education": null,
-    "profession": "actor",
-    "careerTimeline": [
-      {
-        "period": "26-05-2014 - present",
-        "position": "Member of the 16th Lok Sabha"
-      }
-    ],
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian actor, producer, politician, and businessman",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Murali_Mohan",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 2 candidates found, none verified. Details: \"Murali Mohan\" — name doesn't sufficiently match \"Shri Kinjarapu Rammohan Naidu\" | \"Thota Narasimham\" — name doesn't sufficiently match \"Shri Kinjarapu Rammohan Naidu\""
+    ]
   },
   {
     "mpsno": "3982",
@@ -838,63 +729,6 @@
   },
   {
     "mpsno": "4670",
-    "placeBirth": "Chandauli district",
-    "dateBirth": "10-07-1951",
-    "education": "Deen Dayal Upadhyay Gorakhpur University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "00-00-1977 - 00-00-1980",
-        "position": "Member of the Uttar Pradesh Legislative Assembly"
-      },
-      {
-        "period": "26-05-2014 - 30-05-2019",
-        "position": "Minister of Home Affairs"
-      },
-      {
-        "period": "26-05-2014 - 24-05-2019",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "00-00-2009 - 00-00-2014",
-        "position": "Member of the 15th Lok Sabha"
-      },
-      {
-        "period": "30-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "24-05-2003 - 22-05-2004",
-        "position": "Minister of Agriculture & Farmers Welfare"
-      },
-      {
-        "period": "31-05-2019 - present",
-        "position": "Minister of Defence"
-      },
-      {
-        "period": "22-11-1999 - 27-10-2000",
-        "position": "Minister of Road Transport and Highways"
-      },
-      {
-        "period": "28-10-2000 - 08-03-2002",
-        "position": "Chief Minister of Uttar Pradesh"
-      },
-      {
-        "period": "00-00-2024 - present",
-        "position": "Member of the Lok Sabha"
-      }
-    ],
-    "attendanceCurrentTerm": null,
-    "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rajnath_Singh",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
-  },
-  {
-    "mpsno": "5116",
     "placeBirth": "Barahiya",
     "dateBirth": "08-09-1952",
     "education": "Magadh University",
@@ -929,6 +763,19 @@
     "criticismSectionUrl": null,
     "legalSectionUrl": null,
     "dataSource": "wikipedia"
+  },
+  {
+    "mpsno": "5116",
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Giriraj Singh\" — name doesn't sufficiently match \"Smt. Annpurna Devi\" | \"C. R. Patil\" — name doesn't sufficiently match \"Smt. Annpurna Devi\" | \"Tokhan Sahu\" — name doesn't sufficiently match \"Smt. Annpurna Devi\""
+    ]
   },
   {
     "mpsno": "3972",
@@ -1066,93 +913,29 @@
   },
   {
     "mpsno": "4777",
-    "placeBirth": "Khagaria",
-    "dateBirth": "05-07-1946",
-    "education": "Patna University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "23-05-2004 - 22-05-2009",
-        "position": "Minister of Chemicals and Fertilizers"
-      },
-      {
-        "period": "01-09-2001 - 29-04-2002",
-        "position": "Minister of Mines"
-      },
-      {
-        "period": "13-10-1999 - 01-09-2001",
-        "position": "Minister of Communications and Information Technology"
-      },
-      {
-        "period": "01-06-1996 - 19-03-1998",
-        "position": "Minister of Railways"
-      },
-      {
-        "period": "01-07-2010 - 01-01-2014",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 13th Lok Sabha"
-      },
-      {
-        "period": "02-12-1989 - 13-03-1991",
-        "position": "Member of the 9th Lok Sabha"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician (1946–2020)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ram_Vilas_Paswan",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Ram Vilas Paswan\" — name doesn't sufficiently match \"Shri Chirag Paswan\" | \"Paswan (surname)\" — description doesn't confirm politician/India: \"family name\" | \"Arun Bharti\" — name doesn't sufficiently match \"Shri Chirag Paswan\""
+    ]
   },
   {
     "mpsno": "4452",
-    "placeBirth": "Raigad district",
-    "dateBirth": "02-12-1937",
+    "placeBirth": null,
+    "dateBirth": null,
     "education": null,
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "10-05-2002 - 02-06-2004",
-        "position": "Speaker of the Lok Sabha"
-      },
-      {
-        "period": "01-01-1976 - 01-01-1977",
-        "position": "Mayor of Mumbai"
-      },
-      {
-        "period": "? - present",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of Maharashtra Legislative Assembly"
-      },
-      {
-        "period": "14-03-1995 - 31-01-1999",
-        "position": "Chief Minister of Maharashtra"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 13th Lok Sabha"
-      }
-    ],
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician (1937–2024)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Manohar_Joshi",
-    "criticismSectionUrl": "https://en.wikipedia.org/wiki/Manohar_Joshi#Controversy_and_resignation",
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Manohar Joshi\" — name doesn't sufficiently match \"Shri Chandrakant Raghunath Patil\" | \"Jalgaon district\" — name doesn't sufficiently match \"Shri Chandrakant Raghunath Patil\" | \"Chopda\" — name doesn't sufficiently match \"Shri Chandrakant Raghunath Patil\""
+    ]
   },
   {
     "mpsno": "3904",
@@ -1512,36 +1295,16 @@
   },
   {
     "mpsno": "4629",
-    "placeBirth": "Mumbai",
-    "dateBirth": "01-01-1971",
-    "education": "Harvard University, Stanford University, The Doon School, Stanford Graduate School of Business, Harvard College, Campion School, Mumbai",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "? - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 15th Lok Sabha"
-      },
-      {
-        "period": "07-07-2021 - present",
-        "position": "Minister of Civil Aviation"
-      },
-      {
-        "period": "07-07-2022 - present",
-        "position": "Minister of Steel"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jyotiraditya_Scindia",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Jyotiraditya Scindia\" — name doesn't sufficiently match \"Shri Krishan Pal Gurjar\" | \"Gaurav Gautam\" — name doesn't sufficiently match \"Shri Krishan Pal Gurjar\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Krishan Pal Gurjar\""
+    ]
   },
   {
     "mpsno": "2248",
@@ -1572,26 +1335,26 @@
   },
   {
     "mpsno": "2268",
-    "placeBirth": "Bikaner",
-    "dateBirth": "07-12-1954",
-    "education": "Dungar College",
+    "placeBirth": "Muzaffarpur district",
+    "dateBirth": "03-09-1931",
+    "education": "Patna University, Patna Medical College and Hospital",
     "profession": "politician",
     "careerTimeline": [
       {
         "period": "? - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 15th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "00-00-2024 - present",
         "position": "Member of the Lok Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "member of Rajya Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 13th Lok Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 8th Lok Sabha"
       }
     ],
     "attendanceCurrentTerm": null,
@@ -1600,7 +1363,7 @@
       "attendance: Unexpected response shape"
     ],
     "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Arjun_Ram_Meghwal",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/C._P._Thakur",
     "criticismSectionUrl": null,
     "legalSectionUrl": null,
     "dataSource": "wikipedia"
@@ -1636,77 +1399,29 @@
   },
   {
     "mpsno": "4662",
-    "placeBirth": "Uttarakhand",
-    "dateBirth": "15-01-1978",
-    "education": "University of Lucknow",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "? - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 18th Lok Sabha"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dimple_Yadav",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Dimple Yadav\" — name doesn't sufficiently match \"Smt. Anupriya Patel\" | \"Rajkumar Pal\" — name doesn't sufficiently match \"Smt. Anupriya Patel\" | \"C. R. Patil\" — name doesn't sufficiently match \"Smt. Anupriya Patel\""
+    ]
   },
   {
     "mpsno": "5625",
-    "placeBirth": "Vadnagar",
-    "dateBirth": "17-09-1950",
-    "education": "Gujarat University, University of Delhi",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "07-10-2001 - 22-05-2014",
-        "position": "Chief Minister of Gujarat"
-      },
-      {
-        "period": "16-05-2014 - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "26-05-2014 - present",
-        "position": "Prime Minister of India"
-      },
-      {
-        "period": "01-01-2002 - 16-05-2014",
-        "position": "Member of the Gujarat Legislative Assembly"
-      },
-      {
-        "period": "26-05-2014 - present",
-        "position": "Minister of Personnel, Public Grievances and Pensions"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Leader of the House in Lok Sabha"
-      },
-      {
-        "period": "00-00-2024 - present",
-        "position": "Member of the Lok Sabha"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Prime Minister of India since 2014",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Narendra_Modi",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Pralhad Joshi\" — name doesn't sufficiently match \"Shri V Somanna\" | \"S. Jaishankar\" — name doesn't sufficiently match \"Shri V Somanna\" | \"List of people from Telangana\" — name doesn't sufficiently match \"Shri V Somanna\""
+    ]
   },
   {
     "mpsno": "5636",
@@ -1755,11 +1470,60 @@
   },
   {
     "mpsno": "4616",
-    "placeBirth": "Mohol",
-    "dateBirth": "01-01-1974",
+    "placeBirth": null,
+    "dateBirth": null,
     "education": null,
+    "profession": null,
+    "careerTimeline": [],
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Murlidhar Mohol\" — name doesn't sufficiently match \"Km. Shobha Karandlaje\" | \"Tejasvi Surya\" — name doesn't sufficiently match \"Km. Shobha Karandlaje\" | \"R. K. Singh\" — name doesn't sufficiently match \"Km. Shobha Karandlaje\""
+    ]
+  },
+  {
+    "mpsno": "3926",
+    "placeBirth": "Chandauli district",
+    "dateBirth": "10-07-1951",
+    "education": "Deen Dayal Upadhyay Gorakhpur University",
     "profession": "politician",
     "careerTimeline": [
+      {
+        "period": "00-00-1977 - 00-00-1980",
+        "position": "Member of the Uttar Pradesh Legislative Assembly"
+      },
+      {
+        "period": "26-05-2014 - 30-05-2019",
+        "position": "Minister of Home Affairs"
+      },
+      {
+        "period": "26-05-2014 - 24-05-2019",
+        "position": "Member of the 16th Lok Sabha"
+      },
+      {
+        "period": "00-00-2009 - 00-00-2014",
+        "position": "Member of the 15th Lok Sabha"
+      },
+      {
+        "period": "30-05-2019 - present",
+        "position": "Member of the 17th Lok Sabha"
+      },
+      {
+        "period": "24-05-2003 - 22-05-2004",
+        "position": "Minister of Agriculture & Farmers Welfare"
+      },
+      {
+        "period": "31-05-2019 - present",
+        "position": "Minister of Defence"
+      },
+      {
+        "period": "22-11-1999 - 27-10-2000",
+        "position": "Minister of Road Transport and Highways"
+      },
+      {
+        "period": "28-10-2000 - 08-03-2002",
+        "position": "Chief Minister of Uttar Pradesh"
+      },
       {
         "period": "00-00-2024 - present",
         "position": "Member of the Lok Sabha"
@@ -1769,69 +1533,37 @@
     "attendanceLoksabha": 18,
     "errors": [],
     "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Murlidhar_Mohol",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
-  },
-  {
-    "mpsno": "3926",
-    "placeBirth": "Saharanpur",
-    "dateBirth": "00-00-1986",
-    "education": "Hemwati Nandan Bahuguna Garhwal University (A Central University)",
-    "profession": null,
-    "careerTimeline": [],
-    "attendanceCurrentTerm": null,
-    "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian social activist, advocate and political leader",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chandrashekhar_Azad_(politician)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rajnath_Singh",
     "criticismSectionUrl": null,
     "legalSectionUrl": null,
     "dataSource": "wikipedia"
   },
   {
     "mpsno": "2491",
-    "placeBirth": "Saharanpur",
-    "dateBirth": "00-00-1986",
-    "education": "Hemwati Nandan Bahuguna Garhwal University (A Central University)",
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
     "profession": null,
     "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Chandrashekhar Azad (politician)\" — name doesn't sufficiently match \"Shri B.L. Verma\" | \"Beni Prasad Verma\" — name doesn't sufficiently match \"Shri B.L. Verma\" | \"Jagat Singh Negi\" — name doesn't sufficiently match \"Shri B.L. Verma\"",
       "attendance: Unexpected response shape"
-    ],
-    "knownFor": "Indian social activist, advocate and political leader",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chandrashekhar_Azad_(politician)",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    ]
   },
   {
     "mpsno": "5036",
-    "placeBirth": "Patna",
-    "dateBirth": "02-12-1960",
-    "education": "Patna University, St. Xavier's High School, Patna, Himachal Pradesh University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "03-04-2012 - present",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "09-11-2014 - 30-05-2019",
-        "position": "Minister of Health and Family Welfare"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "11th President of the Bharatiya Janata Party",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/J._P._Nadda",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Shantanu Thakur\" | \"Narendra Modi\" — name doesn't sufficiently match \"Shri Shantanu Thakur\" | \"Abhishek Banerjee (politician)\" — name doesn't sufficiently match \"Shri Shantanu Thakur\""
+    ]
   },
   {
     "mpsno": "5552",
@@ -1933,101 +1665,32 @@
   },
   {
     "mpsno": "4303",
-    "placeBirth": "Khagaria",
-    "dateBirth": "05-07-1946",
-    "education": "Patna University",
+    "placeBirth": null,
+    "dateBirth": "01-01-1952",
+    "education": null,
     "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "23-05-2004 - 22-05-2009",
-        "position": "Minister of Chemicals and Fertilizers"
-      },
-      {
-        "period": "01-09-2001 - 29-04-2002",
-        "position": "Minister of Mines"
-      },
-      {
-        "period": "13-10-1999 - 01-09-2001",
-        "position": "Minister of Communications and Information Technology"
-      },
-      {
-        "period": "01-06-1996 - 19-03-1998",
-        "position": "Minister of Railways"
-      },
-      {
-        "period": "01-07-2010 - 01-01-2014",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 13th Lok Sabha"
-      },
-      {
-        "period": "02-12-1989 - 13-03-1991",
-        "position": "Member of the 9th Lok Sabha"
-      }
-    ],
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [],
-    "knownFor": "Indian politician (1946–2020)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ram_Vilas_Paswan",
+    "knownFor": "politician",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Subhawati_Paswan",
     "criticismSectionUrl": null,
     "legalSectionUrl": null,
     "dataSource": "wikipedia"
   },
   {
     "mpsno": "5203",
-    "placeBirth": "Vadnagar",
-    "dateBirth": "17-09-1950",
-    "education": "Gujarat University, University of Delhi",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "07-10-2001 - 22-05-2014",
-        "position": "Chief Minister of Gujarat"
-      },
-      {
-        "period": "16-05-2014 - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "26-05-2014 - present",
-        "position": "Prime Minister of India"
-      },
-      {
-        "period": "01-01-2002 - 16-05-2014",
-        "position": "Member of the Gujarat Legislative Assembly"
-      },
-      {
-        "period": "26-05-2014 - present",
-        "position": "Minister of Personnel, Public Grievances and Pensions"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Leader of the House in Lok Sabha"
-      },
-      {
-        "period": "00-00-2024 - present",
-        "position": "Member of the Lok Sabha"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Prime Minister of India since 2014",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Narendra_Modi",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Bhagirath Choudhary\" | \"Narendra Modi\" — name doesn't sufficiently match \"Shri Bhagirath Choudhary\" | \"2026 in India\" — name doesn't sufficiently match \"Shri Bhagirath Choudhary\""
+    ]
   },
   {
     "mpsno": "2435",
@@ -2082,38 +1745,17 @@
   },
   {
     "mpsno": "2351",
-    "placeBirth": "Mumbai",
-    "dateBirth": "01-01-1971",
-    "education": "Harvard University, Stanford University, The Doon School, Stanford Graduate School of Business, Harvard College, Campion School, Mumbai",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "? - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 15th Lok Sabha"
-      },
-      {
-        "period": "07-07-2021 - present",
-        "position": "Minister of Civil Aviation"
-      },
-      {
-        "period": "07-07-2022 - present",
-        "position": "Minister of Steel"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Jyotiraditya Scindia\" — name doesn't sufficiently match \"Shri Sanjay Seth\" | \"List of Jains\" — name doesn't sufficiently match \"Shri Sanjay Seth\" | \"St. Columba's School, Delhi\" — name doesn't sufficiently match \"Shri Sanjay Seth\"",
       "attendance: Unexpected response shape"
-    ],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jyotiraditya_Scindia",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    ]
   },
   {
     "mpsno": "5057",
@@ -2168,40 +1810,16 @@
   },
   {
     "mpsno": "4596",
-    "placeBirth": "Barahiya",
-    "dateBirth": "08-09-1952",
-    "education": "Magadh University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "16-05-2014 - 23-05-2019",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "07-07-2021 - present",
-        "position": "Minister of Rural Development"
-      },
-      {
-        "period": "07-07-2021 - present",
-        "position": "Minister of Panchayati Raj"
-      },
-      {
-        "period": "30-05-2019 - 07-07-2021",
-        "position": "Minister of Fisheries, Animal Husbandry and Dairying"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician (born 1952)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Giriraj_Singh",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"C. R. Patil\" — name doesn't sufficiently match \"Smt. Savitri Thakur\" | \"Giriraj Singh\" — name doesn't sufficiently match \"Smt. Savitri Thakur\" | \"Tokhan Sahu\" — name doesn't sufficiently match \"Smt. Savitri Thakur\""
+    ]
   },
   {
     "mpsno": "5700",
@@ -2234,78 +1852,54 @@
   },
   {
     "mpsno": "5568",
-    "placeBirth": "Patna",
-    "dateBirth": "02-12-1960",
-    "education": "Patna University, St. Xavier's High School, Patna, Himachal Pradesh University",
+    "placeBirth": "Faizabad",
+    "dateBirth": "01-01-1969",
+    "education": "Dr. Ram Manohar Lohia Awadh University",
     "profession": "politician",
     "careerTimeline": [
       {
-        "period": "03-04-2012 - present",
-        "position": "member of Rajya Sabha"
+        "period": "26-05-2014 - present",
+        "position": "Member of the 16th Lok Sabha"
       },
       {
-        "period": "09-11-2014 - 30-05-2019",
-        "position": "Minister of Health and Family Welfare"
+        "period": "? - present",
+        "position": "Member of the Uttar Pradesh Legislative Assembly"
       }
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [],
-    "knownFor": "11th President of the Bharatiya Janata Party",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/J._P._Nadda",
+    "knownFor": "Indian politician",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Krishna_Raj",
     "criticismSectionUrl": null,
     "legalSectionUrl": null,
     "dataSource": "wikipedia"
   },
   {
     "mpsno": "5745",
-    "placeBirth": "Rameswaram taluk",
-    "dateBirth": "15-10-1931",
-    "education": "St Joseph's College, Tiruchirappalli, University of Madras, Oakland University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "25-07-2002 - 25-07-2007",
-        "position": "President of India"
-      },
-      {
-        "period": "? - present",
-        "position": "president"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian scientist and statesman (1931–2015)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"A. P. J. Abdul Kalam\" — name doesn't sufficiently match \"Shri Srinivasa Varma B J P Varma Bhupathiraju\" | \"Murli Manohar Joshi\" — name doesn't sufficiently match \"Shri Srinivasa Varma B J P Varma Bhupathiraju\" | \"List of Telugu people\" — name doesn't sufficiently match \"Shri Srinivasa Varma B J P Varma Bhupathiraju\""
+    ]
   },
   {
     "mpsno": "5563",
-    "placeBirth": "Patna",
-    "dateBirth": "02-12-1960",
-    "education": "Patna University, St. Xavier's High School, Patna, Himachal Pradesh University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "03-04-2012 - present",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "09-11-2014 - 30-05-2019",
-        "position": "Minister of Health and Family Welfare"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "11th President of the Bharatiya Janata Party",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/J._P._Nadda",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Harsh Malhotra\" | \"Narendra Modi\" — name doesn't sufficiently match \"Shri Harsh Malhotra\" | \"Pralhad Joshi\" — name doesn't sufficiently match \"Shri Harsh Malhotra\""
+    ]
   },
   {
     "mpsno": "5614",
@@ -2322,98 +1916,29 @@
   },
   {
     "mpsno": "5705",
-    "placeBirth": "Vijayapura",
-    "dateBirth": "27-11-1962",
+    "placeBirth": null,
+    "dateBirth": null,
     "education": null,
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "01-01-2009 - present",
-        "position": "Member of the 14th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 15th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "30-05-2019 - present",
-        "position": "Minister of Parliamentary Affairs"
-      },
-      {
-        "period": "30-05-2019 - present",
-        "position": "Minister of Coal"
-      },
-      {
-        "period": "30-05-2019 - present",
-        "position": "Minister of Mines"
-      }
-    ],
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pralhad_Joshi",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Pralhad Joshi\" — name doesn't sufficiently match \"Shri Murlidhar Mohol\" | \"Narendra Modi\" — name doesn't sufficiently match \"Shri Murlidhar Mohol\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Murlidhar Mohol\""
+    ]
   },
   {
     "mpsno": "2510",
-    "placeBirth": "Vadnagar",
-    "dateBirth": "17-09-1950",
-    "education": "Gujarat University, University of Delhi",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "07-10-2001 - 22-05-2014",
-        "position": "Chief Minister of Gujarat"
-      },
-      {
-        "period": "16-05-2014 - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "26-05-2014 - present",
-        "position": "Prime Minister of India"
-      },
-      {
-        "period": "01-01-2002 - 16-05-2014",
-        "position": "Member of the Gujarat Legislative Assembly"
-      },
-      {
-        "period": "26-05-2014 - present",
-        "position": "Minister of Personnel, Public Grievances and Pensions"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Leader of the House in Lok Sabha"
-      },
-      {
-        "period": "00-00-2024 - present",
-        "position": "Member of the Lok Sabha"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Narendra Modi\" — name doesn't sufficiently match \"Shri Pabitra Margherita\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Pabitra Margherita\" | \"Jyotiraditya Scindia\" — name doesn't sufficiently match \"Shri Pabitra Margherita\"",
       "attendance: Unexpected response shape"
-    ],
-    "knownFor": "Prime Minister of India since 2014",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Narendra_Modi",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    ]
   }
 ]
