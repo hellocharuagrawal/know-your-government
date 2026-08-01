@@ -294,13 +294,9 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 <div style="font-size:10px;color:var(--text-muted)">BJP, Kota</div>
 </div>
 <div class="hier-line"></div>
-<div style="width:100%;margin-bottom:14px">
-<div style="position:relative;height:170px"><canvas id="leadership-overview-chart" role="img" aria-label="Pie chart of Lok Sabha seat composition: NDA 293, INDIA bloc 234, others 16"></canvas></div>
-<div style="display:flex;gap:12px;font-size:10.5px;color:var(--text-secondary);margin-top:8px;flex-wrap:wrap;justify-content:center">
-<span><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:var(--accent);margin-right:4px"></span>NDA, 293</span>
-<span><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:var(--transport);margin-right:4px"></span>INDIA bloc, 234</span>
-<span><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:var(--border-strong);margin-right:4px"></span>Others, 16</span>
-</div>
+<div style="width:100%;margin-bottom:14px;position:relative">
+<div id="hemicycle-container" style="width:100%;position:relative"></div>
+<div id="hemicycle-tooltip" style="position:fixed;display:none;background:#1c1c1f;color:#fff;font-size:11px;font-weight:700;padding:6px 10px;border-radius:8px;pointer-events:none;z-index:1000;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.4)"></div>
 </div>
 <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px">Tap a bloc to see its members</div>
 <div style="display:grid;gap:8px;width:100%" id="bloc-summary"></div>
@@ -1003,12 +999,7 @@ setTabStyle("tab-map-btn",tab==="map");
 const subtitles={people:"Who runs the house, and who leads the opposition",map:"Tap a state to see the MPs elected from there"};
 document.getElementById("lok-tab-subtitle").textContent=subtitles[tab];
 if(tab==="people"){
-if(compChart)compChart.destroy();
-compChart=new Chart(document.getElementById("leadership-overview-chart"),{
-type:"doughnut",
-data:{labels:["NDA","INDIA bloc","Others"],datasets:[{data:[BLOC_INFO.NDA.seats,BLOC_INFO.INDIA.seats,BLOC_INFO.Others.seats],backgroundColor:["#ff7a1a","#3b9eff","#5f5e5a"],borderColor:"#101012",borderWidth:2}]},
-options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${ctx.parsed} seats`}}},cutout:"62%"}
-});
+renderHemicycle();
 }
 if(tab==="map")loadIndiaMap();
 }
@@ -1446,6 +1437,93 @@ console.warn("Live alliance fetch failed, using static fallback. Error:",e.messa
 }
 }
 tryLiveAlliancesFetch();
+let PARTY_REPRESENTATION=[];
+async function tryLivePartyRepFetch(){
+try{
+const res=await fetch(`${API_BASE_URL}/api/party-representation`);
+if(!res.ok)throw new Error("HTTP "+res.status);
+const data=await res.json();
+if(!data||!data.length)throw new Error("Empty response shape");
+PARTY_REPRESENTATION=data.map(p=>({party:p.abbrev,seats:p.seats}));
+console.log("Live party representation loaded:",PARTY_REPRESENTATION.length,"parties");
+renderHemicycle();
+}catch(e){
+console.warn("Live party representation fetch failed, hemicycle will use bloc-level fallback. Error:",e.message);
+}
+}
+tryLivePartyRepFetch();
+function computeHemicycleRows(totalSeats){
+const numRows=9;
+const rMin=42,rMax=145;
+const radii=[];
+for(let i=0;i<numRows;i++)radii.push(rMin+(rMax-rMin)*i/(numRows-1));
+let capacities=radii.map(r=>Math.round(totalSeats*r/radii.reduce((a,b)=>a+b,0)));
+let diff=totalSeats-capacities.reduce((a,b)=>a+b,0);
+let idx=capacities.length-1;
+while(diff!==0){
+if(diff>0){capacities[idx]++;diff--;}else{capacities[idx]--;diff++;}
+idx=(idx-1+capacities.length)%capacities.length;
+}
+return radii.map((r,i)=>({radius:r,capacity:capacities[i]}));
+}
+function renderHemicycle(){
+const container=document.getElementById("hemicycle-container");
+if(!container)return;
+const parties=(PARTY_REPRESENTATION&&PARTY_REPRESENTATION.length)?PARTY_REPRESENTATION:[
+{party:"NDA parties",seats:BLOC_INFO.NDA.seats},
+{party:"INDIA bloc parties",seats:BLOC_INFO.INDIA.seats},
+{party:"Others",seats:BLOC_INFO.Others.seats}
+];
+const totalSeats=parties.reduce((a,p)=>a+p.seats,0);
+if(totalSeats<=0)return;
+let angleCursor=180;
+const partyRanges=parties.map(p=>{
+const span=180*p.seats/totalSeats;
+const range={party:p.party,seats:p.seats,start:angleCursor,end:angleCursor-span};
+angleCursor-=span;
+return range;
+});
+function partyForAngle(angle){
+for(const r of partyRanges){if(angle<=r.start+0.01&&angle>=r.end-0.01)return r;}
+return partyRanges[partyRanges.length-1];
+}
+const rows=computeHemicycleRows(totalSeats);
+const width=340,height=185;
+const cx=width/2,cy=height-8;
+let svg=`<svg viewBox="0 0 ${width} ${height}" width="100%" style="display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">`;
+rows.forEach(row=>{
+if(row.capacity<=0)return;
+for(let j=0;j<row.capacity;j++){
+const angleDeg=170-(160*(j+0.5)/row.capacity);
+const angleRad=angleDeg*Math.PI/180;
+const x=cx-row.radius*Math.cos(angleRad);
+const y=cy-row.radius*Math.sin(angleRad);
+const owner=partyForAngle(angleDeg);
+const color=colorForParty(owner?owner.party:"");
+svg+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.3" fill="${color}" data-party="${owner?owner.party.replace(/"/g,'&quot;'):''}" data-seats="${owner?owner.seats:''}" class="hemicycle-dot" style="cursor:pointer"/>`;
+}
+});
+svg+="</svg>";
+container.innerHTML=svg;
+const tooltip=document.getElementById("hemicycle-tooltip");
+container.querySelectorAll(".hemicycle-dot").forEach(dot=>{
+dot.addEventListener("mouseenter",()=>{
+const party=dot.getAttribute("data-party");
+const seats=dot.getAttribute("data-seats");
+const color=dot.getAttribute("fill");
+if(tooltip){
+tooltip.innerHTML=`<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${color};margin-right:6px;vertical-align:middle"></span>${party} - ${seats}`;
+tooltip.style.display="block";
+}
+});
+dot.addEventListener("mousemove",e=>{
+if(tooltip){tooltip.style.left=(e.clientX+12)+"px";tooltip.style.top=(e.clientY-10)+"px";}
+});
+dot.addEventListener("mouseleave",()=>{
+if(tooltip)tooltip.style.display="none";
+});
+});
+}
 let RAJYA_SABHA=[];
 let rajyaSabhaSearch="",rajyaSabhaPartyFilter="All",rajyaSabhaStateFilter="All";
 async function tryLiveRajyaSabhaFetch(){
