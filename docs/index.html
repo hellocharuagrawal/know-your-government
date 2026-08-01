@@ -296,6 +296,7 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 <div class="hier-line"></div>
 <div style="width:100%;margin-bottom:14px;position:relative">
 <div id="hemicycle-container" style="width:100%;position:relative"></div>
+<div id="hemicycle-legend" style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:10px"></div>
 <div id="hemicycle-tooltip" style="position:fixed;display:none;background:#1c1c1f;color:#fff;font-size:11px;font-weight:700;padding:6px 10px;border-radius:8px;pointer-events:none;z-index:1000;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.4)"></div>
 </div>
 <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px">Tap a bloc to see its members</div>
@@ -1476,6 +1477,17 @@ const parties=(PARTY_REPRESENTATION&&PARTY_REPRESENTATION.length)?PARTY_REPRESEN
 ];
 const totalSeats=parties.reduce((a,p)=>a+p.seats,0);
 if(totalSeats<=0)return;
+const legendEl=document.getElementById("hemicycle-legend");
+if(legendEl){
+const sorted=[...parties].sort((a,b)=>b.seats-a.seats);
+const topN=8;
+const shown=sorted.slice(0,topN);
+const rest=sorted.slice(topN);
+const restSeats=rest.reduce((a,p)=>a+p.seats,0);
+let legendItems=shown.map(p=>({party:p.party,seats:p.seats,color:colorForParty(p.party)}));
+if(rest.length>0)legendItems.push({party:`+${rest.length} others`,seats:restSeats,color:"#6b6963"});
+legendEl.innerHTML=legendItems.map(item=>`<span style="display:inline-flex;align-items:center;gap:4px;font-size:9.5px;color:var(--text-secondary);background:var(--surface-2);padding:3px 8px;border-radius:20px"><span style="width:7px;height:7px;border-radius:2px;background:${item.color};flex-shrink:0"></span>${item.party}, ${item.seats}</span>`).join("");
+}
 let angleCursor=180;
 const partyRanges=parties.map(p=>{
 const span=180*p.seats/totalSeats;
@@ -1496,7 +1508,7 @@ if(row.capacity<=0)return;
 for(let j=0;j<row.capacity;j++){
 const angleDeg=170-(160*(j+0.5)/row.capacity);
 const angleRad=angleDeg*Math.PI/180;
-const x=cx+row.radius*Math.cos(angleRad);
+const x=cx-row.radius*Math.cos(angleRad);
 const y=cy-row.radius*Math.sin(angleRad);
 const owner=partyForAngle(angleDeg);
 const color=colorForParty(owner?owner.party:"");
