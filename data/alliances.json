@@ -1,0 +1,185 @@
+{
+  "NDA": {
+    "seats": 275,
+    "parties": [
+      {
+        "party": "BJP",
+        "seats": 240
+      },
+      {
+        "party": "TDP",
+        "seats": 16
+      },
+      {
+        "party": "JD(U)",
+        "seats": 12
+      },
+      {
+        "party": "JD(S)",
+        "seats": 2
+      },
+      {
+        "party": "RLD",
+        "seats": 2
+      },
+      {
+        "party": "AGP",
+        "seats": 1
+      },
+      {
+        "party": "SKM",
+        "seats": 1
+      },
+      {
+        "party": "UPPL",
+        "seats": 1
+      }
+    ]
+  },
+  "INDIA": {
+    "seats": 179,
+    "parties": [
+      {
+        "party": "INC",
+        "seats": 100
+      },
+      {
+        "party": "SP",
+        "seats": 37
+      },
+      {
+        "party": "DMK",
+        "seats": 22
+      },
+      {
+        "party": "CPI(M)",
+        "seats": 4
+      },
+      {
+        "party": "RJD",
+        "seats": 4
+      },
+      {
+        "party": "IUML",
+        "seats": 3
+      },
+      {
+        "party": "JMM",
+        "seats": 3
+      },
+      {
+        "party": "CPI",
+        "seats": 2
+      },
+      {
+        "party": "VCK",
+        "seats": 2
+      },
+      {
+        "party": "MDMK",
+        "seats": 1
+      },
+      {
+        "party": "RSP",
+        "seats": 1
+      }
+    ]
+  },
+  "Others": {
+    "seats": 90,
+    "parties": [
+      {
+        "party": "AITC",
+        "seats": 29
+      },
+      {
+        "party": "SS",
+        "seats": 13
+      },
+      {
+        "party": "NCPSP",
+        "seats": 8
+      },
+      {
+        "party": "Ind.",
+        "seats": 7
+      },
+      {
+        "party": "LJSP(RV)",
+        "seats": 5
+      },
+      {
+        "party": "YSR Congress Party",
+        "seats": 4
+      },
+      {
+        "party": "AAP",
+        "seats": 3
+      },
+      {
+        "party": "SHSUBT",
+        "seats": 3
+      },
+      {
+        "party": "CPI(ML)(L)",
+        "seats": 2
+      },
+      {
+        "party": "J&KNC",
+        "seats": 2
+      },
+      {
+        "party": "JSP",
+        "seats": 2
+      },
+      {
+        "party": "AJSU",
+        "seats": 1
+      },
+      {
+        "party": "AIMIM",
+        "seats": 1
+      },
+      {
+        "party": "Apna Dal (S)",
+        "seats": 1
+      },
+      {
+        "party": "ASP (KR)",
+        "seats": 1
+      },
+      {
+        "party": "BAP",
+        "seats": 1
+      },
+      {
+        "party": "HAM (S)",
+        "seats": 1
+      },
+      {
+        "party": "KEC",
+        "seats": 1
+      },
+      {
+        "party": "NCP",
+        "seats": 1
+      },
+      {
+        "party": "RLP",
+        "seats": 1
+      },
+      {
+        "party": "SAD",
+        "seats": 1
+      },
+      {
+        "party": "VPP",
+        "seats": 1
+      },
+      {
+        "party": "ZPM",
+        "seats": 1
+      }
+    ]
+  }
+}

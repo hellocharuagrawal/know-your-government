@@ -1,0 +1,212 @@
+[
+  {
+    "party": "Bharatiya Janata Party",
+    "abbrev": "BJP",
+    "seats": 240
+  },
+  {
+    "party": "Indian National Congress",
+    "abbrev": "INC",
+    "seats": 100
+  },
+  {
+    "party": "Samajwadi Party",
+    "abbrev": "SP",
+    "seats": 37
+  },
+  {
+    "party": "All India Trinamool Congress",
+    "abbrev": "AITC",
+    "seats": 29
+  },
+  {
+    "party": "Dravida Munnetra Kazhagam",
+    "abbrev": "DMK",
+    "seats": 22
+  },
+  {
+    "party": "Telugu Desam Party",
+    "abbrev": "TDP",
+    "seats": 16
+  },
+  {
+    "party": "Shiv Sena",
+    "abbrev": "SS",
+    "seats": 13
+  },
+  {
+    "party": "Janata Dal (United)",
+    "abbrev": "JD(U)",
+    "seats": 12
+  },
+  {
+    "party": "Nationalist Congress Party - Sharadchandra Pawar",
+    "abbrev": "NCPSP",
+    "seats": 8
+  },
+  {
+    "party": "Independent",
+    "abbrev": "Ind.",
+    "seats": 7
+  },
+  {
+    "party": "Lok Jan Shakti Party (Ram Vilas)",
+    "abbrev": "LJSP(RV)",
+    "seats": 5
+  },
+  {
+    "party": "Communist Party of India (Marxist)",
+    "abbrev": "CPI(M)",
+    "seats": 4
+  },
+  {
+    "party": "Rashtriya Janata Dal",
+    "abbrev": "RJD",
+    "seats": 4
+  },
+  {
+    "party": "Yuvajana Sramika Rythu Congress Party",
+    "abbrev": "YSR Congress Party",
+    "seats": 4
+  },
+  {
+    "party": "Aam Aadmi Party",
+    "abbrev": "AAP",
+    "seats": 3
+  },
+  {
+    "party": "Indian Union Muslim League",
+    "abbrev": "IUML",
+    "seats": 3
+  },
+  {
+    "party": "Jharkhand Mukti Morcha",
+    "abbrev": "JMM",
+    "seats": 3
+  },
+  {
+    "party": "Shiv Sena (Uddhav Balasaheb Thackrey)",
+    "abbrev": "SHSUBT",
+    "seats": 3
+  },
+  {
+    "party": "Communist Party of India",
+    "abbrev": "CPI",
+    "seats": 2
+  },
+  {
+    "party": "Communist Party of India (Marxist-Leninist) Liberation",
+    "abbrev": "CPI(ML)(L)",
+    "seats": 2
+  },
+  {
+    "party": "Jammu and Kashmir National Conference",
+    "abbrev": "J&KNC",
+    "seats": 2
+  },
+  {
+    "party": "Janasena Party",
+    "abbrev": "JSP",
+    "seats": 2
+  },
+  {
+    "party": "Janata Dal (Secular)",
+    "abbrev": "JD(S)",
+    "seats": 2
+  },
+  {
+    "party": "Rashtriya Lok Dal",
+    "abbrev": "RLD",
+    "seats": 2
+  },
+  {
+    "party": "Viduthalai Chiruthaigal Katchi",
+    "abbrev": "VCK",
+    "seats": 2
+  },
+  {
+    "party": "AJSU Party",
+    "abbrev": "AJSU",
+    "seats": 1
+  },
+  {
+    "party": "All India Majlis-E-Ittehadul Muslimeen",
+    "abbrev": "AIMIM",
+    "seats": 1
+  },
+  {
+    "party": "Apna Dal (Soneylal)",
+    "abbrev": "Apna Dal (S)",
+    "seats": 1
+  },
+  {
+    "party": "Asom Gana Parishad",
+    "abbrev": "AGP",
+    "seats": 1
+  },
+  {
+    "party": "Azad Samaj Party (Kanshi Ram)",
+    "abbrev": "ASP (KR)",
+    "seats": 1
+  },
+  {
+    "party": "Bharat Adivasi Party",
+    "abbrev": "BAP",
+    "seats": 1
+  },
+  {
+    "party": "Hindustani Awam Morcha (Secular)",
+    "abbrev": "HAM (S)",
+    "seats": 1
+  },
+  {
+    "party": "Kerala Congress",
+    "abbrev": "KEC",
+    "seats": 1
+  },
+  {
+    "party": "Marumalarchi Dravida Munnetra Kazhagam",
+    "abbrev": "MDMK",
+    "seats": 1
+  },
+  {
+    "party": "Nationalist Congress Party",
+    "abbrev": "NCP",
+    "seats": 1
+  },
+  {
+    "party": "Rashtriya Loktantrik Party",
+    "abbrev": "RLP",
+    "seats": 1
+  },
+  {
+    "party": "Revolutionary Socialist Party",
+    "abbrev": "RSP",
+    "seats": 1
+  },
+  {
+    "party": "Shiromani Akali Dal",
+    "abbrev": "SAD",
+    "seats": 1
+  },
+  {
+    "party": "Sikkim Krantikari Morcha",
+    "abbrev": "SKM",
+    "seats": 1
+  },
+  {
+    "party": "United Peoples Party, Liberal",
+    "abbrev": "UPPL",
+    "seats": 1
+  },
+  {
+    "party": "Voice of the People Party",
+    "abbrev": "VPP",
+    "seats": 1
+  },
+  {
+    "party": "Zoram Peoples Movement",
+    "abbrev": "ZPM",
+    "seats": 1
+  }
+]
