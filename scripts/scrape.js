@@ -180,6 +180,60 @@ async function fetchPartyRepresentation() {
     .sort((a, b) => b.seats - a.seats);
 }
 
+// Unlike every other scraper function here, this one parses rendered HTML rather
+// than a clean JSON API — sansad.in's officer pages don't expose a discoverable
+// JSON endpoint the way their member/party data does. This is more fragile by
+// nature: if the page's markup changes, parsing could silently misfire. To guard
+// against that, each role fails loudly (throws, logged, skipped) rather than
+// guessing at a wrong name if the expected pattern isn't found.
+const LEADERSHIP_PAGES = [
+  { role: "Speaker", url: "https://sansad.in/ls/about/speaker" },
+  { role: "Deputy Speaker", url: "https://sansad.in/ls/about/deputy-speaker" },
+  { role: "Leader of the House", url: "https://sansad.in/ls/about/leader-of-the-house" },
+  { role: "Leader of the Opposition", url: "https://sansad.in/ls/about/leader-of-opposition" },
+];
+
+async function fetchOneLeadershipRole(role, url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const html = await res.text();
+
+  if (/vacant/i.test(html)) {
+    return { role, status: "vacant", name: null, photoUrl: null };
+  }
+
+  // The official photo URL is a distinctive, stable pattern regardless of
+  // surrounding markup changes: sansad.in/getFile/mpimage/photo/{id}.jpg
+  const photoMatch = html.match(/https:\/\/sansad\.in\/getFile\/mpimage\/photo\/\d+\.jpg[^"'\s)]*/);
+  // Name appears as "Shri X", "Smt. X", "Dr. X" etc. — same honorific pattern
+  // used throughout the member data we already parse elsewhere.
+  const nameMatch = html.match(/>(Shri|Smt\.|Dr\.|Kumari)\s+[A-Za-z.\s]+?</);
+
+  if (!nameMatch) {
+    throw new Error("Could not confidently find a name on the page — skipping rather than guessing");
+  }
+
+  return {
+    role,
+    status: "occupied",
+    name: nameMatch[1] + " " + nameMatch[0].slice(nameMatch[1].length + 1, -1).trim(),
+    photoUrl: photoMatch ? photoMatch[0] : null,
+  };
+}
+
+async function fetchLeadershipRoles() {
+  const results = [];
+  for (const page of LEADERSHIP_PAGES) {
+    try {
+      const result = await fetchOneLeadershipRole(page.role, page.url);
+      results.push(result);
+    } catch (e) {
+      results.push({ role: page.role, status: "error", error: e.message, name: null, photoUrl: null });
+    }
+  }
+  return results;
+}
+
 async function fetchChiefs() {
   const res = await fetch("https://www.india.gov.in/directory/whos-who/api", {
     method: "POST",
@@ -270,6 +324,23 @@ async function main() {
   } catch (e) {
     runLog.errors.push(`Party representation fetch failed: ${e.message}`);
     console.error("Party representation fetch failed:", e.message);
+  }
+
+  try {
+    const leadershipRoles = await fetchLeadershipRoles();
+    await writeFile(
+      join(DATA_DIR, "leadership-roles.json"),
+      JSON.stringify(leadershipRoles, null, 2)
+    );
+    const succeeded = leadershipRoles.filter((r) => r.status !== "error").length;
+    runLog.results.leadershipRoles = `${succeeded}/${leadershipRoles.length} parsed`;
+    console.log(`Leadership roles: ${succeeded}/${leadershipRoles.length} parsed successfully`);
+    leadershipRoles.filter((r) => r.status === "error").forEach((r) => {
+      console.error(`  ${r.role}: ${r.error}`);
+    });
+  } catch (e) {
+    runLog.errors.push(`Leadership roles fetch failed: ${e.message}`);
+    console.error("Leadership roles fetch failed:", e.message);
   }
 
   try {
