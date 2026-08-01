@@ -229,9 +229,27 @@ table.kyg-table th:first-child,table.kyg-table td:first-child{text-align:left;co
 <input type="text" id="bloc-search" placeholder="Search by name or party..." style="width:100%;padding:11px 14px 11px 38px;border-radius:14px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-primary);font-size:13px;font-family:inherit">
 <span style="position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text-muted)"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
 </div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
-<select id="bloc-state-select"><option value="All">All states</option></select>
-<select id="bloc-city-select"><option value="All">All constituencies</option></select>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;position:relative">
+<div style="position:relative">
+<button class="tap" id="bloc-state-trigger" style="width:100%;text-align:left;padding:9px 12px;border-radius:14px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-primary);font-size:12.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:4px">
+<span id="bloc-state-trigger-label" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">All states</span>
+<span style="color:var(--text-muted);flex-shrink:0">&#9662;</span>
+</button>
+<div id="bloc-state-panel" style="display:none;position:absolute;top:100%;left:0;right:0;margin-top:4px;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;z-index:60;max-height:280px;flex-direction:column;box-shadow:0 8px 24px rgba(0,0,0,.5)">
+<input type="text" id="bloc-state-panel-search" placeholder="Search states..." style="margin:8px;padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--text-primary);font-size:13px;font-family:inherit">
+<div id="bloc-state-panel-list" style="overflow-y:auto;max-height:210px"></div>
+</div>
+</div>
+<div style="position:relative">
+<button class="tap" id="bloc-city-trigger" style="width:100%;text-align:left;padding:9px 12px;border-radius:14px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-primary);font-size:12.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:4px">
+<span id="bloc-city-trigger-label" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">All constituencies</span>
+<span style="color:var(--text-muted);flex-shrink:0">&#9662;</span>
+</button>
+<div id="bloc-city-panel" style="display:none;position:absolute;top:100%;left:0;right:0;margin-top:4px;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;z-index:60;max-height:280px;flex-direction:column;box-shadow:0 8px 24px rgba(0,0,0,.5)">
+<input type="text" id="bloc-city-panel-search" placeholder="Search constituencies..." style="margin:8px;padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--text-primary);font-size:13px;font-family:inherit">
+<div id="bloc-city-panel-list" style="overflow-y:auto;max-height:210px"></div>
+</div>
+</div>
 </div>
 <div id="bloc-party-chips" style="display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;margin-bottom:6px"></div>
 <div id="bloc-members-list"></div>
@@ -1742,6 +1760,53 @@ let blocChart=null;
 const BLOC_PIE_PALETTE=["#ff7a1a","#3b9eff","#7c5cff","#22c55e","#f5a623","#ec4899","#5f5e5a"];
 function blocPieColor(i){return BLOC_PIE_PALETTE[i%BLOC_PIE_PALETTE.length];}
 let blocSearch="",blocPartyFilter="All",blocStateFilter="All",blocCityFilter="All",currentBlocKey=null;
+function setupSearchableDropdown(prefix,allLabel,onSelect){
+const trigger=document.getElementById(`${prefix}-trigger`);
+const label=document.getElementById(`${prefix}-trigger-label`);
+const panel=document.getElementById(`${prefix}-panel`);
+const searchInput=document.getElementById(`${prefix}-panel-search`);
+const listEl=document.getElementById(`${prefix}-panel-list`);
+let currentOptions=[];
+let currentValue="All";
+function renderList(filterText){
+const q=(filterText||"").trim().toLowerCase();
+const filtered=["All",...currentOptions].filter(o=>o==="All"?true:o.toLowerCase().includes(q));
+if(!filtered.length){listEl.innerHTML=`<div style="padding:14px;font-size:12px;color:var(--text-muted);text-align:center">No matches</div>`;return;}
+listEl.innerHTML=filtered.map(o=>`<div class="tap dropdown-option" data-v="${o.replace(/"/g,'&quot;')}" style="padding:10px 14px;cursor:pointer;font-size:13px;color:${o===currentValue?'var(--text-primary)':'var(--text-secondary)'};font-weight:${o===currentValue?'700':'500'}">${o==="All"?allLabel:o}</div>`).join("");
+listEl.querySelectorAll(".dropdown-option").forEach(opt=>{
+opt.addEventListener("click",()=>{
+currentValue=opt.dataset.v;
+label.textContent=currentValue==="All"?allLabel:currentValue;
+panel.style.display="none";
+onSelect(currentValue);
+});
+});
+}
+trigger.addEventListener("click",e=>{
+e.stopPropagation();
+const isOpen=panel.style.display==="flex";
+document.querySelectorAll('[id$="-panel"]').forEach(p=>p.style.display="none");
+panel.style.display=isOpen?"none":"flex";
+if(!isOpen){searchInput.value="";renderList("");}
+});
+searchInput.addEventListener("input",e=>renderList(e.target.value));
+searchInput.addEventListener("click",e=>e.stopPropagation());
+document.addEventListener("click",e=>{
+if(!trigger.contains(e.target)&&!panel.contains(e.target))panel.style.display="none";
+});
+return{
+setOptions(opts){currentOptions=opts;},
+reset(){currentValue="All";label.textContent=allLabel;}
+};
+}
+const blocStateDropdown=setupSearchableDropdown("bloc-state","All states",value=>{
+blocStateFilter=value;
+renderBlocMemberList();
+});
+const blocCityDropdown=setupSearchableDropdown("bloc-city","All constituencies",value=>{
+blocCityFilter=value;
+renderBlocMemberList();
+});
 function openBlocScreen(blocKey){
 currentBlocKey=blocKey;
 blocSearch="";blocPartyFilter="All";blocStateFilter="All";blocCityFilter="All";
@@ -1766,28 +1831,27 @@ const blocMembers=MPS.filter(mp=>BLOC_BY_PARTY[mp.party]===blocKey);
 const parties=[...new Set(blocMembers.map(mp=>mp.party))].sort();
 const states=[...new Set(blocMembers.map(mp=>mp.constituency.split(",").slice(-1)[0].trim()))].sort();
 const cities=[...new Set(blocMembers.map(mp=>mp.constituency.split(",")[0].trim()))].sort();
+function renderBlocPartyChips(){
 const chipsEl=document.getElementById("bloc-party-chips");
 chipsEl.innerHTML=["All",...parties].map(p=>{
 const active=p===blocPartyFilter;
 return `<button class="tap bloc-party-chip" data-p="${p}" style="flex-shrink:0;padding:6px 13px;border-radius:16px;font-size:11.5px;font-weight:700;border:1px solid ${active?'var(--text-primary)':'var(--border)'};background:${active?'var(--text-primary)':'var(--surface-2)'};color:${active?'var(--bg)':'var(--text-secondary)'}">${p}</button>`;
 }).join("");
 chipsEl.querySelectorAll(".bloc-party-chip").forEach(btn=>{
-btn.addEventListener("click",()=>{blocPartyFilter=btn.dataset.p;openBlocScreen(blocKey);});
+btn.addEventListener("click",()=>{
+blocPartyFilter=btn.dataset.p;
+renderBlocPartyChips();
+renderBlocMemberList();
 });
-const stateSel=document.getElementById("bloc-state-select");
-stateSel.innerHTML=`<option value="All">All states</option>`+states.map(s=>`<option value="${s}" ${s===blocStateFilter?"selected":""}>${s}</option>`).join("");
-const citySel=document.getElementById("bloc-city-select");
-citySel.innerHTML=`<option value="All">All constituencies</option>`+cities.map(c=>`<option value="${c}" ${c===blocCityFilter?"selected":""}>${c}</option>`).join("");
+});
+}
+renderBlocPartyChips();
+blocStateDropdown.setOptions(states);
+blocStateDropdown.reset();
+blocCityDropdown.setOptions(cities);
+blocCityDropdown.reset();
 renderBlocMemberList();
 }
-document.getElementById("bloc-state-select").addEventListener("change",e=>{
-blocStateFilter=e.target.value;
-renderBlocMemberList();
-});
-document.getElementById("bloc-city-select").addEventListener("change",e=>{
-blocCityFilter=e.target.value;
-renderBlocMemberList();
-});
 function renderBlocMemberList(){
 const q=blocSearch.trim().toLowerCase();
 const members=MPS.filter(mp=>{
