@@ -379,13 +379,20 @@ async function fetchWikipediaProfile(name) {
   let claims = null;
   let candidateErrors = [];
 
+  const originalWords = cleanWords(name);
+
   for (const candidate of results.slice(0, 3)) {
     const titleWords = cleanWords(candidate.title.replace(/_/g, " "));
-    const originalFirstName = cleanWords(name)[0];
-    const candidateFirstName = titleWords[0];
-    if (!originalFirstName || !candidateFirstName || originalFirstName !== candidateFirstName) {
+    // Order-agnostic containment: the shorter word-set must be fully contained in
+    // the longer one, regardless of which word is "supposed" to be first/middle/
+    // last name — Indian naming conventions vary too much (father's name first,
+    // surname first, etc.) to safely assume position means anything.
+    const [shorter, longer] =
+      originalWords.length <= titleWords.length ? [originalWords, titleWords] : [titleWords, originalWords];
+    const fullyContained = shorter.length > 0 && shorter.every((w) => longer.includes(w));
+    if (!fullyContained) {
       candidateErrors.push(
-        `"${candidate.title}" — first name "${candidateFirstName}" doesn't match "${originalFirstName}"`
+        `"${candidate.title}" — words [${titleWords.join(", ")}] don't fully contain/match [${originalWords.join(", ")}]`
       );
       continue;
     }
