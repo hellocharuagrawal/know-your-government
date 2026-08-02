@@ -144,7 +144,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — description doesn't confirm politician/India: \"11th president of the bharatiya janata party\" | \"Prakash Javadekar\" — words [prakash, javadekar] don't fully contain/match [jagat, prakash, nadda] | \"Narendra Modi\" — words [narendra, modi] don't fully contain/match [jagat, prakash, nadda]",
+      "wikipedia match: could not parse government DOB \" \" for verification",
       "attendance: Unexpected response shape"
     ]
   },
@@ -207,82 +207,81 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Indira Gandhi\" — words [indira, gandhi] don't fully contain/match [nirmala, sitharaman] | \"Maneka Gandhi\" — words [maneka, gandhi] don't fully contain/match [nirmala, sitharaman] | \"Giriraj Singh\" — words [giriraj, singh] don't fully contain/match [nirmala, sitharaman]",
+      "wikipedia match: could not parse government DOB \" \" for verification",
       "attendance: Unexpected response shape"
     ]
   },
   {
     "mpsno": "2426",
-    "placeBirth": "New Delhi",
-    "dateBirth": "09-01-1955",
-    "education": "St. Stephen's College, Jawaharlal Nehru University, The Air Force School",
-    "profession": "diplomat",
-    "careerTimeline": [
-      {
-        "period": "01-12-2013 - 28-01-2015",
-        "position": "ambassador of India to the United States"
-      },
-      {
-        "period": "29-01-2015 - 28-01-2018",
-        "position": "Foreign Secretary of India"
-      },
-      {
-        "period": "30-05-2019 - present",
-        "position": "Minister of External Affairs"
-      },
-      {
-        "period": "01-06-2009 - 01-12-2013",
-        "position": "Ambassador of India to China"
-      }
-    ],
-    "attendanceCurrentTerm": null,
-    "attendanceLoksabha": null,
-    "errors": [
-      "attendance: Unexpected response shape"
-    ],
-    "knownFor": "External Affairs Minister of India",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/S._Jaishankar",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
-  },
-  {
-    "mpsno": "5792",
-    "placeBirth": null,
-    "dateBirth": "03-06-1938",
-    "education": "Chhatrapati Shahu Ji Maharaj University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "? - present",
-        "position": "Member of the Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the Uttar Pradesh Legislative Assembly"
-      }
-    ],
-    "attendanceCurrentTerm": null,
-    "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Manohar_Lal_(politician)",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
-  },
-  {
-    "mpsno": "3711",
     "placeBirth": null,
     "dateBirth": null,
     "education": null,
     "profession": null,
     "careerTimeline": [],
     "attendanceCurrentTerm": null,
-    "attendanceLoksabha": 18,
+    "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"H. D. Kumaraswamy\" — description doesn't confirm politician/India: \"12th chief minister of karnataka\" | \"H. D. Deve Gowda\" — words [deve, gowda] don't fully contain/match [kumaraswamy] | \"M. B. Patil\" — words [patil] don't fully contain/match [kumaraswamy]"
+      "wikipedia match: could not parse government DOB \" \" for verification",
+      "attendance: Unexpected response shape"
     ]
+  },
+  {
+    "mpsno": "5792",
+    "placeBirth": "Haryana",
+    "dateBirth": "05-05-1954",
+    "education": "University of Delhi",
+    "profession": "politician",
+    "careerTimeline": [
+      {
+        "period": "26-10-2014 - 12-03-2024",
+        "position": "Chief Minister of Haryana"
+      }
+    ],
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
+    "errors": [],
+    "knownFor": "Indian politician",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Manohar_Lal_Khattar",
+    "criticismSectionUrl": "https://en.wikipedia.org/wiki/Manohar_Lal_Khattar#Controversies",
+    "legalSectionUrl": null,
+    "dataSource": "wikipedia"
+  },
+  {
+    "mpsno": "3711",
+    "placeBirth": "Haradanahalli",
+    "dateBirth": "16-12-1959",
+    "education": null,
+    "profession": "politician",
+    "careerTimeline": [
+      {
+        "period": "03-02-2006 - 09-10-2007",
+        "position": "Chief Minister of Karnataka"
+      },
+      {
+        "period": "13-05-2023 - 04-06-2024",
+        "position": "Member of the Karnataka Legislative Assembly"
+      },
+      {
+        "period": "23-05-2018 - 26-07-2019",
+        "position": "Chief Minister of Karnataka"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 11th Lok Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 15th Lok Sabha"
+      }
+    ],
+    "attendanceCurrentTerm": null,
+    "attendanceLoksabha": 18,
+    "errors": [],
+    "knownFor": "12th Chief Minister of Karnataka",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/H._D._Kumaraswamy",
+    "criticismSectionUrl": "https://en.wikipedia.org/wiki/H._D._Kumaraswamy#Controversies",
+    "legalSectionUrl": "https://en.wikipedia.org/wiki/H._D._Kumaraswamy#Vishwabharati_case",
+    "dataSource": "wikipedia"
   },
   {
     "mpsno": "5551",
