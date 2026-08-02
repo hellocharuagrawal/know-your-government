@@ -136,54 +136,17 @@
   },
   {
     "mpsno": "2204",
-    "placeBirth": "Pune",
-    "dateBirth": "30-01-1951",
-    "education": "Savitribai Phule Pune University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "03-04-2018 - present",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "00-00-1990 - 00-00-2002",
-        "position": "Member of the Maharashtra Legislature"
-      },
-      {
-        "period": "26-05-2014 - 09-11-2014",
-        "position": "Minister of Information and Broadcasting"
-      },
-      {
-        "period": "30-05-2019 - 07-07-2021",
-        "position": "Minister of Information and Broadcasting"
-      },
-      {
-        "period": "30-05-2019 - 07-07-2021",
-        "position": "Minister of Environment and Forests"
-      },
-      {
-        "period": "26-05-2014 - 05-07-2016",
-        "position": "Minister of Environment and Forests"
-      },
-      {
-        "period": "12-11-2019 - 07-07-2021",
-        "position": "Minister of Heavy Industries and Public Enterprises"
-      },
-      {
-        "period": "05-07-2016 - 30-05-2019",
-        "position": "Minister of Human Resource Development"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — first name \"nadda\" doesn't match \"jagat\" | \"Prakash Javadekar\" — first name \"prakash\" doesn't match \"jagat\" | \"Narendra Modi\" — first name \"narendra\" doesn't match \"jagat\"",
       "attendance: Unexpected response shape"
-    ],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Prakash_Javadekar",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    ]
   },
   {
     "mpsno": "96",
@@ -244,7 +207,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Indira Gandhi\" — name doesn't sufficiently match \"Smt. Nirmala Sitharaman\" | \"Maneka Gandhi\" — name doesn't sufficiently match \"Smt. Nirmala Sitharaman\" | \"Smriti Irani\" — name doesn't sufficiently match \"Smt. Nirmala Sitharaman\"",
+      "wikipedia match: 3 candidates found, none verified. Details: \"Indira Gandhi\" — first name \"indira\" doesn't match \"nirmala\" | \"Maneka Gandhi\" — first name \"maneka\" doesn't match \"nirmala\" | \"Smriti Irani\" — first name \"smriti\" doesn't match \"nirmala\"",
       "attendance: Unexpected response shape"
     ]
   },
@@ -318,7 +281,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"H. D. Kumaraswamy\" — description doesn't confirm politician/India: \"12th chief minister of karnataka\" | \"H. D. Deve Gowda\" — name doesn't sufficiently match \"Shri H D Kumaraswamy\" | \"Krishna Byre Gowda\" — name doesn't sufficiently match \"Shri H D Kumaraswamy\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"H. D. Kumaraswamy\" — description doesn't confirm politician/India: \"12th chief minister of karnataka\" | \"H. D. Deve Gowda\" — first name \"deve\" doesn't match \"kumaraswamy\" | \"M. B. Patil\" — first name \"patil\" doesn't match \"kumaraswamy\""
     ]
   },
   {
@@ -392,7 +355,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Ram Vilas Paswan\" — name doesn't sufficiently match \"Shri Jitan Ram Manjhi\" | \"Arjun Ram Meghwal\" — name doesn't sufficiently match \"Shri Jitan Ram Manjhi\" | \"List of Dalits\" — name doesn't sufficiently match \"Shri Jitan Ram Manjhi\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Ram Vilas Paswan\" — first name \"ram\" doesn't match \"jitan\" | \"Arjun Ram Meghwal\" — first name \"arjun\" doesn't match \"jitan\" | \"List of Dalits\" — first name \"list\" doesn't match \"jitan\""
     ]
   },
   {
@@ -405,7 +368,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Adhir Ranjan Chowdhury\" — name doesn't sufficiently match \"Shri Rajiv Ranjan Singh\" | \"Ramchandra Prasad Singh\" — name doesn't sufficiently match \"Shri Rajiv Ranjan Singh\" | \"Mulayam Singh Yadav\" — name doesn't sufficiently match \"Shri Rajiv Ranjan Singh\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Adhir Ranjan Chowdhury\" — first name \"adhir\" doesn't match \"rajiv\" | \"Chandra Shekhar\" — first name \"chandra\" doesn't match \"rajiv\" | \"Ramchandra Prasad Singh\" — first name \"ramchandra\" doesn't match \"rajiv\""
     ]
   },
   {
@@ -500,7 +463,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 2 candidates found, none verified. Details: \"Murali Mohan\" — name doesn't sufficiently match \"Shri Kinjarapu Rammohan Naidu\" | \"Thota Narasimham\" — name doesn't sufficiently match \"Shri Kinjarapu Rammohan Naidu\""
+      "wikipedia match: 2 candidates found, none verified. Details: \"Murali Mohan\" — first name \"murali\" doesn't match \"kinjarapu\" | \"Thota Narasimham\" — first name \"thota\" doesn't match \"kinjarapu\""
     ]
   },
   {
@@ -729,60 +692,16 @@
   },
   {
     "mpsno": "4670",
-    "placeBirth": "Chandauli district",
-    "dateBirth": "10-07-1951",
-    "education": "Deen Dayal Upadhyay Gorakhpur University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "00-00-1977 - 00-00-1980",
-        "position": "Member of the Uttar Pradesh Legislative Assembly"
-      },
-      {
-        "period": "26-05-2014 - 30-05-2019",
-        "position": "Minister of Home Affairs"
-      },
-      {
-        "period": "26-05-2014 - 24-05-2019",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "00-00-2009 - 00-00-2014",
-        "position": "Member of the 15th Lok Sabha"
-      },
-      {
-        "period": "30-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "24-05-2003 - 22-05-2004",
-        "position": "Minister of Agriculture & Farmers Welfare"
-      },
-      {
-        "period": "31-05-2019 - present",
-        "position": "Minister of Defence"
-      },
-      {
-        "period": "22-11-1999 - 27-10-2000",
-        "position": "Minister of Road Transport and Highways"
-      },
-      {
-        "period": "28-10-2000 - 08-03-2002",
-        "position": "Chief Minister of Uttar Pradesh"
-      },
-      {
-        "period": "00-00-2024 - present",
-        "position": "Member of the Lok Sabha"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rajnath_Singh",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Giriraj Singh\" — first name \"giriraj\" doesn't match \"gajendra\" | \"Rajnath Singh\" — first name \"rajnath\" doesn't match \"gajendra\" | \"Jitendra Singh Rana\" — first name \"jitendra\" doesn't match \"gajendra\""
+    ]
   },
   {
     "mpsno": "5116",
@@ -794,7 +713,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Giriraj Singh\" — name doesn't sufficiently match \"Smt. Annpurna Devi\" | \"C. R. Patil\" — name doesn't sufficiently match \"Smt. Annpurna Devi\" | \"Tokhan Sahu\" — name doesn't sufficiently match \"Smt. Annpurna Devi\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Giriraj Singh\" — first name \"giriraj\" doesn't match \"annpurna\" | \"C. R. Patil\" — first name \"patil\" doesn't match \"annpurna\" | \"Tokhan Sahu\" — first name \"tokhan\" doesn't match \"annpurna\""
     ]
   },
   {
@@ -828,42 +747,17 @@
   },
   {
     "mpsno": "2371",
-    "placeBirth": "Barahiya",
-    "dateBirth": "08-09-1952",
-    "education": "Magadh University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "16-05-2014 - 23-05-2019",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "07-07-2021 - present",
-        "position": "Minister of Rural Development"
-      },
-      {
-        "period": "07-07-2021 - present",
-        "position": "Minister of Panchayati Raj"
-      },
-      {
-        "period": "30-05-2019 - 07-07-2021",
-        "position": "Minister of Fisheries, Animal Husbandry and Dairying"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Giriraj Singh\" — first name \"giriraj\" doesn't match \"hardeep\" | \"Rajnath Singh\" — first name \"rajnath\" doesn't match \"hardeep\" | \"Jitendra Singh Rana\" — first name \"jitendra\" doesn't match \"hardeep\"",
       "attendance: Unexpected response shape"
-    ],
-    "knownFor": "Indian politician (born 1952)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Giriraj_Singh",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    ]
   },
   {
     "mpsno": "5555",
@@ -941,7 +835,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Ram Vilas Paswan\" — name doesn't sufficiently match \"Shri Chirag Paswan\" | \"Paswan (surname)\" — description doesn't confirm politician/India: \"family name\" | \"Arun Bharti\" — name doesn't sufficiently match \"Shri Chirag Paswan\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Ram Vilas Paswan\" — first name \"ram\" doesn't match \"chirag\" | \"Paswan (surname)\" — first name \"paswan\" doesn't match \"chirag\" | \"Arun Bharti\" — first name \"arun\" doesn't match \"chirag\""
     ]
   },
   {
@@ -954,7 +848,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Manohar Joshi\" — name doesn't sufficiently match \"Shri Chandrakant Raghunath Patil\" | \"Chopda\" — name doesn't sufficiently match \"Shri Chandrakant Raghunath Patil\" | \"Jalgaon district\" — name doesn't sufficiently match \"Shri Chandrakant Raghunath Patil\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Manohar Joshi\" — first name \"manohar\" doesn't match \"chandrakant\" | \"List of Marathi people\" — first name \"list\" doesn't match \"chandrakant\" | \"Chopda\" — first name \"chopda\" doesn't match \"chandrakant\""
     ]
   },
   {
@@ -1299,16 +1193,33 @@
   },
   {
     "mpsno": "3479",
-    "placeBirth": "Kairana",
-    "dateBirth": "00-00-1995",
-    "education": "SOAS, University of London, Lady Shri Ram College for Women",
+    "placeBirth": "Gorakhpur",
+    "dateBirth": "01-01-1958",
+    "education": null,
     "profession": "politician",
-    "careerTimeline": [],
+    "careerTimeline": [
+      {
+        "period": "? - present",
+        "position": "Member of the 16th Lok Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 11th Lok Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 12th Lok Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 17th Lok Sabha"
+      }
+    ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [],
     "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Iqra_Choudhary",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pankaj_Chaudhary",
     "criticismSectionUrl": null,
     "legalSectionUrl": null,
     "dataSource": "wikipedia"
@@ -1323,7 +1234,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Jyotiraditya Scindia\" — name doesn't sufficiently match \"Shri Krishan Pal Gurjar\" | \"Gaurav Gautam\" — name doesn't sufficiently match \"Shri Krishan Pal Gurjar\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Krishan Pal Gurjar\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Jyotiraditya Scindia\" — first name \"jyotiraditya\" doesn't match \"krishan\" | \"Gaurav Gautam\" — first name \"gaurav\" doesn't match \"krishan\" | \"J. P. Nadda\" — first name \"nadda\" doesn't match \"krishan\""
     ]
   },
   {
@@ -1355,17 +1266,54 @@
   },
   {
     "mpsno": "2268",
-    "placeBirth": null,
-    "dateBirth": null,
-    "education": null,
-    "profession": null,
-    "careerTimeline": [],
+    "placeBirth": "Khagaria",
+    "dateBirth": "05-07-1946",
+    "education": "Patna University",
+    "profession": "politician",
+    "careerTimeline": [
+      {
+        "period": "23-05-2004 - 22-05-2009",
+        "position": "Minister of Chemicals and Fertilizers"
+      },
+      {
+        "period": "01-09-2001 - 29-04-2002",
+        "position": "Minister of Mines"
+      },
+      {
+        "period": "13-10-1999 - 01-09-2001",
+        "position": "Minister of Communications and Information Technology"
+      },
+      {
+        "period": "01-06-1996 - 19-03-1998",
+        "position": "Minister of Railways"
+      },
+      {
+        "period": "01-07-2010 - 01-01-2014",
+        "position": "member of Rajya Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 16th Lok Sabha"
+      },
+      {
+        "period": "? - present",
+        "position": "Member of the 13th Lok Sabha"
+      },
+      {
+        "period": "02-12-1989 - 13-03-1991",
+        "position": "Member of the 9th Lok Sabha"
+      }
+    ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Arjun Ram Meghwal\" — name doesn't sufficiently match \"Shri Ram Nath Thakur\" | \"Ram Vilas Paswan\" — name doesn't sufficiently match \"Shri Ram Nath Thakur\" | \"Mulayam Singh Yadav\" — name doesn't sufficiently match \"Shri Ram Nath Thakur\"",
       "attendance: Unexpected response shape"
-    ]
+    ],
+    "knownFor": "Indian politician (1946–2020)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ram_Vilas_Paswan",
+    "criticismSectionUrl": null,
+    "legalSectionUrl": null,
+    "dataSource": "wikipedia"
   },
   {
     "mpsno": "4625",
@@ -1406,7 +1354,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Dimple Yadav\" — name doesn't sufficiently match \"Smt. Anupriya Patel\" | \"Maneka Gandhi\" — name doesn't sufficiently match \"Smt. Anupriya Patel\" | \"Rajkumar Pal\" — name doesn't sufficiently match \"Smt. Anupriya Patel\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Dimple Yadav\" — first name \"dimple\" doesn't match \"anupriya\" | \"C. R. Patil\" — first name \"patil\" doesn't match \"anupriya\" | \"Maneka Gandhi\" — first name \"maneka\" doesn't match \"anupriya\""
     ]
   },
   {
@@ -1419,7 +1367,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Narendra Modi\" — name doesn't sufficiently match \"Shri V Somanna\" | \"Pralhad Joshi\" — name doesn't sufficiently match \"Shri V Somanna\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri V Somanna\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — first name \"nadda\" doesn't match \"somanna\" | \"Narendra Modi\" — first name \"narendra\" doesn't match \"somanna\" | \"List of people from Telangana\" — first name \"list\" doesn't match \"somanna\""
     ]
   },
   {
@@ -1477,45 +1425,21 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Murlidhar Mohol\" — name doesn't sufficiently match \"Km. Shobha Karandlaje\" | \"Tejasvi Surya\" — name doesn't sufficiently match \"Km. Shobha Karandlaje\" | \"R. K. Singh\" — name doesn't sufficiently match \"Km. Shobha Karandlaje\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Murlidhar Mohol\" — first name \"murlidhar\" doesn't match \"shobha\" | \"Tejasvi Surya\" — first name \"tejasvi\" doesn't match \"shobha\" | \"R. K. Singh\" — first name \"singh\" doesn't match \"shobha\""
     ]
   },
   {
     "mpsno": "3926",
-    "placeBirth": "Barahiya",
-    "dateBirth": "08-09-1952",
-    "education": "Magadh University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "16-05-2014 - 23-05-2019",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "23-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "07-07-2021 - present",
-        "position": "Minister of Rural Development"
-      },
-      {
-        "period": "07-07-2021 - present",
-        "position": "Minister of Panchayati Raj"
-      },
-      {
-        "period": "30-05-2019 - 07-07-2021",
-        "position": "Minister of Fisheries, Animal Husbandry and Dairying"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician (born 1952)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Giriraj_Singh",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Chandrashekhar Azad (politician)\" — first name \"chandrashekhar\" doesn't match \"kirti\" | \"Giriraj Singh\" — first name \"giriraj\" doesn't match \"kirti\" | \"Akhilesh Yadav\" — first name \"akhilesh\" doesn't match \"kirti\""
+    ]
   },
   {
     "mpsno": "2491",
@@ -1527,7 +1451,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Chandrashekhar Azad (politician)\" — name doesn't sufficiently match \"Shri B.L. Verma\" | \"Beni Prasad Verma\" — name doesn't sufficiently match \"Shri B.L. Verma\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri B.L. Verma\"",
+      "wikipedia match: 3 candidates found, none verified. Details: \"Chandrashekhar Azad (politician)\" — first name \"chandrashekhar\" doesn't match \"verma\" | \"Beni Prasad Verma\" — first name \"beni\" doesn't match \"verma\" | \"Jagat Singh Negi\" — first name \"jagat\" doesn't match \"verma\"",
       "attendance: Unexpected response shape"
     ]
   },
@@ -1541,7 +1465,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Shantanu Thakur\" | \"Narendra Modi\" — name doesn't sufficiently match \"Shri Shantanu Thakur\" | \"Abhishek Banerjee (politician)\" — name doesn't sufficiently match \"Shri Shantanu Thakur\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — first name \"nadda\" doesn't match \"shantanu\" | \"Narendra Modi\" — first name \"narendra\" doesn't match \"shantanu\" | \"Pralhad Joshi\" — first name \"pralhad\" doesn't match \"shantanu\""
     ]
   },
   {
@@ -1591,31 +1515,15 @@
   {
     "mpsno": "4651",
     "placeBirth": null,
-    "dateBirth": "16-06-1958",
+    "dateBirth": null,
     "education": null,
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "? - present",
-        "position": "Member of the Uttarakhand Legislative Assembly"
-      },
-      {
-        "period": "? - present",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 15th Lok Sabha"
-      }
-    ],
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pradeep_Tamta",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Pradeep Tamta\" — first name \"pradeep\" doesn't match \"ajay\" | \"Narendra Modi\" — first name \"narendra\" doesn't match \"ajay\" | \"J. P. Nadda\" — first name \"nadda\" doesn't match \"ajay\""
+    ]
   },
   {
     "mpsno": "5076",
@@ -1645,18 +1553,15 @@
   {
     "mpsno": "4303",
     "placeBirth": null,
-    "dateBirth": "01-01-1952",
+    "dateBirth": null,
     "education": null,
-    "profession": "politician",
+    "profession": null,
     "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Subhawati_Paswan",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Ram Vilas Paswan\" — first name \"ram\" doesn't match \"kamlesh\" | \"Subhawati Paswan\" — first name \"subhawati\" doesn't match \"kamlesh\" | \"Paswan (surname)\" — first name \"paswan\" doesn't match \"kamlesh\""
+    ]
   },
   {
     "mpsno": "5203",
@@ -1668,59 +1573,22 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Narendra Modi\" — name doesn't sufficiently match \"Shri Bhagirath Choudhary\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Bhagirath Choudhary\" | \"2026 in India\" — name doesn't sufficiently match \"Shri Bhagirath Choudhary\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Narendra Modi\" — first name \"narendra\" doesn't match \"bhagirath\" | \"J. P. Nadda\" — first name \"nadda\" doesn't match \"bhagirath\" | \"2026 in India\" — first name \"2026\" doesn't match \"bhagirath\""
     ]
   },
   {
     "mpsno": "2435",
-    "placeBirth": "Ibrahimpatti",
-    "dateBirth": "17-04-1927",
-    "education": "University of Allahabad",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "10-11-1990 - 21-06-1991",
-        "position": "Prime Minister of India"
-      },
-      {
-        "period": "00-00-1962 - present",
-        "position": "member of Rajya Sabha"
-      },
-      {
-        "period": "15-05-1996 - 04-12-1997",
-        "position": "Member of the 11th Lok Sabha"
-      },
-      {
-        "period": "10-03-1998 - 26-04-1999",
-        "position": "Member of the 12th Lok Sabha"
-      },
-      {
-        "period": "10-10-1999 - 06-02-2004",
-        "position": "Member of the 13th Lok Sabha"
-      },
-      {
-        "period": "02-12-1989 - 13-03-1991",
-        "position": "Member of the 9th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the 7th Lok Sabha"
-      },
-      {
-        "period": "20-02-1991 - 21-06-1991",
-        "position": "Minister of External Affairs"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"Chandra Shekhar\" — first name \"chandra\" doesn't match \"satish\" | \"Chandrashekhar Azad (politician)\" — first name \"chandrashekhar\" doesn't match \"satish\" | \"H. D. Kumaraswamy\" — first name \"kumaraswamy\" doesn't match \"satish\"",
       "attendance: Unexpected response shape"
-    ],
-    "knownFor": "Prime Minister of India (1990-1991)",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chandra_Shekhar",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    ]
   },
   {
     "mpsno": "2351",
@@ -1732,7 +1600,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Sunil Dutt\" — name doesn't sufficiently match \"Shri Sanjay Seth\" | \"Surendra Singh Nagar\" — name doesn't sufficiently match \"Shri Sanjay Seth\" | \"St. Columba's School, Delhi\" — name doesn't sufficiently match \"Shri Sanjay Seth\"",
+      "wikipedia match: 3 candidates found, none verified. Details: \"Jyotiraditya Scindia\" — first name \"jyotiraditya\" doesn't match \"sanjay\" | \"Surendra Singh Nagar\" — first name \"surendra\" doesn't match \"sanjay\" | \"St. Columba's School, Delhi\" — first name \"columba's\" doesn't match \"sanjay\"",
       "attendance: Unexpected response shape"
     ]
   },
@@ -1797,7 +1665,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"C. R. Patil\" — name doesn't sufficiently match \"Smt. Savitri Thakur\" | \"Giriraj Singh\" — name doesn't sufficiently match \"Smt. Savitri Thakur\" | \"Alok Sanjar\" — name doesn't sufficiently match \"Smt. Savitri Thakur\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"C. R. Patil\" — first name \"patil\" doesn't match \"savitri\" | \"Giriraj Singh\" — first name \"giriraj\" doesn't match \"savitri\" | \"Tokhan Sahu\" — first name \"tokhan\" doesn't match \"savitri\""
     ]
   },
   {
@@ -1831,28 +1699,16 @@
   },
   {
     "mpsno": "5568",
-    "placeBirth": "Faizabad",
-    "dateBirth": "01-01-1969",
-    "education": "Dr. Ram Manohar Lohia Awadh University",
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "26-05-2014 - present",
-        "position": "Member of the 16th Lok Sabha"
-      },
-      {
-        "period": "? - present",
-        "position": "Member of the Uttar Pradesh Legislative Assembly"
-      }
-    ],
+    "placeBirth": null,
+    "dateBirth": null,
+    "education": null,
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Krishna_Raj",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — first name \"nadda\" doesn't match \"raj\" | \"Krishna Raj\" — first name \"krishna\" doesn't match \"raj\" | \"List of Indian Christians\" — first name \"list\" doesn't match \"raj\""
+    ]
   },
   {
     "mpsno": "5745",
@@ -1864,7 +1720,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"A. P. J. Abdul Kalam\" — name doesn't sufficiently match \"Shri Srinivasa Varma B J P Varma Bhupathiraju\" | \"Murli Manohar Joshi\" — name doesn't sufficiently match \"Shri Srinivasa Varma B J P Varma Bhupathiraju\" | \"List of Telugu people\" — name doesn't sufficiently match \"Shri Srinivasa Varma B J P Varma Bhupathiraju\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"A. P. J. Abdul Kalam\" — first name \"abdul\" doesn't match \"srinivasa\" | \"Murli Manohar Joshi\" — first name \"murli\" doesn't match \"srinivasa\" | \"List of Telugu people\" — first name \"list\" doesn't match \"srinivasa\""
     ]
   },
   {
@@ -1877,7 +1733,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Harsh Malhotra\" | \"Pralhad Joshi\" — name doesn't sufficiently match \"Shri Harsh Malhotra\" | \"C. N. Manjunath\" — name doesn't sufficiently match \"Shri Harsh Malhotra\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"J. P. Nadda\" — first name \"nadda\" doesn't match \"harsh\" | \"Pralhad Joshi\" — first name \"pralhad\" doesn't match \"harsh\" | \"C. N. Manjunath\" — first name \"manjunath\" doesn't match \"harsh\""
     ]
   },
   {
@@ -1903,7 +1759,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Pralhad Joshi\" — name doesn't sufficiently match \"Shri Murlidhar Mohol\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Murlidhar Mohol\" | \"Narendra Modi\" — name doesn't sufficiently match \"Shri Murlidhar Mohol\""
+      "wikipedia match: 3 candidates found, none verified. Details: \"Pralhad Joshi\" — first name \"pralhad\" doesn't match \"murlidhar\" | \"Narendra Modi\" — first name \"narendra\" doesn't match \"murlidhar\" | \"J. P. Nadda\" — first name \"nadda\" doesn't match \"murlidhar\""
     ]
   },
   {
@@ -1916,7 +1772,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: 3 candidates found, none verified. Details: \"Narendra Modi\" — name doesn't sufficiently match \"Shri Pabitra Margherita\" | \"J. P. Nadda\" — name doesn't sufficiently match \"Shri Pabitra Margherita\" | \"Pralhad Joshi\" — name doesn't sufficiently match \"Shri Pabitra Margherita\"",
+      "wikipedia match: 3 candidates found, none verified. Details: \"Narendra Modi\" — first name \"narendra\" doesn't match \"pabitra\" | \"J. P. Nadda\" — first name \"nadda\" doesn't match \"pabitra\" | \"Pralhad Joshi\" — first name \"pralhad\" doesn't match \"pabitra\"",
       "attendance: Unexpected response shape"
     ]
   }
