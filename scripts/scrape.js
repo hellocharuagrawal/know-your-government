@@ -233,24 +233,42 @@ async function fetchOneMinisterProfile(mpsno, name) {
     errors: [],
   };
 
-  // 1. Birth info, education, profession, career timeline — all from Wikidata/Wikipedia,
-  // matched by name with a confidence check (occupation/nationality) since we no longer
-  // have government data to cross-verify against.
+  // Step 0: fetch the government-recorded date of birth purely as a trusted anchor
+  // to verify the Wikipedia match against. We do NOT display this — it's only used
+  // to confirm we found the right person. Everything shown still comes from Wikipedia.
+  let govDateBirth = null;
   try {
-    const wiki = await fetchWikipediaProfile(name);
-    if (wiki && !wiki.error) {
-      profile.dateBirth = wiki.dateBirth;
-      profile.placeBirth = wiki.placeBirth;
-      profile.education = wiki.education;
-      profile.profession = wiki.profession;
-      profile.careerTimeline = wiki.careerTimeline;
-      profile.knownFor = wiki.knownFor;
-      profile.wikipediaUrl = wiki.wikipediaUrl;
-      profile.criticismSectionUrl = wiki.criticismSectionUrl;
-      profile.legalSectionUrl = wiki.legalSectionUrl;
-      profile.dataSource = "wikipedia";
+    const res = await fetch(`https://sansad.in/api_ls/member/${mpsno}?locale=en`);
+    if (res.ok) {
+      const d = await res.json();
+      govDateBirth = d.dateOfBirth || null; // e.g. "22-Oct-1964"
+    }
+  } catch {
+    // Non-fatal; without an anchor we simply won't be able to confirm a match below.
+  }
+
+  // 1. Birth info, education, profession, career timeline — all from Wikipedia/Wikidata,
+  // but the correct person is confirmed by matching date of birth against the trusted
+  // government anchor above, rather than by fuzzy name/occupation guessing.
+  try {
+    if (!govDateBirth) {
+      profile.errors.push("no government DOB anchor available to verify a Wikipedia match");
     } else {
-      profile.errors.push(`wikipedia match: ${wiki?.error || "unknown failure"}`);
+      const wiki = await fetchWikipediaProfile(name, govDateBirth);
+      if (wiki && !wiki.error) {
+        profile.dateBirth = wiki.dateBirth;
+        profile.placeBirth = wiki.placeBirth;
+        profile.education = wiki.education;
+        profile.profession = wiki.profession;
+        profile.careerTimeline = wiki.careerTimeline;
+        profile.knownFor = wiki.knownFor;
+        profile.wikipediaUrl = wiki.wikipediaUrl;
+        profile.criticismSectionUrl = wiki.criticismSectionUrl;
+        profile.legalSectionUrl = wiki.legalSectionUrl;
+        profile.dataSource = "wikipedia";
+      } else {
+        profile.errors.push(`wikipedia match: ${wiki?.error || "unknown failure"}`);
+      }
     }
   } catch (e) {
     profile.errors.push(`wikipedia profile: ${e.message}`);
@@ -340,18 +358,40 @@ async function fetchMinisterProfiles(ministers) {
 const WIKIMEDIA_USER_AGENT =
   "KnowYourGovernmentApp/1.0 (https://github.com/hellocharuagrawal/know-your-government; civic-education tool)";
 
-async function fetchWikipediaProfile(name) {
+async function fetchWikipediaProfile(name, govDateBirth) {
   if (!name) return { error: "no name provided" };
 
-  // Search Wikipedia itself (real full-text, relevance-ranked search — not the
-  // rigid literal label-matching Wikidata's own search does, which was failing on
-  // every single name here because of the "Shri"/"Smt." honorific prefixes still
-  // attached to government-sourced names). This naturally tolerates extra words,
-  // prefixes, and minor name variations the way an actual search engine would.
+  // Normalize the government DOB (e.g. "22-Oct-1964") to YYYY-MM-DD for comparison.
+  const normalizeGovDate = (raw) => {
+    if (!raw) return null;
+    const months = {
+      jan: "01", feb: "02", mar: "03", apr: "04", may: "05", jun: "06",
+      jul: "07", aug: "08", sep: "09", oct: "10", nov: "11", dec: "12",
+    };
+    const m = raw.match(/(\d{1,2})[-\s]([A-Za-z]{3})[A-Za-z]*[-\s](\d{4})/);
+    if (!m) return null;
+    const mon = months[m[2].toLowerCase().slice(0, 3)];
+    if (!mon) return null;
+    return `${m[3]}-${mon}-${m[1].padStart(2, "0")}`;
+  };
+  const anchorDate = normalizeGovDate(govDateBirth);
+  if (!anchorDate) return { error: `could not parse government DOB "${govDateBirth}" for verification` };
+
+  // Search Wikipedia with the CLEAN name only (honorifics stripped, no extra
+  // qualifier words) — matching exactly what a person typing the name into
+  // Wikipedia's search box would do, which reliably surfaces the right person.
+  const cleanWords = (s) =>
+    s
+      .toLowerCase()
+      .replace(/[.,()]/g, "")
+      .split(/\s+/)
+      .filter((w) => w.length > 1 && ["shri", "smt", "dr", "km", "kumari", "mr", "mrs", "prof", "adv"].indexOf(w) === -1);
+  const cleanName = cleanWords(name).join(" ");
+
   const searchRes = await fetch(
     `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(
-      name + " Indian politician"
-    )}&format=json&srlimit=3`,
+      cleanName
+    )}&format=json&srlimit=10`,
     { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
   );
   if (!searchRes.ok) return { error: `wikipedia search HTTP ${searchRes.status}` };
@@ -361,86 +401,64 @@ async function fetchWikipediaProfile(name) {
     return { error: `no Wikipedia search results (raw: ${JSON.stringify(searchData).slice(0, 300)})` };
   }
 
-  // Verify candidates rather than blindly trusting the top search result — this was
-  // the actual cause of several ministers resolving to a DIFFERENT, more Wikipedia-
-  // prominent person (e.g. an obscure minister's search returning a better-known
-  // namesake or unrelated politician as the "best match"). Check name similarity
-  // AND occupation plausibility together, trying up to 3 candidates in order.
-  const cleanWords = (s) =>
-    s
-      .toLowerCase()
-      .replace(/[.,()]/g, "")
-      .split(/\s+/)
-      .filter((w) => w.length > 2 && ["shri", "smt", "dr", "km", "kumari", "mr", "mrs", "prof", "adv"].indexOf(w) === -1);
-
+  // Verify each of the top 10 candidates by date of birth against the trusted
+  // government anchor. The person whose Wikidata DOB exactly matches is the correct
+  // match — a far stronger signal than name/occupation guessing, and immune to the
+  // shared-surname false positives that plagued earlier approaches.
   let wikiTitle = null;
   let entityId = null;
   let entity = null;
   let claims = null;
-  let candidateErrors = [];
+  let candidatesChecked = 0;
+  let candidatesWithDob = 0;
 
-  const originalWords = cleanWords(name);
+  const formatWikidataDate = (raw) => {
+    if (!raw) return null;
+    const match = raw.match(/^\+?(\d{4})-(\d{2})-(\d{2})/);
+    return match ? `${match[1]}-${match[2]}-${match[3]}` : null;
+  };
 
-  for (const candidate of results.slice(0, 3)) {
-    const titleWords = cleanWords(candidate.title.replace(/_/g, " "));
-    // Order-agnostic containment: the shorter word-set must be fully contained in
-    // the longer one, regardless of which word is "supposed" to be first/middle/
-    // last name — Indian naming conventions vary too much (father's name first,
-    // surname first, etc.) to safely assume position means anything.
-    const [shorter, longer] =
-      originalWords.length <= titleWords.length ? [originalWords, titleWords] : [titleWords, originalWords];
-    const fullyContained = shorter.length > 0 && shorter.every((w) => longer.includes(w));
-    if (!fullyContained) {
-      candidateErrors.push(
-        `"${candidate.title}" — words [${titleWords.join(", ")}] don't fully contain/match [${originalWords.join(", ")}]`
-      );
-      continue;
-    }
-
+  for (const candidate of results.slice(0, 10)) {
+    candidatesChecked++;
     const pagepropsRes = await fetch(
       `https://en.wikipedia.org/w/api.php?action=query&prop=pageprops&titles=${encodeURIComponent(
         candidate.title
       )}&format=json`,
       { headers: { "User-Agent": WIKIMEDIA_USER_AGENT } }
     );
-    if (!pagepropsRes.ok) {
-      candidateErrors.push(`"${candidate.title}" — pageprops HTTP ${pagepropsRes.status}`);
-      continue;
-    }
+    if (!pagepropsRes.ok) continue;
     const pagepropsData = await pagepropsRes.json();
     const pages = pagepropsData?.query?.pages || {};
     const page = Object.values(pages)[0];
     const candidateEntityId = page?.pageprops?.wikibase_item;
-    if (!candidateEntityId) {
-      candidateErrors.push(`"${candidate.title}" — no linked Wikidata item`);
-      continue;
-    }
+    if (!candidateEntityId) continue;
 
     const entityRes = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${candidateEntityId}.json`, {
       headers: { "User-Agent": WIKIMEDIA_USER_AGENT },
     });
-    if (!entityRes.ok) {
-      candidateErrors.push(`"${candidate.title}" — entity HTTP ${entityRes.status}`);
-      continue;
-    }
+    if (!entityRes.ok) continue;
     const entityData = await entityRes.json();
     const candidateEntity = entityData?.entities?.[candidateEntityId];
-    const description = (candidateEntity?.descriptions?.en?.value || "").toLowerCase();
-    if (!(description.includes("politician") || description.includes("india"))) {
-      candidateErrors.push(`"${candidate.title}" — description doesn't confirm politician/India: "${description}"`);
-      continue;
-    }
+    const candidateClaims = candidateEntity?.claims || {};
+    const candidateDob = formatWikidataDate(candidateClaims.P569?.[0]?.mainsnak?.datavalue?.value?.time);
+    if (!candidateDob) continue; // no DOB on this candidate — can't verify, skip.
+    candidatesWithDob++;
 
-    // Passed both checks.
-    wikiTitle = candidate.title;
-    entityId = candidateEntityId;
-    entity = candidateEntity;
-    claims = candidateEntity?.claims || {};
-    break;
+    if (candidateDob === anchorDate) {
+      // Confirmed by exact date-of-birth match.
+      wikiTitle = candidate.title;
+      entityId = candidateEntityId;
+      entity = candidateEntity;
+      claims = candidateClaims;
+      break;
+    }
+    await new Promise((r) => setTimeout(r, 80));
   }
 
   if (!wikiTitle) {
-    return { error: `${results.length} candidates found, none verified. Details: ${candidateErrors.join(" | ")}` };
+    return {
+      error: `no DOB match among ${candidatesChecked} candidates (${candidatesWithDob} had a DOB on Wikidata) against anchor ${anchorDate}`,
+    };
   }
   const match = { description: entity?.descriptions?.en?.value || null };
 
@@ -457,7 +475,7 @@ async function fetchWikipediaProfile(name) {
     }
   };
 
-  const formatWikidataDate = (raw) => {
+  const formatWikidataDateForDisplay = (raw) => {
     if (!raw) return null;
     // Wikidata dates look like "+1964-10-22T00:00:00Z"
     const match = raw.match(/^\+?(\d{4})-(\d{2})-(\d{2})/);
@@ -465,7 +483,7 @@ async function fetchWikipediaProfile(name) {
   };
 
   // Date of birth (P569)
-  const dateBirth = formatWikidataDate(claims.P569?.[0]?.mainsnak?.datavalue?.value?.time);
+  const dateBirth = formatWikidataDateForDisplay(claims.P569?.[0]?.mainsnak?.datavalue?.value?.time);
 
   // Place of birth (P19)
   let placeBirth = null;
@@ -496,8 +514,8 @@ async function fetchWikipediaProfile(name) {
     if (!posId) continue;
     const posLabel = await resolveLabel(posId);
     if (!posLabel) continue;
-    const start = formatWikidataDate(p.qualifiers?.P580?.[0]?.datavalue?.value?.time);
-    const end = formatWikidataDate(p.qualifiers?.P582?.[0]?.datavalue?.value?.time);
+    const start = formatWikidataDateForDisplay(p.qualifiers?.P580?.[0]?.datavalue?.value?.time);
+    const end = formatWikidataDateForDisplay(p.qualifiers?.P582?.[0]?.datavalue?.value?.time);
     careerTimeline.push({ period: `${start || "?"} - ${end || "present"}`, position: posLabel });
   }
 
