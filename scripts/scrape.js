@@ -371,8 +371,7 @@ async function fetchWikipediaProfile(name) {
       .toLowerCase()
       .replace(/[.,()]/g, "")
       .split(/\s+/)
-      .filter((w) => w.length > 2 && !["shri", "smt", "dr", "km", "kumari", "mr", "mrs", "prof", "adv"].includes(w));
-  const originalWords = new Set(cleanWords(name));
+      .filter((w) => w.length > 2 && ["shri", "smt", "dr", "km", "kumari", "mr", "mrs", "prof", "adv"].indexOf(w) === -1);
 
   let wikiTitle = null;
   let entityId = null;
@@ -382,9 +381,12 @@ async function fetchWikipediaProfile(name) {
 
   for (const candidate of results.slice(0, 3)) {
     const titleWords = cleanWords(candidate.title.replace(/_/g, " "));
-    const overlap = titleWords.filter((w) => originalWords.has(w)).length;
-    if (titleWords.length === 0 || overlap / titleWords.length < 0.5) {
-      candidateErrors.push(`"${candidate.title}" — name doesn't sufficiently match "${name}"`);
+    const originalFirstName = cleanWords(name)[0];
+    const candidateFirstName = titleWords[0];
+    if (!originalFirstName || !candidateFirstName || originalFirstName !== candidateFirstName) {
+      candidateErrors.push(
+        `"${candidate.title}" — first name "${candidateFirstName}" doesn't match "${originalFirstName}"`
+      );
       continue;
     }
 
