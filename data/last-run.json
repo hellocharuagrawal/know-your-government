@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-08-02T11:55:19.077Z",
+  "ranAt": "2026-08-03T13:31:01.865Z",
   "results": {
     "partyRepresentation": 42,
     "allianceSeats": {
@@ -11,7 +11,7 @@
     "rajyaSabhaMembers": 241,
     "lokSabhaMembers": 540,
     "councilOfMinisters": 73,
-    "ministerProfiles": "7/10 fully succeeded (TEST MODE, wrote to minister-profiles-test.json)"
+    "ministerProfiles": "42/73 fully succeeded"
   },
   "errors": []
 }
