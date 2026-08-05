@@ -37,11 +37,11 @@
     ]
   },
   "INDIA": {
-    "seats": 179,
+    "seats": 177,
     "parties": [
       {
         "party": "INC",
-        "seats": 100
+        "seats": 98
       },
       {
         "party": "SP",
@@ -86,11 +86,11 @@
     ]
   },
   "Others": {
-    "seats": 90,
+    "seats": 88,
     "parties": [
       {
         "party": "AITC",
-        "seats": 29
+        "seats": 28
       },
       {
         "party": "SS",
@@ -170,10 +170,6 @@
       },
       {
         "party": "SAD",
-        "seats": 1
-      },
-      {
-        "party": "VPP",
         "seats": 1
       },
       {

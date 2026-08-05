@@ -7,7 +7,7 @@
   {
     "party": "Indian National Congress",
     "abbrev": "INC",
-    "seats": 100
+    "seats": 98
   },
   {
     "party": "Samajwadi Party",
@@ -17,7 +17,7 @@
   {
     "party": "All India Trinamool Congress",
     "abbrev": "AITC",
-    "seats": 29
+    "seats": 28
   },
   {
     "party": "Dravida Munnetra Kazhagam",
@@ -197,11 +197,6 @@
   {
     "party": "United Peoples Party, Liberal",
     "abbrev": "UPPL",
-    "seats": 1
-  },
-  {
-    "party": "Voice of the People Party",
-    "abbrev": "VPP",
     "seats": 1
   },
   {
