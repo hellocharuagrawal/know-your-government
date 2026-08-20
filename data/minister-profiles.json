@@ -550,7 +550,7 @@
     "errors": [],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pralhad_Joshi",
-    "criticismSectionUrl": null,
+    "criticismSectionUrl": "https://en.wikipedia.org/wiki/Pralhad_Joshi#Controversies",
     "legalSectionUrl": null,
     "dataSource": "wikipedia"
   },
@@ -848,7 +848,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1960-06-15"
+      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1960-06-15"
     ]
   },
   {
@@ -940,7 +940,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (9 had a DOB on Wikidata) against anchor 1956-09-15"
+      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1956-09-15"
     ]
   },
   {
@@ -953,7 +953,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1953-12-20"
+      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1953-12-20"
     ]
   },
   {
@@ -1173,7 +1173,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (5 had a DOB on Wikidata) against anchor 1964-11-20"
+      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1964-11-20"
     ]
   },
   {
@@ -1186,7 +1186,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (9 had a DOB on Wikidata) against anchor 1957-02-04"
+      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1957-02-04"
     ]
   },
   {
@@ -1622,28 +1622,16 @@
   },
   {
     "mpsno": "5035",
-    "placeBirth": "Balurghat",
-    "dateBirth": "29-12-1979",
+    "placeBirth": null,
+    "dateBirth": null,
     "education": null,
-    "profession": "politician",
-    "careerTimeline": [
-      {
-        "period": "30-05-2019 - present",
-        "position": "Member of the 17th Lok Sabha"
-      },
-      {
-        "period": "00-00-2024 - present",
-        "position": "Member of the Lok Sabha"
-      }
-    ],
+    "profession": null,
+    "careerTimeline": [],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
-    "knownFor": "Indian politician",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sukanta_Majumdar",
-    "criticismSectionUrl": null,
-    "legalSectionUrl": null,
-    "dataSource": "wikipedia"
+    "errors": [
+      "wikipedia profile: fetch failed"
+    ]
   },
   {
     "mpsno": "4596",
@@ -1702,7 +1690,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (3 had a DOB on Wikidata) against anchor 1967-08-04"
+      "wikipedia match: no DOB match among 10 candidates (2 had a DOB on Wikidata) against anchor 1967-08-04"
     ]
   },
   {
