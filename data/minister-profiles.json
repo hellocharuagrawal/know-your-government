@@ -848,7 +848,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1960-06-15"
+      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1960-06-15"
     ]
   },
   {
@@ -953,7 +953,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1953-12-20"
+      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1953-12-20"
     ]
   },
   {
@@ -1622,16 +1622,28 @@
   },
   {
     "mpsno": "5035",
-    "placeBirth": null,
-    "dateBirth": null,
+    "placeBirth": "Balurghat",
+    "dateBirth": "29-12-1979",
     "education": null,
-    "profession": null,
-    "careerTimeline": [],
+    "profession": "politician",
+    "careerTimeline": [
+      {
+        "period": "30-05-2019 - present",
+        "position": "Member of the 17th Lok Sabha"
+      },
+      {
+        "period": "00-00-2024 - present",
+        "position": "Member of the Lok Sabha"
+      }
+    ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [
-      "wikipedia profile: fetch failed"
-    ]
+    "errors": [],
+    "knownFor": "Indian politician",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sukanta_Majumdar",
+    "criticismSectionUrl": null,
+    "legalSectionUrl": null,
+    "dataSource": "wikipedia"
   },
   {
     "mpsno": "4596",
