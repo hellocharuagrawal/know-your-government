@@ -86,7 +86,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician and 32nd Union Minister of Home Affairs",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Amit_Shah",
     "criticismSectionUrl": "https://en.wikipedia.org/wiki/Amit_Shah#Criticism",
@@ -190,7 +192,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Union Minister of Agriculture and Famers' Welfare, Govt of India",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Shivraj_Singh_Chouhan",
     "criticismSectionUrl": null,
@@ -276,7 +280,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "12th Chief Minister of Karnataka",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/H._D._Kumaraswamy",
     "criticismSectionUrl": "https://en.wikipedia.org/wiki/H._D._Kumaraswamy#Controversies",
@@ -366,7 +372,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Union Minister of Micro, Small and Medium Enterprises",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jitan_Ram_Manjhi",
     "criticismSectionUrl": "https://en.wikipedia.org/wiki/Jitan_Ram_Manjhi#Controversies",
@@ -432,7 +440,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Union Cabinet Minister and politician from Assam",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sarbananda_Sonowal",
     "criticismSectionUrl": null,
@@ -473,7 +483,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Virendra_Kumar_Khatik",
     "criticismSectionUrl": null,
@@ -502,7 +514,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Union Minister of Civil Aviation, Govt of India",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinjarapu_Ram_Mohan_Naidu",
     "criticismSectionUrl": null,
@@ -547,7 +561,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pralhad_Joshi",
     "criticismSectionUrl": "https://en.wikipedia.org/wiki/Pralhad_Joshi#Controversies",
@@ -596,7 +612,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "politician from Odisha, India",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jual_Oram",
     "criticismSectionUrl": null,
@@ -633,7 +651,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician (born 1952)",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Giriraj_Singh",
     "criticismSectionUrl": null,
@@ -651,7 +671,7 @@
     "attendanceLoksabha": null,
     "errors": [
       "wikipedia match: could not parse government DOB \" \" for verification",
-      "attendance: Unexpected response shape"
+      "attendance: fetch failed"
     ]
   },
   {
@@ -679,8 +699,10 @@
       }
     ],
     "attendanceCurrentTerm": null,
-    "attendanceLoksabha": 18,
-    "errors": [],
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: fetch failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jyotiraditya_Scindia",
     "criticismSectionUrl": null,
@@ -709,7 +731,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bhupender_Yadav",
     "criticismSectionUrl": null,
@@ -738,7 +762,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gajendra_Singh_Shekhawat",
     "criticismSectionUrl": null,
@@ -759,7 +785,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Annpurna_Devi",
     "criticismSectionUrl": null,
@@ -788,7 +816,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Bharatiya Janata Party politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kiren_Rijiju",
     "criticismSectionUrl": "https://en.wikipedia.org/wiki/Kiren_Rijiju#Controversies",
@@ -806,7 +836,7 @@
     "attendanceLoksabha": null,
     "errors": [
       "wikipedia match: could not parse government DOB \" \" for verification",
-      "attendance: Unexpected response shape"
+      "attendance: fetch failed"
     ]
   },
   {
@@ -869,7 +899,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Union Minister of Food Processing Industries, Govt. of India",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Chirag_Paswan",
     "criticismSectionUrl": null,
@@ -898,7 +930,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Member of Parliament",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/C._R._Patil",
     "criticismSectionUrl": null,
@@ -923,7 +957,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rao_Inderjit_Singh",
     "criticismSectionUrl": "https://en.wikipedia.org/wiki/Rao_Inderjit_Singh#Controversies",
@@ -940,7 +976,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1956-09-15"
+      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1956-09-15",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -953,7 +990,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1953-12-20"
+      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1953-12-20",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1038,7 +1076,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1956-09-15"
+      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1956-09-15",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1051,7 +1090,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1953-12-20"
+      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1953-12-20",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1080,7 +1120,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Prataprao_Jadhav",
     "criticismSectionUrl": null,
@@ -1098,7 +1140,7 @@
     "attendanceLoksabha": null,
     "errors": [
       "wikipedia match: could not parse government DOB \" \" for verification",
-      "attendance: Unexpected response shape"
+      "attendance: fetch failed"
     ]
   },
   {
@@ -1119,7 +1161,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jitin_Prasada",
     "criticismSectionUrl": null,
@@ -1156,7 +1200,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Shripad_Naik",
     "criticismSectionUrl": null,
@@ -1173,7 +1219,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1964-11-20"
+      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1964-11-20",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1186,7 +1233,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1957-02-04"
+      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1957-02-04",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1200,7 +1248,7 @@
     "attendanceLoksabha": null,
     "errors": [
       "wikipedia match: could not parse government DOB \" \" for verification",
-      "attendance: Unexpected response shape"
+      "attendance: fetch failed"
     ]
   },
   {
@@ -1285,7 +1333,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (4 had a DOB on Wikidata) against anchor 1951-07-20"
+      "wikipedia match: no DOB match among 10 candidates (4 had a DOB on Wikidata) against anchor 1951-07-20",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1298,7 +1347,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (2 had a DOB on Wikidata) against anchor 1976-03-07"
+      "wikipedia match: no DOB match among 10 candidates (2 had a DOB on Wikidata) against anchor 1976-03-07",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1322,8 +1372,10 @@
       }
     ],
     "attendanceCurrentTerm": null,
-    "attendanceLoksabha": 18,
-    "errors": [],
+    "attendanceLoksabha": null,
+    "errors": [
+      "attendance: fetch failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/S._P._Singh_Baghel",
     "criticismSectionUrl": null,
@@ -1348,7 +1400,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Incumbent MP from Udupi-chikmagalur lok sabha constituency",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Shobha_Karandlaje",
     "criticismSectionUrl": null,
@@ -1377,7 +1431,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kirti_Vardhan_Singh",
     "criticismSectionUrl": null,
@@ -1395,7 +1451,7 @@
     "attendanceLoksabha": null,
     "errors": [
       "wikipedia match: could not parse government DOB \" \" for verification",
-      "attendance: Unexpected response shape"
+      "attendance: fetch failed"
     ]
   },
   {
@@ -1416,7 +1472,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Shantanu_Thakur",
     "criticismSectionUrl": null,
@@ -1433,7 +1491,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (2 had a DOB on Wikidata) against anchor 1958-06-26"
+      "wikipedia match: no DOB match among 10 candidates (2 had a DOB on Wikidata) against anchor 1958-06-26",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1530,7 +1589,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kamlesh_Paswan",
     "criticismSectionUrl": null,
@@ -1547,7 +1608,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1954-06-01"
+      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1954-06-01",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1638,7 +1700,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sukanta_Majumdar",
     "criticismSectionUrl": null,
@@ -1659,7 +1723,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Savitri_Thakur",
     "criticismSectionUrl": "https://en.wikipedia.org/wiki/Savitri_Thakur#Controversies",
@@ -1676,7 +1742,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1969-10-15"
+      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1969-10-15",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1687,9 +1754,10 @@
     "profession": null,
     "careerTimeline": [],
     "attendanceCurrentTerm": null,
-    "attendanceLoksabha": 18,
+    "attendanceLoksabha": null,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1977-07-04"
+      "wikipedia match: no DOB match among 10 candidates (9 had a DOB on Wikidata) against anchor 1977-07-04",
+      "attendance: fetch failed"
     ]
   },
   {
@@ -1702,7 +1770,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (2 had a DOB on Wikidata) against anchor 1967-08-04"
+      "wikipedia match: no DOB match among 10 candidates (2 had a DOB on Wikidata) against anchor 1967-08-04",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1719,7 +1788,9 @@
     ],
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
-    "errors": [],
+    "errors": [
+      "attendance: 1/7 session requests failed"
+    ],
     "knownFor": "Indian politician",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Harsh_Malhotra",
     "criticismSectionUrl": null,
@@ -1736,7 +1807,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 3 candidates (2 had a DOB on Wikidata) against anchor 1966-09-08"
+      "wikipedia match: no DOB match among 3 candidates (2 had a DOB on Wikidata) against anchor 1966-09-08",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1749,7 +1821,8 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1974-11-09"
+      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1974-11-09",
+      "attendance: 1/7 session requests failed"
     ]
   },
   {
@@ -1763,7 +1836,7 @@
     "attendanceLoksabha": null,
     "errors": [
       "wikipedia match: could not parse government DOB \" \" for verification",
-      "attendance: Unexpected response shape"
+      "attendance: fetch failed"
     ]
   }
 ]
