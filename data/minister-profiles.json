@@ -848,7 +848,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (6 had a DOB on Wikidata) against anchor 1960-06-15"
+      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1960-06-15"
     ]
   },
   {
@@ -1285,7 +1285,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (4 had a DOB on Wikidata) against anchor 1951-07-20"
+      "wikipedia match: no DOB match among 10 candidates (5 had a DOB on Wikidata) against anchor 1951-07-20"
     ]
   },
   {
@@ -1689,7 +1689,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (8 had a DOB on Wikidata) against anchor 1977-07-04"
+      "wikipedia match: no DOB match among 10 candidates (7 had a DOB on Wikidata) against anchor 1977-07-04"
     ]
   },
   {
@@ -1702,7 +1702,7 @@
     "attendanceCurrentTerm": null,
     "attendanceLoksabha": 18,
     "errors": [
-      "wikipedia match: no DOB match among 10 candidates (3 had a DOB on Wikidata) against anchor 1967-08-04"
+      "wikipedia match: no DOB match among 10 candidates (2 had a DOB on Wikidata) against anchor 1967-08-04"
     ]
   },
   {
