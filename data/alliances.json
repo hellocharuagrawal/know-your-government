@@ -1,10 +1,10 @@
 {
   "NDA": {
-    "seats": 275,
+    "seats": 276,
     "parties": [
       {
         "party": "BJP",
-        "seats": 240
+        "seats": 241
       },
       {
         "party": "TDP",
@@ -86,7 +86,7 @@
     ]
   },
   "Others": {
-    "seats": 88,
+    "seats": 87,
     "parties": [
       {
         "party": "AITC",
@@ -125,10 +125,6 @@
         "seats": 2
       },
       {
-        "party": "J&KNC",
-        "seats": 2
-      },
-      {
         "party": "JSP",
         "seats": 2
       },
@@ -154,6 +150,10 @@
       },
       {
         "party": "HAM (S)",
+        "seats": 1
+      },
+      {
+        "party": "J&KNC",
         "seats": 1
       },
       {
