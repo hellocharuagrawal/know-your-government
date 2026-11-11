@@ -80,14 +80,6 @@
     "mpsno": 4170
   },
   {
-    "name": "Aga Syed Ruhullah Mehdi",
-    "party": "JKNC",
-    "constituency": "Srinagar",
-    "state": "Jammu and Kashmir",
-    "photoUrl": "https://sansad.in/getFile/dms/fetch/1fbd6803-e967-4c4e-bd9f-b82df83e9281?source=dsp2",
-    "mpsno": 5761
-  },
-  {
     "name": "Ajay Bhatt",
     "party": "BJP",
     "constituency": "Nainital-Udhamsingh Nagar",
@@ -1000,6 +992,14 @@
     "mpsno": 5703
   },
   {
+    "name": "D M Kathir Anand",
+    "party": "DMK",
+    "constituency": "Vellore",
+    "state": "Tamil Nadu",
+    "photoUrl": "https://sansad.in/getFile/dms/fetch/be60dd5f-6f56-44bc-9c8f-72d740078961?source=dsp2",
+    "mpsno": 5528
+  },
+  {
     "name": "D Ravi Kumar",
     "party": "Viduthalai Chiruthaigal Katchi",
     "constituency": "Viluppuram",
@@ -1070,6 +1070,14 @@
     "state": "Dadra and Nagar Haveli and Daman and Diu",
     "photoUrl": "https://sansad.in/getFile/dms/fetch/0b69b9de-eba3-43ca-a1eb-b788543480b1?source=dsp2",
     "mpsno": 5536
+  },
+  {
+    "name": "Devasish Sharma",
+    "party": "BJP",
+    "constituency": "Nagaon",
+    "state": "Assam",
+    "photoUrl": "https://sansad.in/getFile/dms/fetch/6a861c13-fe37-4da5-8e9d-f54c6ca4f97e?source=dsp2",
+    "mpsno": 5837
   },
   {
     "name": "Devendra Singh Alias Bhole Singh",
@@ -1920,7 +1928,7 @@
     "mpsno": 4303
   },
   {
-    "name": "Kanimozhi Karunanidhi",
+    "name": "Kanimozhi Rajathi Karunanidhi",
     "party": "DMK",
     "constituency": "Thoothukkudi",
     "state": "Tamil Nadu",
@@ -4054,14 +4062,6 @@
     "state": "Tamil Nadu",
     "photoUrl": "https://sansad.in/getFile/dms/fetch/9122e76f-4110-4f54-8c2b-f5729379f434?source=dsp2",
     "mpsno": 5797
-  },
-  {
-    "name": "Thiru D M Kathir Anand",
-    "party": "DMK",
-    "constituency": "Vellore",
-    "state": "Tamil Nadu",
-    "photoUrl": "https://sansad.in/getFile/dms/fetch/be60dd5f-6f56-44bc-9c8f-72d740078961?source=dsp2",
-    "mpsno": 5528
   },
   {
     "name": "Thiru Dayanidhi Maran",
