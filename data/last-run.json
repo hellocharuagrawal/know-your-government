@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-11-23T11:44:16.139Z",
+  "ranAt": "2026-11-24T13:14:09.056Z",
   "results": {
     "partyRepresentation": 41,
     "allianceSeats": {
@@ -8,7 +8,7 @@
       "Others": 87
     },
     "chiefs": 2,
-    "rajyaSabhaMembers": 243,
+    "rajyaSabhaMembers": 242,
     "lokSabhaMembers": 540,
     "councilOfMinisters": 72,
     "ministerProfiles": "42/72 fully succeeded"
