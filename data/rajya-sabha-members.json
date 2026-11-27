@@ -84,12 +84,6 @@
     "mpCode": 2668
   },
   {
-    "name": "Arun Singh",
-    "party": "BJP",
-    "state": "Uttar Pradesh",
-    "mpCode": 2437
-  },
-  {
     "name": "Ashok Kumar Mittal",
     "party": "BJP",
     "state": "Punjab",
@@ -118,12 +112,6 @@
     "party": "BRS",
     "state": "Telangana",
     "mpCode": 2530
-  },
-  {
-    "name": "B.L. Verma",
-    "party": "BJP",
-    "state": "Uttar Pradesh",
-    "mpCode": 2491
   },
   {
     "name": "Babubhai Jesangbhai Desai",
@@ -184,12 +172,6 @@
     "party": "BJP",
     "state": "West Bengal",
     "mpCode": 2681
-  },
-  {
-    "name": "Brij Lal",
-    "party": "BJP",
-    "state": "Uttar Pradesh",
-    "mpCode": 2488
   },
   {
     "name": "C. Sadanandan Master",
@@ -264,10 +246,22 @@
     "mpCode": 2544
   },
   {
+    "name": "Dhanraj Nathwani",
+    "party": "SP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2709
+  },
+  {
     "name": "Dharmasthala Veerendra Heggade",
     "party": "Nominated",
     "state": "Nominated",
     "mpCode": 2567
+  },
+  {
+    "name": "Dharmpal Singh",
+    "party": "BJP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2712
   },
   {
     "name": "Dharmshila Gupta",
@@ -280,6 +274,12 @@
     "party": "Independent",
     "state": "Odisha",
     "mpCode": 236
+  },
+  {
+    "name": "Dinesh Kumar Arya",
+    "party": "BJP",
+    "state": "Uttarakhand",
+    "mpCode": 2710
   },
   {
     "name": "Dola Sen",
@@ -306,12 +306,6 @@
     "mpCode": 2384
   },
   {
-    "name": "Geeta alias Chandraprabha",
-    "party": "BJP",
-    "state": "Uttar Pradesh",
-    "mpCode": 2487
-  },
-  {
     "name": "Ghanshyam Tiwari",
     "party": "BJP",
     "state": "Rajasthan",
@@ -322,6 +316,12 @@
     "party": "YSRCP",
     "state": "Andhra Pradesh",
     "mpCode": 2586
+  },
+  {
+    "name": "Gopi Krishna Panday",
+    "party": "BJP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2711
   },
   {
     "name": "Govindbhai Laljibhai Dholakia",
@@ -762,12 +762,6 @@
     "mpCode": 2600
   },
   {
-    "name": "Naresh Bansal",
-    "party": "BJP",
-    "state": "Uttarakhand",
-    "mpCode": 2493
-  },
-  {
     "name": "Nathwani Parimal",
     "party": "Independent",
     "state": "Jharkhand",
@@ -784,12 +778,6 @@
     "party": "INC",
     "state": "Rajasthan",
     "mpCode": 2477
-  },
-  {
-    "name": "Neeraj Shekhar",
-    "party": "BJP",
-    "state": "Uttar Pradesh",
-    "mpCode": 2297
   },
   {
     "name": "Nirmala Sitharaman",
@@ -912,6 +900,12 @@
     "mpCode": 2687
   },
   {
+    "name": "Priyanka Singh Rawat",
+    "party": "BJP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2713
+  },
+  {
     "name": "R. Dharmar",
     "party": "AIADMK",
     "state": "Tamil Nadu",
@@ -922,6 +916,12 @@
     "party": "DMK",
     "state": "Tamil Nadu",
     "mpCode": 2535
+  },
+  {
+    "name": "Radha Kant Ojha",
+    "party": "BJP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2708
   },
   {
     "name": "Radha Mohan Das Agrawal",
@@ -996,16 +996,22 @@
     "mpCode": 2268
   },
   {
+    "name": "Ram Prakash Pal",
+    "party": "BJP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2714
+  },
+  {
+    "name": "Ram Pratap Singh",
+    "party": "BJP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2715
+  },
+  {
     "name": "Ramdas Bandu Athawale",
     "party": "RPI(A)",
     "state": "Maharashtra",
     "mpCode": 2248
-  },
-  {
-    "name": "Ramji",
-    "party": "BSP",
-    "state": "Uttar Pradesh",
-    "mpCode": 2489
   },
   {
     "name": "Ramji Lal Suman",
@@ -1254,12 +1260,6 @@
     "mpCode": 2583
   },
   {
-    "name": "Seema Dwivedi",
-    "party": "BJP",
-    "state": "Uttar Pradesh",
-    "mpCode": 2490
-  },
-  {
     "name": "Shambhu Sharan Patel",
     "party": "BJP",
     "state": "Bihar",
@@ -1276,6 +1276,12 @@
     "party": "BJP",
     "state": "Bihar",
     "mpCode": 2684
+  },
+  {
+    "name": "Shruti Gangwar",
+    "party": "BJP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2717
   },
   {
     "name": "Sikander Kumar",
@@ -1420,6 +1426,12 @@
     "party": "INC",
     "state": "Telangana",
     "mpCode": 2682
+  },
+  {
+    "name": "Vidya Sagar Sonkar",
+    "party": "BJP",
+    "state": "Uttar Pradesh",
+    "mpCode": 2716
   },
   {
     "name": "Vijay Chintakayala",
